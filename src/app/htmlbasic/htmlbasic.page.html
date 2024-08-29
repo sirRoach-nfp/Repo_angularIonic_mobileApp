@@ -1,0 +1,189 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="menu-tool"> <!-- Menu Panel -->
+    <ion-list>
+
+      <ion-item button [routerLink]="['/html']">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/learn">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/challenges">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ion-content>
+    <ng-template>
+    <div class="popup-content">
+      <h3>Hello, Rhonalyn Ortiz!</h3>
+      <p>ortizrhonalynmail.com</p>
+      <ion-button (click)="closePopup()">Close</ion-button>
+    </div>
+  </ng-template>
+  </ion-content>
+</ion-modal>
+
+
+<ion-content>
+<div class="option">
+  <a [routerLink]="['/html']" class="active">HTML</a>
+  <a href="#css">CSS</a>
+  <a href="#javascript">PHP</a>
+  <a href="#sql">JAVA</a>
+  <a href="#python">PYTHON</a>
+  <a href="#C++">C++</a>
+  <a href="#SQL">SQL</a>
+</div>
+
+<ion-content padding class="intro">
+  <h1>HTML  BASIC EXAMPLES</h1>
+  <hr class="custom-hr1">
+  <p>In this chapter we will show some basic HTML examples.</p>
+  <hr class="custom-hr2">
+  <h1>HTML  Documents</h1>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p class="sixthbullet">All HTML documents must start with a document type declaration: <span class="bulletred">&lt;!DOCTYPE html&gt;</span>.</p>
+  </ion-item>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>The HTML document itself begins with <span class="bulletred">&lt;html&gt;</span> and ends with <span class="bulletred">&lt;/html&gt;</span>.</p>
+  </ion-item>    
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>The visible part of the HTML document is between <span class="bulletred">&lt;body&gt;</span> and <span class="bulletred">&lt;/body&gt;</span>.</p>
+  </ion-item>    
+  <h1>EXAMPLE</h1>
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
+    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+  <br>
+  <br>
+  <h1>OUTPUT:</h1>
+  <div class="output1">
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+  </div>
+  <hr class="custom-hr2">
+  <h1>The &lt;!DOCTYPE&gt; Declaration</h1>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p class="sixthbullet">The <span class="bulletred">&lt;!DOCTYPE html&gt;</span>  declaration represents the document type, and helps browsers to display web pages correctly.</p>
+  </ion-item>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>It must only appear once, at the top of the page (before any HTML tags).</p>
+  </ion-item>    
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>The <span class="bulletred">&lt;!DOCTYPE&gt;</span> declaration is not case sensitive.</p>
+  </ion-item>    
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>The <span class="bulletred">&lt;!DOCTYPE&gt;</span> declaration for HTML5 is:</p>
+  </ion-item>    
+
+  <div class="example2">
+    <p>&lt;!DOCTYPE html&gt;</p>
+  </div>
+  <hr class="custom-hr2">
+  <h1>HTML Headings</h1>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p class="sixthbullet">HTML headings are defined with the <span class="bulletred">&lt;h1&gt;</span> to <span class="bulletred">&lt;h6&gt;</span> tags.</p>
+  </ion-item>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p><span class="bulletred">&lt;h1&gt;</span> defines the most important heading.
+    <span class="bulletred">&lt;h6&gt;</span> defines the least important heading: </p>
+  </ion-item>
+  <h1>EXAMPLE</h1>
+  <div class="example3">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h1&gt;<span>This is heading 1</span>&lt;/h1&gt;</p>
+    <p>&lt;h2&gt;<span>This is heading 2</span>&lt;/h2&gt;</p>
+    <p>&lt;h3&gt;<span>This is heading 3</span>&lt;/h3&gt;</p>
+    <p>&lt;h4&gt;<span>This is heading 4</span>&lt;/h4&gt;</p>
+    <p>&lt;h5&gt;<span>This is heading 5</span>&lt;/h5&gt;</p>
+    <p>&lt;h6&gt;<span>This is heading 6</span>&lt;/h6&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+  <h1>OUTPUT:</h1>
+  <div class="output3">
+    <p>This is heading 1</p>
+    <p>This is heading 2</p>
+    <p>This is heading 3</p>
+    <p>This is heading 4</p>
+    <p>This is heading 5</p>
+    <p>This is heading 6</p>
+  </div>
+  <hr class="custom-hr2">
+  <h1>HTML Paragraphs</h1>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>HTML paragraphs are defined with the <span class="bulletred">&lt;p&gt;</span> tag:</p>
+  </ion-item> 
+  <h1>EXAMPLE</h1>
+  <div class="example4">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;p&gt;<span>This is a paragraph.</span>&lt;/p&gt;</p>
+  </div>
+</ion-content>
+</ion-content>
