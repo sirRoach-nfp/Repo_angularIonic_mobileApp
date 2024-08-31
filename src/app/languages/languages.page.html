@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-languages" contentId="main-content">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
@@ -84,7 +84,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <ion-menu-button menu="main-menu-languages"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -131,41 +131,83 @@
 <div class="option">
   <a [routerLink]="['/html']" class="active">HTML</a>
   <a href="#css">CSS</a>
-  <a href="#javascript">PHP</a>
-  <a href="#sql">JAVA</a>
-  <a href="#python">PYTHON</a>
-  <a href="#C++">C++</a>
+  <a href="#JS">JS</a>
+  <a href="#PYTHON">PYTHON</a>
   <a href="#SQL">SQL</a>
+  <a href="#PHP">PHP</a>
+  <a href="#JAVA">JAVA</a>
+  <a href="#C++">C++</a>
 </div>
+  
+
 
 <ion-content id="content">
-  <ion-card class="tag-container"> <!-- Main Content -->
-    <img src="../../assets/img/LOGO.png">
-    <h1>Tagline</h1>
-  </ion-card>
 
-  <div id="mess-container">
-    <p>Want to Learn??</p>
-    <ion-button color="#fb7c57" shape="round" routerLink="/languages">Begin My Journey</ion-button>
-
-    <p>Challenge yourself and Know your limit!</p>
-    <ion-button color="#ffe6d5" shape="round" style="  background: linear-gradient(to right , #ffe6d5, #fb7c57);">Challenge some problems</ion-button>
+  <div id="title-code">
+    <h1>Learn to Code</h1>
+    <p>To become a web developer, start with<br>the subjects below.</p>
   </div>
+  <!-- HTML -->
+  <div class="learn-html">
+    <h1>HTML</h1>
+    <p><b>A language for creating webpages.</b>The first thing you have to learn, is HTML, which is the standard markup language for creating web pages. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;" routerLink="/html">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+  <!-- CSS -->
+  <div class="learn-html">
+    <h1>CSS</h1>
+    <p><b>A language for styling webpages.</b>To set the layout of your web page with beautiful colors, fonts, and much more. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+
+  <!-- PHP -->
+  <div class="learn-html">
+    <h1>PHP</h1>
+    <p><b>A language for styling webpages.</b>To set the layout of your web page with beautiful colors, fonts, and much more. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+
+  <!-- JAVA -->
+  <div class="learn-html">
+    <h1>JAVA</h1>
+    <p><b>A language for styling webpages.</b>To set the layout of your web page with beautiful colors, fonts, and much more. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+
+  <!-- PYTHON -->
+  <div class="learn-html">
+    <h1>PYTHON</h1>
+    <p><b>A language for styling webpages.</b>To set the layout of your web page with beautiful colors, fonts, and much more. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+
+  <!-- C++ -->
+  <div class="learn-html">
+    <h1>C++</h1>
+    <p><b>A language for styling webpages.</b>To set the layout of your web page with beautiful colors, fonts, and much more. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+
+  <!-- SQL -->
+  <div class="learn-html">
+    <h1>SQL</h1>
+    <p><b>A language for styling webpages.</b>To set the layout of your web page with beautiful colors, fonts, and much more. </p>
+    <ion-button shape="round" color="#0cc0df" style=" background-color: #0cc0df; border-radius: 40px;">Learn HTML</ion-button>
+    <br>
+    <ion-button shape="round" color="#ffbd59" style=" background-color: #ffbd59; border-radius: 40px;">Video Tutorial</ion-button>
+  </div>
+
+
 </ion-content>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
