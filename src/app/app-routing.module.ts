@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'htmlbasic',
     loadChildren: () => import('./htmlbasic/htmlbasic.module').then( m => m.HtmlbasicPageModule)
+  },  {
+    path: 'languages',
+    loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
+
 
 ];
 

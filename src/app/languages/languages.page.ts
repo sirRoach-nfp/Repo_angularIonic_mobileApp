@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
+
 @Component({
-  selector: 'app-html',
-  templateUrl: './html.page.html',
-  styleUrls: ['./html.page.scss'],
+  selector: 'app-languages',
+  templateUrl: './languages.page.html',
+  styleUrls: ['./languages.page.scss'],
 })
-export class HtmlPage{
+export class LanguagesPage implements OnInit {
+
   isPopupVisible = false;
   showSubtopics = false;
 
@@ -25,7 +27,17 @@ export class HtmlPage{
   constructor(private menu: MenuController) {}
 
   closeMenu() {
-      this.menu.close();
+    this.menu.close();
   }
 
+  ngOnInit() {
+    this.initializeSideMenu();
+  }
+
+  initializeSideMenu() {
+    // Your side menu initialization logic
+    this.menu.enable(true, 'first');
+    console.log('Side menu initialized');
+  }
 }
+
