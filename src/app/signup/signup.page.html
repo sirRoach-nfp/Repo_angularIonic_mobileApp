@@ -10,22 +10,22 @@
     <ion-card-content>
       
       <ion-item lines="full">
-        <ion-label position="floating">Name:</ion-label>
-        <ion-input clearInput>
+        <ion-label position="floating">Username:</ion-label>
+        <ion-input [(ngModel)] = "user.username" clearInput>
             <ion-icon slot="start" name="person-outline"></ion-icon>
         </ion-input>
       </ion-item>
 
       <ion-item lines="full">
         <ion-label position="floating">Email:</ion-label>
-        <ion-input clearInput>
+        <ion-input [(ngModel)] = "user.email" clearInput>
           <ion-icon slot="start" name="mail-outline"></ion-icon>
         </ion-input>
       </ion-item>
 
       <ion-item lines="full">
           <ion-label position="floating">Password:</ion-label>
-          <ion-input clearInput type="Password">
+          <ion-input [(ngModel)] = "user.password" clearInput type="Password">
               <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
           </ion-input>
         </ion-item>
@@ -33,7 +33,7 @@
         <div class="fpass">
           <ion-card-subtitle><a href="#forgotpass">Forgot Password?</a></ion-card-subtitle>
         </div>
-        <ion-buttons button class="sent"><ion-icon name="arrow-forward-outline"></ion-icon></ion-buttons>
+        <ion-buttons button class="sent" (click)="register()"><ion-icon name="arrow-forward-outline"></ion-icon></ion-buttons>
 
     </ion-card-content>
 

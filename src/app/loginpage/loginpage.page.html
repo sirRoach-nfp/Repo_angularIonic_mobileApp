@@ -11,14 +11,14 @@
 
       <ion-item lines="full">
         <ion-label position="floating">Email:</ion-label>
-        <ion-input clearInput>
+        <ion-input [(ngModel)] = "credential.email" clearInput>
           <ion-icon slot="start" name="mail-outline"></ion-icon>
         </ion-input>
       </ion-item>
 
       <ion-item lines="full">
           <ion-label position="floating">Password:</ion-label>
-          <ion-input clearInput type="Password">
+          <ion-input  [(ngModel)] = "credential.password" clearInput type="Password">
               <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
           </ion-input>
         </ion-item>
@@ -26,7 +26,7 @@
         <div class="fpass">
           <ion-card-subtitle><a href="#forgotpass">Forgot Password?</a></ion-card-subtitle>
         </div>
-        <ion-buttons button class="sent"><ion-icon name="arrow-forward-outline"></ion-icon></ion-buttons>
+        <ion-buttons  button  (click)="login()"  class="sent"><ion-icon name="arrow-forward-outline"></ion-icon></ion-buttons>
 
     </ion-card-content>
 
