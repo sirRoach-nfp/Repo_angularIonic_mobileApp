@@ -228,7 +228,7 @@ ion-list {
 } 
 //size nung laman(modify para humaba)
 .intro{
-  height: 1000vh;
+  height: 100%;
 }
 .intro h1{
   margin-left: 10px;
@@ -493,5 +493,37 @@ ion-list {
   flex-shrink: 0;
   color: black;
 }
-
+.home-next{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-next ion-button{
+  --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+  color:black;
+  --border-radius: 30px;
+  --border-style: solid;
+  --border-color: #aea2a1;
+  --border-width: 1px;
+  height: 5vh;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 12px;
+  font-size: 1.5vh;
+}
+.home-next ion-button:nth-child(2){
+  width: 150px;
+}
+.click-here{
+  --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+  color:black;
+  --border-radius: 30px;
+  --border-style: solid;
+  --border-color: #aea2a1;
+  --border-width: 1px;
+  font-size: 1.5vh;
+  width: 100px;
+  height: 4vh;
+  margin-right: 12px;
+}
 
