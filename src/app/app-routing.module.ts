@@ -42,6 +42,22 @@ const routes: Routes = [
     path: 'languages',
     loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
+  {
+    path: 'css',
+    loadChildren: () => import('./css/css.module').then( m => m.CssPageModule)
+  },
+  {
+    path: 'css',
+    loadChildren: () => import('./css/css.module').then( m => m.CssPageModule)
+  },
+  {
+    path: 'css',
+    loadChildren: () => import('./css/css.module').then( m => m.CssPageModule)
+  },
+  {
+    path: 'css-intro',
+    loadChildren: () => import('./css-intro/css-intro.module').then( m => m.CssIntroPageModule)
+  },
 
 
 ];
