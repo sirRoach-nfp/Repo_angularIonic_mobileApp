@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-htmlbasic',
@@ -20,6 +22,11 @@ export class HtmlbasicPage {
 
   toggleSubtopics() {
     this.showSubtopics = !this.showSubtopics;
+  }
+  constructor(private menu: MenuController) {}
+
+  closeMenu() {
+      this.menu.close();
   }
 
 }

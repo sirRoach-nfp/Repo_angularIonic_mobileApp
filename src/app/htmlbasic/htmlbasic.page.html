@@ -1,43 +1,90 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
   <ion-header>
     <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content class="menu-tool"> <!-- Menu Panel -->
-    <ion-list>
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
 
-      <ion-item button [routerLink]="['/html']">
+      <ion-item button routerLink="/home" class="menu-item">
         <ion-icon slot="start" name="home-outline"></ion-icon>
         <ion-label>Home</ion-label>
       </ion-item>
 
-      <ion-item button routerLink="/learn">
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
         <ion-icon slot="start" name="book-outline"></ion-icon>
         <ion-label>Learn</ion-label>
       </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
 
-      <ion-item button routerLink="/challenges">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
         <ion-icon slot="start" name="trophy-outline"></ion-icon>
         <ion-label>Challenges</ion-label>
       </ion-item>
 
-      <ion-item button routerLink="/tutorials">
+      <ion-item button routerLink="/tutorials" class="menu-item">
         <ion-icon slot="start" name="school-outline"></ion-icon>
         <ion-label>Tutorials</ion-label>
       </ion-item>
 
     </ion-list>
   </ion-content>
+
 </ion-menu>
 
 <ion-header [translucent]="true" id="head">
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -53,17 +100,31 @@
 
 <!-- Popup Message -->
 <ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
-  <ion-content>
-    <ng-template>
-    <div class="popup-content">
-      <h3>Hello, Rhonalyn Ortiz!</h3>
-      <p>ortizrhonalynmail.com</p>
-      <ion-button (click)="closePopup()">Close</ion-button>
-    </div>
-  </ng-template>
-  </ion-content>
-</ion-modal>
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
 
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
 
 <ion-content>
 <div class="option">
@@ -75,6 +136,11 @@
   <a href="#C++">C++</a>
   <a href="#SQL">SQL</a>
 </div>
+
+
+
+
+
 
 <ion-content padding class="intro">
   <h1>HTML  BASIC EXAMPLES</h1>
@@ -114,7 +180,7 @@
     <p>My first paragraph.</p>
   </div>
   <hr class="custom-hr2">
-  <h1>The &lt;!DOCTYPE&gt; Declaration</h1>
+  <h1 class="doctype">The &lt;!DOCTYPE&gt; Declaration</h1>
   <ion-item lines="none" class="icon-text">
     <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
     <p class="sixthbullet">The <span class="bulletred">&lt;!DOCTYPE html&gt;</span>  declaration represents the document type, and helps browsers to display web pages correctly.</p>
@@ -162,6 +228,8 @@
     <p>&lt;/body&gt;</p>
     <p>&lt;/html&gt;</p>
   </div>
+  <br>
+  <br>
   <h1>OUTPUT:</h1>
   <div class="output3">
     <p>This is heading 1</p>
@@ -184,6 +252,104 @@
     <p>&lt;body&gt;</p>
     <br>
     <p>&lt;p&gt;<span>This is a paragraph.</span>&lt;/p&gt;</p>
+    <p>&lt;p&gt;<span>This is another paragraph.</span>&lt;p&gt;</p>
+    <br>
+    <p>&lt;body&gt;</p>
+    <p>&lt;html&gt;</p>
   </div>
+  <br><br>
+  <h1>OUTPUT:</h1>
+  <div class="output4">
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+  </div>
+
+  <hr class="custom-hr2" style="margin-top: 50px;">
+  <h1>HTML Links</h1>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>HTML links are defined with the <span class="bulletred">&lt;a&gt;</span> tag:</p>
+  </ion-item> 
+  <h1>EXAMPLE</h1>
+  <div class="example5">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>HTML Links</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>HTML links are defined with the a tag:</span>&lt;/p&gt;</p>
+    <p>&lt;a href=<span class="bulletblue">"https://www.youtube.com"</span>&gt;<span>This is a link</span>&lt;/a&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+  <br><br>
+  <h1>OUTPUT:</h1>
+  <div class="output5">
+    <p>HTML Links</p>
+    <p>HTML links are defined with the a tag:</p>
+    <p><u class="bulletblue">This is a link</u></p>
+  </div>
+  <br><br>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>The link's destination is specified in the <span class="bulletred">href</span> attribute. </p>
+  </ion-item>    
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>Attributes are used to provide additional information about HTML elements.</p>
+  </ion-item>    
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>You will learn more about attributes in a later chapter.</p>
+  </ion-item>    
+  <hr class="custom-hr2">
+  <h1>HTML Images</h1>
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>HTML images are defined with the <span class="bulletred">&lt;img&gt;</span> tag.</p>
+  </ion-item>    
+  <ion-item lines="none" class="icon-text">
+    <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+    <p>The source file (<span class="bulletred">src</span>), alternative text (<span class="bulletred">alt</span>), <span class="bulletred">width</span>, and <span class="bulletred">height</span> are provided as attributes:</p>
+  </ion-item>
+  <h1>EXAMPLE</h1>
+  <div class="example5">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>HTML Images</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>HTML images are defined with the img tag:</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;img src=<span class="bulletblue">"codejpg"</span> alt=<span class="bulletblue">"codecom"</span> width=<span class="bulletblue">"104"</span> height=<span class="bulletblue">"142"</span>&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+  <br><br>
+  <div class="output6">
+    <h2>HTML Images</h2>
+    <p>HTML images are defined with the img tag:</p>
+    <img src="../../assets/img/html_image.jpg">
+  </div>
+  <br><br>
+  <hr class="custom-hr2">
+  <h1>How to View HTML Source</h1>
+  <p>Have you ever seen a Web page and wondered "Hey! How did they do that?"</p>
+  <br><br>
+  <ion-item lines="none" class="icon-text-container">
+    <ion-icon name="radio-button-on-outline"></ion-icon>
+    <div class="text-content">
+      <p class="first-text">View HTML Source Code:</p>
+      <div class="second-icon-text-container">
+        <ion-icon name="return-down-forward-outline"></ion-icon>
+        <p class="second-text"> Click CTRL + U in an HTML page, or right-click on the page and select "View Page Source". This will open a new tab containing the HTML source code of the page.</p>
+      </div>
+    </div>
+  </ion-item>
+  
+    
+  
 </ion-content>
 </ion-content>
