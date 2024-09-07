@@ -144,28 +144,28 @@
 <ion-content>
 
   <div class="css-main-container">
-    <h1>CSS INTRODUCTION</h1>
+    <h1 class="FadeInUp">CSS INTRODUCTION</h1>
     <hr style="display: flex; justify-content: center; width: 100%;  border: 1px solid black; background-color: black;">
 
-    <p>CSS is the language we use to style a Web page.</p>
+    <p class="FadeInUp">CSS is the language we use to style a Web page.</p>
     <hr>
     
-    <ion-item lines="none">
+    <ion-item lines="none"  class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
       <p>CSS stands for Cascading Style Sheets.</p>
     </ion-item>
 
-    <ion-item lines="none">
+    <ion-item lines="none"  class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
       <p>CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</p>
     </ion-item>
 
-    <ion-item lines="none">
+    <ion-item lines="none"  class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
       <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
     </ion-item>
 
-    <ion-item lines="none">
+    <ion-item lines="none" class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
       <p>External stylesheets are stored in CSS files.</p>
     </ion-item>
@@ -175,47 +175,104 @@
   </div>
 
   <div class="css-main-container css-second-container">
-    <h2>Why Use CSS?</h2>
-    <p>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+    <h2 class="FadeInUp">Why Use CSS?</h2>
+    <p class="FadeInUp">CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
 
-    <h2>EXAMPLE: </h2>
-    <ion-card>
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <ion-card  class="FadeInUp">
 
       &lt;!DOCTYPE html&gt;<br>
       &lt;html&gt;<br>
       &lt;head&gt;<br>
       &lt;style&gt;<br>
       body {{ '{' }} <br>
-      &nbsp;&nbsp;&nbsp;background-color: lightblue;<br>
+      &nbsp;&nbsp;&nbsp;background-color: <a>lightblue</a>;<br>
       {{ '}' }} <br>
       <br>
       h1 {{ '{' }} <br>
-      &nbsp;&nbsp;&nbsp;color: white; <br>
-      &nbsp;&nbsp;&nbsp;text-align: center; <br>
+      &nbsp;&nbsp;&nbsp;color: <a>white</a>; <br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>; <br> 
       {{ '}' }} <br>
       <br>
       p {{ '{' }} <br>
-      &nbsp;&nbsp;&nbsp;font-family: verdana; <br>
-      &nbsp;&nbsp;&nbsp;font-size: 20px; <br>
+      &nbsp;&nbsp;&nbsp;font-family: <a>verdana</a>; <br>
+      &nbsp;&nbsp;&nbsp;font-size: <a>20px</a>; <br>
       {{ '}' }}
       <br>
       &lt;/head&gt;<br>
       &lt;/head&gt;<br>
       &lt;body&gt;<br>
       <br>
-      &lt;h1&gt;My First CSS Example&lt;/h1&gt;<br>
-      &lt;p&gt;This is paragraph.&lt;/p&gt;<br>
+      &lt;h1&gt;<span>My First CSS Example</span>&lt;/h1&gt;<br>
+      &lt;p&gt;<span>This is paragraph.</span>&lt;/p&gt;<br>
       <br>
       &lt;/body&gt;<br>
       &lt;/html&gt;<br>
     
     </ion-card>
 
-    
-
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="background-color: #ADDBE6;  padding-top: 100px; padding-bottom: 100px; padding-left: 0; padding-right: 0; " >
+      <h1 style="text-align: center; color: black;">CSS INTRODUCTION</h1>
+      <p style="color: black;">This is paragraph.</p>
+    </ion-card>
+    <br>
+    <hr>
   </div>
 
+
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">CSS Solved a Big Problem</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">HTML was NEVER intended to contain tags for formatting a web page!</p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">HTML was created to describe the content of a web page, like:
+        <br>
+        &lt;h1&gt;This is a heading&lt;/h1&gt;
+        <br>
+        &lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+    </ion-item>
+  
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. 
+        Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.</p>
+    </ion-item>
+  
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">CSS removed the style formatting from the HTML page!</p>
+    </ion-item>
+
+    <ion-card class="desc-comment" class="FadeInUp">
+      <p>You will learn much more about CSS selectors and CSS properties in the next chapters!</p>
+    </ion-card>
+  
+    <hr>
+  </div>
+
+  <ion-item lines="none"   class="FadeInUp">
+    <ion-button class="test-exercise" shape="round" slot="end" button>click-here</ion-button>
+    <h3>Test yourself with some exercises?</h3>
+  </ion-item>
+
+  <ion-item lines="none" class="back-next FadeInUp">
+    <ion-button shape="round" slot="start">BACK</ion-button>
+    <br><br><br><br>
+    <br>
+    <ion-button shape="round" slot="end">NEXT CHAPTER</ion-button>
+  </ion-item>
+
+
 </ion-content>
+
 
 
 

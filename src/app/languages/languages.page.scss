@@ -148,13 +148,19 @@
     }
   }
   
-  #content{
-    --background: url(../../assets/img/learn-logo.png) 0 0/100% 100% repeat;
-    height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-y: scroll;
+  .scrollable-background {
+    background-image: url('../../assets/img/scroll-bg.png');
+    background-size: contain;
+    background-repeat: repeat-y; /* Repeats the background vertically */
+    background-position: center;
+    width: 100%;
+    min-height: 100vh; /* Ensures the background covers at least the full viewport height */
   }
+  
+  .content {
+    padding: 20px;
+  }
+  
   
   #title-code{
       text-align: center;
@@ -182,7 +188,7 @@
       max-width: fit-content;
       margin: 10px;
       padding: 60px;
-      margin-top: 50px;
+      margin-top: 260px;
   }
   
   .learn-html h1{

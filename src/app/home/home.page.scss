@@ -101,7 +101,7 @@
 
 //Main content
 #content{
-  --background: url(../../assets/img/bg.jpg) 0 0/100% 100% no-repeat;
+  --background: url('../../assets/img/bg-home.png') 0 0/100% 100% no-repeat;
   overflow-y: hidden;
   height: 1000px;
 
@@ -110,17 +110,22 @@
 .tag-container{//Tagline
   text-align: center;
   height: 300px;
+  margin: 50px;
   margin-bottom: 100px;
   border: 1px solid rgb(128, 126, 126);
   border-radius: 10px; 
   background-color: #fcfafa;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+
 }
 
 .tag-container img{
   display: flex;
   justify-content: left;
   margin: 10px;
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
 
 }
 
