@@ -1,0 +1,23 @@
+<div class="lessonRendererWrapper">
+
+  <div class="header">
+    <h1>{{topic}}</h1>
+    <span>{{topicDesc}}</span>
+  </div>
+
+  <div *ngFor="let part of formattedContent; let i = index">
+    <ng-container *ngIf="part.startsWith('<img') || part.startsWith('<div') || part.startsWith('<h2'); else textPart">
+      <div class="image-container" [innerHTML]="part"></div>
+    </ng-container>
+    <ng-template #textPart>
+      <div class="keypointWrapper" *ngIf="part.trim()">
+        <div class="imageWrapper">
+          <img src="" alt="" class="placeholderImage">
+        </div>  
+        <p style="margin: 0;">{{ part.trim() }}</p>
+      </div>
+    </ng-template>
+  </div>
+
+
+</div>

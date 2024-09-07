@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  openaiApiKey:'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'
 };
 
 /*
@@ -14,3 +15,5 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+
+

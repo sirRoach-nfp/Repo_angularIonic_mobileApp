@@ -42,6 +42,34 @@ const routes: Routes = [
     path: 'languages',
     loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
+  {
+    path: 'page-test',
+    loadChildren: () => import('./page-test/page-test.module').then( m => m.PageTestPageModule)
+  },
+  {
+    path: 'test-topic-selector',
+    loadChildren: () => import('./test-topic-selector/test-topic-selector.module').then( m => m.TestTopicSelectorPageModule)
+  },
+  {
+    path: 'exercise-page',
+    loadChildren: () => import('./exercise-page/exercise-page.module').then( m => m.ExercisePagePageModule)
+  },
+  {
+    path: 'exercise-selector',
+    loadChildren: () => import('./exercise-selector/exercise-selector.module').then( m => m.ExerciseSelectorPageModule)
+  },
+  {
+    path: 'htmldiffpage',
+    loadChildren: () => import('./ChallengeDifPage/htmldiffpage/htmldiffpage.module').then( m => m.HTMLdiffpagePageModule)
+  },
+  {
+    path: 'cssdiffpage',
+    loadChildren: () => import('./ChallengeDifPage/cssdiffpage/cssdiffpage.module').then( m => m.CSSdiffpagePageModule)
+  },
+  {
+    path: 'review-page',
+    loadChildren: () => import('./review-page/review-page.module').then( m => m.ReviewPagePageModule)
+  },
 
 
 ];

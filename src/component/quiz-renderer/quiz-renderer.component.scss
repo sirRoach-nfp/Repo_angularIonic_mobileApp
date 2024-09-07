@@ -1,0 +1,215 @@
+.quizWrapper{
+    width: 100%;
+    height: fit-content;
+    //border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+    .headerDiv{
+        width: 100%;
+        height: fit-content;
+        //border: 1px solid red;
+        margin-bottom: 25px;
+        color: black;
+        margin-top: 20px;
+
+        h1{
+            margin: 0;
+            margin-left: 15px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        hr{
+            width: 95%;
+            height: 2px;
+            background-color: black;
+        }
+    }
+
+    .quizItemContainer{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .navigation{
+            width: 95%;
+            //border: 1px solid red;
+            margin-top: 30px;
+            display: flex;
+
+
+            .navButtons{
+                flex: 1;
+            }
+        }
+    }
+    .question{
+        width: 92%;
+        height: fit-content;
+        border: 1px solid black;
+        color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        h2{
+            margin-bottom: 30px;
+        }
+
+        .optItems{
+            border: 1px solid black;
+            padding: 2px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+            label{
+                font-size: 18px;
+            }
+
+            input{
+                margin-left: 5px;
+            }
+        }
+    
+    }
+}
+
+
+
+.scoreBoardDiv{
+    margin-top: 30px;
+    width: 100%;
+    //border: 1px solid red;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    .answerSumDiv{
+        width: 95%;
+        border: 1px solid black;
+        color: black;
+        border-radius: 10px;
+        margin-top: 50px;
+        background-color: #fee8db;
+
+        h3{
+            margin-left: 20px;
+        }
+
+        li{
+            border: 1p solid black;
+            margin-bottom: 10px;
+        }
+    }
+
+
+    .scoreBoardCard{
+        width: 95%;
+        border: 1px solid black;
+        border-radius: 20px;
+        height: fit-content;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .sbHeader{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            //border: 1px solid yellow;
+            color: black;
+
+            hr{
+                height: 2px ;
+                background-color: black;
+                width: 80%;
+            }
+        }
+
+        .sbMiddle{
+            width: 100%;
+            height: fit-content;
+           // border: 1px solid green;
+            display: flex;
+            flex-direction: row;
+
+            .scoreCard{
+                flex: 1;
+                height: fit-content;
+                //border: 1px solid green;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                span{
+                    color: black;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .scoreC{
+                    font-weight: 600;
+                    color: rgba(0, 128, 0, 0.509);
+                    font-size: 35px;
+                    margin-top: 20px;
+                }
+
+                .scoreW{
+                    font-weight: 600;
+                    color: rgba(128, 0, 0, 0.509);
+                    font-size: 35px;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .sbBottom{
+            width: 100%;
+            height: fit-content;
+           // border: 1px solid black;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            //margin-top: 20px;
+            
+
+            hr{
+                height: 1px ;
+                background-color: black;
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            .buttonWrapper{
+                width: 100;
+                display: flex;
+                .retBut{
+                    flex: 1;
+                }
+                
+            }
+
+
+
+
+        }
+    }
+}

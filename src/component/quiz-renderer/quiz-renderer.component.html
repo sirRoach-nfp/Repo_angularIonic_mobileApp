@@ -1,0 +1,80 @@
+<div *ngIf="!quizCompleted" class="quizWrapper">
+
+  <div class="headerDiv">
+    <h1>HTML Exercise (Introduction)</h1>
+    <hr>
+  </div>
+  <div *ngIf="quizData.length > 0" class="quizItemContainer">
+    <div class="question">
+      <h2>{{ quizData[currentQuestionIndex].question }}</h2>
+      <div class="options">
+        <div *ngFor="let option of quizData[currentQuestionIndex].options | keyvalue" class="optItems">
+          <label>
+            <input
+              type="radio"
+              [name]="'option' + currentQuestionIndex"
+              [value]="option.key"
+              (change)="selectAnswer(option.key)"
+              [checked]="userAnswers[currentQuestionIndex] === option.key"
+            />
+            {{ option.value }}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <ion-button class="navButtons" (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Prev</ion-button>
+      <ion-button class="navButtons" (click)="nextQuestion()" [disabled]="isLastQuestion()">Next</ion-button>
+      <ion-button class="navButtons"  *ngIf="isLastQuestion()"  (click)="submitQuiz()">Submit</ion-button>
+
+    </div>
+  </div>
+</div>
+
+<div *ngIf="quizCompleted" class="scoreBoardDiv">
+
+
+  <div class="scoreBoardCard">
+    <div class="sbHeader">
+      <h3>Great Job, Username</h3>
+      <hr>
+    </div>
+
+    <div class="sbMiddle">
+      <div class="scoreCard">
+        <span>Correct Answers :</span>
+        <span class="scoreC">{{score}}</span>
+      </div>
+
+      <div class="scoreCard">
+        <span>Wrong Answers</span>
+        <span class="scoreW">{{ wrongAnswers.length }}</span>
+      </div>
+    </div>
+
+    <div class="sbBottom">
+        <hr>
+
+        <div class="buttonWrapper">
+          <ion-button class="retBut">Return to Exercise Menu</ion-button>
+          <ion-button class="retBut">test</ion-button>
+        </div>
+
+     
+        
+    </div>
+  </div>
+
+  <div *ngIf="wrongAnswers.length > 0" class="answerSumDiv">
+    <h3>Incorrect Answers:</h3>
+    <ul>
+      <li *ngFor="let wrong of wrongAnswers">
+        <strong>Question:</strong> {{ wrong.question }} <br>
+        <strong>Your answer:</strong> {{ wrong.selectedAnswer }} <br>
+        <strong>Correct answer:</strong> {{ wrong.correctAnswer }}
+      </li>
+    </ul>
+  </div>
+  <p>Your score: {{ score }}/{{ quizData.length }}</p>
+</div>

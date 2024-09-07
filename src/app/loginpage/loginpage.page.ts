@@ -32,6 +32,7 @@ export class LoginpagePage implements OnInit {
         //console.log("Username response: " + response.username)
 
         const username = response.username;
+        localStorage.setItem("username",username);
         this.store.dispatch(setUsername({username}))
       },
       error=>{

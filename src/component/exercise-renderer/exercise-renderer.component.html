@@ -1,0 +1,29 @@
+<div *ngIf="exercises.length > 0" class="exerciseContainer">
+  <div class="headerDiv">
+    <h2>{{lang}} Exercise  ||  {{difficulty}}</h2>
+    <hr>
+  </div>
+  <div class="problem">
+    <h2>{{ exercises[currentExerciseIndex].title }}</h2>
+    <p>{{ exercises[currentExerciseIndex].description }}</p>
+    <ul>
+      <li *ngFor="let requirement of exercises[currentExerciseIndex].requirements">
+        {{ requirement }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="answer" [@answerAnimation]="showAnswer ? 'visible' : 'hidden'">
+    <!-- Wrap code content with a <pre> tag and dynamically apply syntax highlighting -->
+    <pre [innerHTML]="highlightCode(exercises[currentExerciseIndex]?.hint)"></pre>
+  </div>
+
+
+  <div class="navigation">
+
+    <ion-button (click)="prevExercise()" [disabled]="currentExerciseIndex === 0" class="navButtons">Prev</ion-button>
+    <ion-button (click)="toggleAnswer()" class="navButtonsShow">Show Answer</ion-button>
+    <ion-button (click)="nextExercise()" [disabled]="currentExerciseIndex === exercises.length - 1" class="navButtons">Next</ion-button>
+
+  </div>
+</div>

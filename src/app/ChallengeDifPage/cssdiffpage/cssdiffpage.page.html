@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>CSSdiffpage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="options">
+    <div class="optHeader">
+      <div class="iconDiv">
+          <img src="" alt="" class="iconImg">
+      </div>
+
+      <h2 class="header">Levels of Difficulty</h2>
+    </div>
+
+    <div class="optionsWrapper">
+      <div class="option">
+        <ion-button class="buttons" (click)="navigateToExercise('Intro','CSS')">Intro</ion-button>
+      </div>
+
+      <div class="option">
+        <ion-button class="buttons">Basic</ion-button>
+      </div>
+
+      <div class="option">
+        <ion-button class="buttons">Intermediate</ion-button>
+      </div>
+
+      <div class="option">
+        <ion-button class="buttons">Above Intermediate</ion-button>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

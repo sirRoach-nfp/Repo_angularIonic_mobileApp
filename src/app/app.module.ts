@@ -12,13 +12,18 @@ import { userReducer } from './store/user/user.reducer';
 import { StoreDevtools } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { LessonRendererComponent } from 'src/component/lesson-renderer/lesson-renderer.component';
+import { SharedModule } from 'src/component/shared-modules';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ExerciseServiceService } from './GPTservice/exercise-service.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [FormsModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule, StoreModule.forRoot({user:userReducer}), StoreDevtoolsModule.instrument({
     maxAge: 30,
     logOnly: environment.production
-  })],
+  }),SharedModule,BrowserAnimationsModule],
+
 
 
 
