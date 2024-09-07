@@ -40,7 +40,20 @@
 
 .menu-item{
   --ion-item-background: transparent;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
 }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .menu-tool{
   background: transparent;
@@ -280,6 +293,7 @@ span{
   padding: 0 10px;
   font-size: 5px;
   border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
 .desc-comment p{

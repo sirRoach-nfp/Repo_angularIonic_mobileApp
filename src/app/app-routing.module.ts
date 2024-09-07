@@ -58,6 +58,10 @@ const routes: Routes = [
     path: 'css-intro',
     loadChildren: () => import('./css-intro/css-intro.module').then( m => m.CssIntroPageModule)
   },
+  {
+    path: 'css-basic',
+    loadChildren: () => import('./css-basic/css-basic.module').then( m => m.CssBasicPageModule)
+  },
 
 
 ];

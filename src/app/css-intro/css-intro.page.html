@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-css-intro" contentId="main-content">
   <ion-header>
     <ion-toolbar color="primary">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
@@ -21,45 +21,245 @@
         <ion-label>Learn</ion-label>
       </ion-item>
         <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeHtml()" (click)="toggleArrowHtml()">
+              <ion-icon [name]="arrowIconHtml" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>HTML</ion-label>
+              
+            </ion-item>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml"  class="menu-tool">
+              
+              <ion-item button routerLink="/htmlintro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/htmlbasic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Basic</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Element</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeCss()" (click)="toggleArrowCss()">
+              <ion-icon [name]="arrowIconCss" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>CSS</ion-label>
+              
+            </ion-item>
 
-          <ion-item button routerLink="/subtopic" class="menu-item">
-              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Topics</ion-label>
-          </ion-item>
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesCss"  class="menu-tool">
+              
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Basic</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Element</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeJs()" (click)="toggleArrowJs()">
+              <ion-icon [name]="arrowIconJs" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>JavaScript</ion-label>
+              
+            </ion-item>
+
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesJs"  class="menu-tool">
+              
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Basic</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Element</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypePy()" (click)="toggleArrowPy()">
+              <ion-icon [name]="arrowIconPy" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Python</ion-label>
+              
+            </ion-item>
+
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesPy"  class="menu-tool">
+              
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Basic</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Element</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+
+          
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeSQL()" (click)="toggleArrowSQL()">
+              <ion-icon [name]="arrowIconSQL" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>SQL</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesSQL" class="menu-tool">
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+          
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypePHP()" (click)="toggleArrowPHP()">
+              <ion-icon [name]="arrowIconPHP" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>PHP</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesPHP" class="menu-tool">
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+          
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeJava()" (click)="toggleArrowJava()">
+              <ion-icon [name]="arrowIconJava" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Java</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesJava" class="menu-tool">
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+          
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeCpp()" (click)="toggleArrowCpp()">
+              <ion-icon [name]="arrowIconCpp" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>C++</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesCpp" class="menu-tool">
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+              </ion-item>
+              <ion-item button routerLink="/subtopic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+          
 
         </ion-list>
       <!--Learn menu panel -->
@@ -84,7 +284,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+      <ion-menu-button menu="main-menu-css-intro"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -251,7 +451,7 @@
       <p class="paragraph-spaces">CSS removed the style formatting from the HTML page!</p>
     </ion-item>
 
-    <ion-card class="desc-comment" class="FadeInUp">
+    <ion-card class="desc-comment FadeInUp" >
       <p>You will learn much more about CSS selectors and CSS properties in the next chapters!</p>
     </ion-card>
   
