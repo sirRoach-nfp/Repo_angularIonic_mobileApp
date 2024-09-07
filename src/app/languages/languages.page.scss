@@ -16,9 +16,7 @@
   #container p {
     font-size: 16px;
     line-height: 22px;
-  
     color: #8c8c8c;
-  
     margin: 0;
   }
   
@@ -95,10 +93,9 @@
     text-decoration: none;
     color: rgb(17, 17, 17);
     background-color: #ffe6d5;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border: 1px transparent;
     font-size: 13px;
-  
   }
   
   // Popup Message
@@ -130,6 +127,7 @@
   }
   
   .popup-content p h3{
+    font-size: 19px;
     color: black;
   }
   
@@ -172,6 +170,7 @@
   #title-code p{
       color: #0cc0df;
       font-size: 22px;
+
   }
   
   .learn-html{

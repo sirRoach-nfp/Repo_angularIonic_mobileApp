@@ -8,6 +8,13 @@
   <ion-card class="slanted-card">
     <!-- First Section: Before Slant -->
     <ion-card-content>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input [(ngModel)] = "user.email" clearInput>
+            <ion-icon slot="start" name="mail-outline"></ion-icon>
+        </ion-input>
+      </ion-item>
       
       <ion-item lines="full">
         <ion-label position="floating">Username:</ion-label>
