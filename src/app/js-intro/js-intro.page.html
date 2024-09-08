@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu-css" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-css-element" contentId="main-content">
   <ion-header>
     <ion-toolbar style="--background: #f27f60; color: black;">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
@@ -272,6 +272,7 @@
             </ion-list>
           </div>
           
+          
 
         </ion-list>
       <!--Learn menu panel -->
@@ -296,7 +297,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu-css"></ion-menu-button>
+      <ion-menu-button menu="main-menu-css-element"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -339,9 +340,8 @@
 </ion-modal>
 
 
-<!-- WAG BUBURAHIN -->
-<!-- Background settings -->
-<div class="option">
+ <!-- Overflow-x Language Options -->
+ <div class="option">
   <a [routerLink]="['/html']" class="active">HTML</a>
   <a routerLink="/css" class="active">CSS</a>
   <a routerLink="/js" class="active">JS</a>
@@ -352,22 +352,132 @@
   <a routerLink="/c++" class="active">C++</a>
 </div>
 
-<ion-content class="background">
-  <div class="background-wrapper">
-    <div class="background"></div>
+<ion-content>
+
+  <div class="css-main-container">
+    <h1 class="FadeInUp">JavaScript Introduction</h1>
+    <hr style="display: flex; justify-content: center; width: 100%;  border-top: 1px solid black; background-color: black;">
+
+    <p class="FadeInUp">This page contains some examples of what JavaScript can do.</p>
+    <hr>
+
+    <h1 class="FadeInUp" style="font-size: 26px;">External CSS</h1>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">One of many JavaScript HTML methods is <span style="color: #ff5757;">getElementById().</span></p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":</p>
+    </ion-item>
+
+
   </div>
-  <!--SIMULA NG HTML-->
-  <h1 class="html">CSS</h1>
-  <div class="center-container">
-    <div class="htmlfront">
-      <p>A language for styling webpages.</p>
-      <p>To set the layout of your web page with beautiful colors, fonts, and much more.</p>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of an HTML page:</p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span>JavaScript can change HTML content.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;button type="<a>button</a>" onclick='<a>document.getElementById("demo").innerHTML = "Hello JavaScript!"</a>'&gt;Click Me!&lt;/button&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;" >
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 15px; text-align: left;"><b>What Can JavaScript Do?</b></p>
+      <p id="demo" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">JavaScript can change HTML content.</p>
+
+      <ion-button expand="full" (click)="changeContent()">Click Me!</ion-button>
+    </ion-card>
+    <br>
+
+  </div>
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>JavaScript accepts both double and single quotes:</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Can Change HTML Attribute Values</h1>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">In this example JavaScript changes the value of the <span style="color: #ff5757;">src</span> (source) attribute of an <span style="color: #ff5757;">&lt;img&gt;</span> tag:</p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":</p>
+    </ion-item>
+
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span>JavaScript can change HTML attribute values.</span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span>In this case JavaScript changes the value of the src (source) attribute of an image.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;button type="<a>button</a>" onclick='<a>document.getElementById('myImage').src='pic_bulbon.gif'"</a>'&gt;Turn on the light&lt;/button&gt;<br>
+      <br>
+      &lt;img id="<a>myImage</a>" src="<a>pic_bulboff.gif</a>" style="<a>width:100px</a>" &gt;<br>
+      <br>
+      &lt;button type="<a>button</a>" onclick='<a>document.getElementById('myImage').src='pic_bulboff.gif'"</a>'&gt;Turn off the light&lt;/button&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;" >
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 15px; text-align: left;"><b>What Can JavaScript Do?</b></p>
+      <p id="demo" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">JavaScript can change HTML attribute values.</p>
+      <p id="demo" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+      <div style="display: flex; justify-content: center;">
+        <button style="width: 100px; height: 30px; border: 1px solid black;" onclick="document.getElementById('myImage').src='../../assets/img/bulb-on.png'">Turn on the light</button>
+
+        <img id="myImage" src="../../assets/img/bulb-off.png" style="width: 100px; height: 100px;">
+
+        <button style="width: 100px; height: 30px; border: 1px solid black;" onclick="document.getElementById('myImage').src='../../assets/img/bulb-off.png'">Turn off the light</button>
     </div>
+    </ion-card>
+    <br>
+
   </div>
-  <div class="htmlbutton">
-    <ion-button [routerLink]="['/css-intro']"><u>CSS Introduction</u></ion-button>
-    <ion-button [routerLink]="['/css-basic']"><u>CSS Basic</u></ion-button>
-    <ion-button [routerLink]="['/css-element']"><u>CSS Element</u></ion-button>
-    <ion-button [routerLink]="['/css-attributes']"><u>CSS Attributes</u></ion-button>
-  </div>
+
+
+
+
 </ion-content>

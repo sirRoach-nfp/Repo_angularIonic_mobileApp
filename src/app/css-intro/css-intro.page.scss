@@ -63,6 +63,11 @@
   margin-left: 20px;
 }
 
+#subTypes{
+  margin-left: 35px;
+}
+
+
 .about{
   margin-bottom: 250px;
 }
@@ -227,7 +232,7 @@ ion-list {
 }
 
 .css-main-container{
-    margin: 20px;
+  margin: 0 20px;
 
 }
 
@@ -243,22 +248,23 @@ hr{
 }
 
 p{
-    font-size: 18px;
+    font-size: 20px;
     color: #1b1b1b;
 
 }
 
 .custom-icon{
-    height: 35px;
-    width: 35px;
+    position: relative;
+    bottom: -5px;
     color: #ec8b70;
     margin-right: 10px;
     align-self: flex-start;
+
     
 }
 
 .css-second-container h2{
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
 
 }
@@ -285,6 +291,7 @@ span{
 
 .paragraph-spaces{
   margin-bottom: 0;
+  padding: 0;
 }
 
 .desc-comment{
@@ -322,7 +329,7 @@ span{
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1s forwards;
-  margin: 10px 0;
+  padding: 0;
 }
 
 .FadeInUp:nth-child(1) {

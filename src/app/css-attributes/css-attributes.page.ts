@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-css-basic',
-  templateUrl: './css-basic.page.html',
-  styleUrls: ['./css-basic.page.scss'],
+  selector: 'app-css-attributes',
+  templateUrl: './css-attributes.page.html',
+  styleUrls: ['./css-attributes.page.scss'],
 })
-export class CssBasicPage implements OnInit {
+export class CssAttributesPage implements OnInit {
+
 
   isPopupVisible = false;
   showSubtopics = false;

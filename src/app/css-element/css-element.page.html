@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu-css-basic" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-css-element" contentId="main-content">
   <ion-header>
     <ion-toolbar style="--background: #f27f60; color: black;">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
@@ -72,17 +72,17 @@
     
               <ion-item button routerLink="/css-basic" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Basic</ion-label>
+                  <ion-label>Syntax</ion-label>
               </ion-item>
     
               <ion-item button routerLink="/css-element" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Element</ion-label>
+                  <ion-label>Selectors</ion-label>
               </ion-item>
     
               <ion-item button routerLink="/css-attributes" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Attributes</ion-label>
+                  <ion-label>How to</ion-label>
               </ion-item>
             </ion-list>
           </div>
@@ -104,17 +104,17 @@
     
               <ion-item button routerLink="/js-basic" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Basic</ion-label>
+                  <ion-label>Where to</ion-label>
               </ion-item>
     
               <ion-item button routerLink="/js-element" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Element</ion-label>
+                  <ion-label>Output</ion-label>
               </ion-item>
     
               <ion-item button routerLink="/js-attributes" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Attributes</ion-label>
+                  <ion-label>Statements</ion-label>
               </ion-item>
             </ion-list>
           </div>
@@ -297,7 +297,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu-css-basic"></ion-menu-button>
+      <ion-menu-button menu="main-menu-css-element"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -352,47 +352,57 @@
   <a routerLink="/c++" class="active">C++</a>
 </div>
 
-
-
 <ion-content>
 
   <div class="css-main-container">
-    <h1 class="FadeInUp">CSS SYNTAX</h1>
+    <h1 class="FadeInUp">CSS SELECTORS</h1>
     <hr style="display: flex; justify-content: center; width: 100%;  border-top: 1px solid black; background-color: black;">
 
-    <p class="FadeInUp">A CSS rule consists of as selector and a declaration block.</p>
+    <p class="FadeInUp">A CSS selector selects HTML element(s) you want to style.</p>
     <hr>
-    <div class="img">
-      <img src="../../assets/img/CSS-syntax.png"> 
-    </div>
+
+    <p class="FadeInUp">A CSS selector selects HTML element(s) you want to style.</p>
+    <p class="FadeInUp" style="margin-bottom: 0;">We can divide CSS selectors into five categories:</p>
 
     <ion-item lines="none"  class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">The selector points to the HTML element you want to style.</p>
+      <div class="bullet-number">1</div>
+      <p class="paragraph-spaces"><b>Simple selectors</b> (select elements based on name, id, class).</p>
     </ion-item>
 
     <ion-item lines="none"  class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">The declaration block contains one or more declarations separated by semicolons.</p>
+      <div class="bullet-number">2</div>
+      <p class="paragraph-spaces"><b>Combinator selectors</b> (select elements based on a specific relationship between them).</p>
     </ion-item>
 
     <ion-item lines="none"  class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">Each declaration includes a CSS property name and a value, separated by a colon.</p>
+      <div class="bullet-number">3</div>
+      <p class="paragraph-spaces"><b>Pseudo-class selectors</b> (select elements based on a certain state).</p>
     </ion-item>
 
     <ion-item lines="none" class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">Multiple CSS declarations are separated i-with semicolons, and declaration blocks are surrounded by curly braces.</p>
+      <div class="bullet-number">4</div>
+      <p class="paragraph-spaces"><b>Pseudo-elements selectors</b> (select and style a part of an element).</p>
     </ion-item>
 
+    <ion-item lines="none" class="FadeInUp">
+      <div class="bullet-number">5</div>
+      <p class="paragraph-spaces"><b>Attribute selectors</b> (select elements based on an attribute or attribute value).</p>
+    </ion-item>
+
+    <p class="FadeInUp">This page will explain the most basic CSS selectors.</p>
     <hr>
 
   </div>
 
+
   <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">The CSS element Selector</h2>
+    <p class="FadeInUp">The element selector selects HTML elements based on the element name.</p>
+
   
     <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">Here, all &lt;p&gt; elements on the page will be center-aligned, with a red text color: </p>
     <ion-card  class="FadeInUp">
 
       &lt;!DOCTYPE html&gt;<br>
@@ -408,8 +418,9 @@
       &lt;/head&gt;<br>
       &lt;body&gt;<br>
       <br>
-      &lt;h1&gt;<span>Hello World!</span>&lt;/h1&gt;<br>
-      &lt;p&gt;<span>These paragraphs are styled with CSS.</span>&lt;/p&gt;<br>
+      &lt;p&gt;<span>Every paragraph will be affected by the style.</span>&lt;/p&gt;<br>
+      &lt;p id="para1"&gt;<span>Me too!</span>&lt;/p&gt;<br>
+      &lt;p&gt;<span>And me!</span>&lt;/p&gt;<br>
       <br>
       &lt;/body&gt;<br>
       &lt;/html&gt;<br>
@@ -418,50 +429,391 @@
 
     <br><br><br><br>
     <h2 class="FadeInUp">OUTPUT: </h2>
-    <ion-card class="FadeInUp" style="text-align: center; padding: 100px 0;" >
-      <p style="margin: 0; font-size: 21px; color: #ff3131; margin-bottom: 15px;" >Hello World!</p>
-      <p style="margin: 0; font-size: 21px; color: #ff3131;">These paragraphs are styled with CSS.</p>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 18px; color: #ff3131; margin-bottom: 15px;" >Every paragraph will be affected by the style.</p>
+      <p style="margin: 0; font-size: 18px; color: #ff3131; margin-bottom: 15px;">Me too!</p>
+      <p style="margin: 0; font-size: 18px; color: #ff3131; margin-bottom: 15px;">And me!</p>
     </ion-card>
     <br>
     <hr>
   </div>
 
-
   <div class="css-main-container" >
-    <h1 class="FadeInUp" style="font-size: 26px;">Example Explained:</h1>
+    <h1 class="FadeInUp" style="font-size: 26px;">The CSS id Selector</h1>
   
     <ion-item lines="none"  class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces"><span style="color: #f17177;">p</span> is a selection in CSS (it points to the HTML element you want to style: &lt;p&gt;).</p>
+      <p class="paragraph-spaces">The id selector uses the id attribute of an HTML element to select a specific element.</p>
     </ion-item>
   
     <ion-item lines="none"  class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces"><span style="color: #f17177;">color</span> is a property, and <span style="color: #f17177;">red</span> is the property value.</p>
+      <p class="paragraph-spaces">The id of an element is unique within a page, so the id selector is used to select one unique element!</p>
     </ion-item>
   
     <ion-item lines="none" class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces"><span style="color: #f17177;">text-align</span> is a property, and <span style="color: #f17177;">center </span>is the property value</p>
+      <p class="paragraph-spaces">To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p>
     </ion-item>
 
-    <ion-card class="desc-comment FadeInUp" >
-      <p>You will learn much more about CSS selectors and CSS properties in the next chapters!</p>
-    </ion-card>
-  
-    <hr>
   </div>
 
-  <ion-item lines="none"   class="FadeInUp">
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">The CSS rule below will be applied to the HTML element with id="para1": </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      #para1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;p <a>id="para1"</a>&gt;<span>Hello World!</span>&lt;/p&gt;<br>
+      &lt;p&gt;<span>This paragraph is not affected by the style.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 18px; color: #ff3131; margin-bottom: 15px;" >Hello World!</p>
+      <p style="margin: 0; font-size: 18px; margin-bottom: 15px; text-align: left;">This paragraph is not affected by the style.</p>
+    </ion-card>
+    <br>
+
+  </div> 
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: center; border: none;">
+    <p>Note: An id name cannot start with a number!</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">The CSS class Selector</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The class selector selects HTML elements with a specific class attribute.</p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">To select elements with a specific class, write a period (.) character, followed by the class name.</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">In this example all HTML elements with class="center" will be red and center-aligned: </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      .center {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1 <a>class="center"</a>&gt;<span>Red and center-aligned heading</span>&lt;/h1&gt;<br>
+      &lt;p <a>class="center"</a>&gt;<span>Red and center-aligned paragraph.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 32px; color: #ff3131; margin-bottom: 15px;" >Red and center-aligned heading</p>
+      <p style="margin: 0; font-size: 18px; color: #ff3131; margin-bottom: 15px;">Red and center-aligned paragraph.</p>
+    </ion-card>
+    <br>
+  </div>
+
+  <div class="css-main-container" >
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">You can also specify that only specific HTML elements should be affected by a class.</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">In this example only &lt;p&gt; elements with class="center" will be red and center-aligned: </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      p .center {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1 <a>class="center"</a>&gt;<span>Red and center-aligned heading</span>&lt;/h1&gt;<br>
+      &lt;p <a>class="center"</a>&gt;<span>Red and center-aligned paragraph.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 32px; margin-bottom: 15px; text-align: left;" >Red and center-aligned heading</p>
+      <p style="margin: 0; font-size: 18px; color: #ff3131;  margin-bottom: 15px;">Red and center-aligned paragraph.</p>
+    </ion-card>
+    <br>
+  </div>
+
+  <div class="css-main-container" >
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">HTML elements can also refer to more than one class.</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">In this example the <p> element will be styled according to class="center" and to class="large": </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      p .center {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      p .large {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1 <a>class="center"</a>&gt;<span>Red and center-aligned heading</span>&lt;/h1&gt;<br>
+      &lt;p <a>class="center"</a>&gt;<span>Red and center-aligned paragraph.</span>&lt;/p&gt;<br>
+      &lt;p <a>class="center large"</a>&gt;<span>This paragraph will be red, center-aligned, and in a large font-size.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 32px; margin-bottom: 15px; text-align: left;" >Red and center-aligned heading</p>
+      <p style="margin: 0; font-size: 18px; color: #ff3131;  margin-bottom: 15px;">Red and center-aligned paragraph.</p>
+      <p style="margin: 0; font-size: 40px; color: #ff3131;  margin-bottom: 15px;">This paragraph will be red, center-aligned, and in a large font-size.</p>
+    </ion-card>
+    <br>
+
+  </div>
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: center; border: none;">
+    <p>Note: A class name cannot start with a number!</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">The CSS class Selector</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The universal selector (*) selects all HTML elements on the page.</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">The CSS rule below will affect every HTML element on the page: </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      * {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>blue</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1&gt;<span>Hello World!</span>&lt;/h1&gt;<br>
+      &lt;p&gt;<span>Every element on the page will be affected by the style.</span>&lt;/p&gt;<br>
+      &lt;p <a>id="para1"</a>&gt;<span>Me too!</span>&lt;/p&gt;<br>
+      &lt;p&gt;<span>And me!</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 32px; color: #1777f1; margin-bottom: 15px;"><b>Hello World!</b></p>
+      <p style="margin: 0; font-size: 15px; color: #1777f1;  margin-bottom: 15px;">Every element on the page will be affected by the style.</p>
+      <p style="margin: 0; font-size: 15px; color: #1777f1;  margin-bottom: 15px;">Me too!</p>
+      <p style="margin: 0; font-size: 15px; color: #1777f1;  margin-bottom: 15px;">And me!</p>
+
+    </ion-card>
+    <br>
+  </div>
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">The CSS Grouping Selector</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The grouping selector selects all the HTML elements with the same style definitions.</p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp"> 
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Look at the following CSS code (the h1, h2, and p elements have the same style definitions):</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+    <ion-card>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      h2 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      p {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      {{ '}' }} <br>
+      <br>
+
+    </ion-card>
+
+    <br>
+  </div>
+
+  
+  <div class="css-main-container" >
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">It will be better to group the selectors, to minimize the code.</p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp"> 
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">To group selectors, separate each selector with a comma.</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">In this example we have grouped the selectors from the code above: </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      h1, h2, p {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1&gt;<span>Hello World!</span>&lt;/h1&gt;<br>
+      &lt;h2&gt;<span>Smaller Heading</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>This is a paragraph.</span>&lt;/p&gt;<br>
+ 
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 32px; color: #ff3131; margin-bottom: 15px;"><b>Hello World!</b></p>
+      <p style="margin: 0; font-size: 21px; color: #ff3131;  margin-bottom: 15px;">Smaller Heading</p>
+      <p style="margin: 0; font-size: 15px; color: #ff3131;  margin-bottom: 15px;">This is a paragraph.</p>
+
+    </ion-card>
+    <hr>
+    <br>
+  </div>
+
+    <ion-item lines="none"   class="FadeInUp">
     <ion-button class="test-exercise" shape="round" slot="end" routerLink="/tutorial" button>click-here</ion-button>
     <h3><b>Test yourself with some exercises?</b></h3>
   </ion-item>
 
   <ion-item lines="none" class="back-next FadeInUp">
-    <ion-button shape="round" slot="start" routerLink="/css-intro">BACK</ion-button>
+    <ion-button shape="round" slot="start" routerLink="/css-basic">BACK</ion-button>
     <br><br><br><br>
     <br>
-    <ion-button shape="round" slot="end" routerLink="/css-element">NEXT CHAPTER</ion-button>
+    <ion-button shape="round" slot="end" routerLink="/css-attributes">NEXT CHAPTER</ion-button>
   </ion-item>
+  
+
+
+
   
 </ion-content>
