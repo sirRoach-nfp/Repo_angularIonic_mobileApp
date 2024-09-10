@@ -1,17 +1,16 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-css-intro',
-  templateUrl: './css-intro.page.html',
-  styleUrls: ['./css-intro.page.scss'],
+  selector: 'app-js-intro',
+  templateUrl: './js-intro.page.html',
+  styleUrls: ['./js-intro.page.scss'],
 })
-export class CssIntroPage implements OnInit, AfterViewInit {
-
+export class JsIntroPage implements OnInit {
 
   isPopupVisible = false;
   showSubtopics = false;
-  
+
   showSubTypesHtml = false;
   arrowIconHtml: string = 'caret-forward-outline';
 
@@ -129,7 +128,10 @@ export class CssIntroPage implements OnInit, AfterViewInit {
     this.showSubtopics = !this.showSubtopics;
   }
 
-  constructor(private menu: MenuController) {}
+  
+  constructor(private menu: MenuController) {
+
+  }
 
   closeMenu() {
       this.menu.close();
@@ -148,9 +150,7 @@ export class CssIntroPage implements OnInit, AfterViewInit {
   }
 
 
-
   ngAfterViewInit() {
-    // Ensure the element is available after the view has been initialized
     this.addEventListeners();
   }
 
@@ -179,10 +179,4 @@ export class CssIntroPage implements OnInit, AfterViewInit {
       console.error(`Element with id "${elementId}" not found.`);
     }
   }
-
-
 }
-
-
-
-

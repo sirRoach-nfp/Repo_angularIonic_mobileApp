@@ -1,0 +1,771 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-css-attributes" contentId="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: #f27f60; color: black;">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeHtml()" (click)="toggleArrowHtml()">
+              <ion-icon [name]="arrowIconHtml" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>HTML</ion-label>
+              
+            </ion-item>
+
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml"  class="menu-tool">
+              
+              <ion-item button routerLink="/htmlintro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/htmlbasic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Basic</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/htmlelement" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Element</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/htmlattribute" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Attributes</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeCss()" (click)="toggleArrowCss()">
+              <ion-icon [name]="arrowIconCss" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>CSS</ion-label>
+              
+            </ion-item>
+
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesCss"  class="menu-tool">
+              
+              <ion-item button routerLink="/css-intro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/css-basic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Syntax</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/css-element" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Selectors</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/css-attributes" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>How to</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeJs()" (click)="toggleArrowJs()">
+              <ion-icon [name]="arrowIconJs" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>JavaScript</ion-label>
+              
+            </ion-item>
+
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesJs"  class="menu-tool">
+              
+              <ion-item button routerLink="/js-intro" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Introduction</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/js-basic" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Where to</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/js-element" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Output</ion-label>
+              </ion-item>
+    
+              <ion-item button routerLink="/js-attributes" class="menu-item">
+                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                  <ion-label>Statements</ion-label>
+              </ion-item>
+            </ion-list>
+          </div>
+
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypePy()" (click)="toggleArrowPy()">
+              <ion-icon [name]="arrowIconPy" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Python</ion-label>
+              
+            </ion-item>
+
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesPy"  class="menu-tool">
+              
+              <ion-item button routerLink="/py-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+              </ion-item>
+  
+              <ion-item button routerLink="/py-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+              </ion-item>
+  
+            <ion-item button routerLink="/py-element" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/py-attributes" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+            </ion-item>
+            </ion-list>
+          </div>
+
+
+          
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeSQL()" (click)="toggleArrowSQL()">
+              <ion-icon [name]="arrowIconSQL" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>SQL</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesSQL" class="menu-tool">
+              <ion-item button routerLink="/sql-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/sql-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/sql-element" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/sql-attributes" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+            </ion-item>
+            </ion-list>
+          </div>
+          
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypePHP()" (click)="toggleArrowPHP()">
+              <ion-icon [name]="arrowIconPHP" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>PHP</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesPHP" class="menu-tool">
+              <ion-item button routerLink="/php-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/php-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/php-element" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/php-attributes" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+            </ion-item>
+            </ion-list>
+          </div>
+          
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeJava()" (click)="toggleArrowJava()">
+              <ion-icon [name]="arrowIconJava" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Java</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesJava" class="menu-tool">
+              <ion-item button routerLink="/java-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/java-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/java-element" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/java-attributes" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+            </ion-item>
+            </ion-list>
+          </div>
+          
+
+          <div>
+            <ion-item button class="menu-item" (click)="toggleTypeCpp()" (click)="toggleArrowCpp()">
+              <ion-icon [name]="arrowIconCpp" slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>C++</ion-label>
+            </ion-item>
+          
+            <ion-list id="subTypes" [class.hidden]="!showSubTypesCpp" class="menu-tool">
+              <ion-item button routerLink="/cpp-intro" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Introduction</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/cpp-basic" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Basic</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/cpp-element" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Element</ion-label>
+            </ion-item>
+  
+            <ion-item button routerLink="/cpp-attributes" class="menu-item">
+                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+                <ion-label>Attributes</ion-label>
+            </ion-item>
+            </ion-list>
+          </div>
+          
+          
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-css-attributes"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+ <!-- Overflow-x Language Options -->
+ <div class="option">
+  <a [routerLink]="['/html']" class="active">HTML</a>
+  <a routerLink="/css" class="active">CSS</a>
+  <a routerLink="/js" class="active">JS</a>
+  <a routerLink="/python" class="active">PYTHON</a>
+  <a routerLink="/sql" class="active">SQL</a>
+  <a routerLink="/php" class="active">PHP</a>
+  <a routerLink="/java" class="active">JAVA</a>
+  <a routerLink="/c++" class="active">C++</a>
+</div>
+
+
+<ion-content>
+
+  <div class="css-main-container">
+    <h1 class="FadeInUp">How to Add CSS</h1>
+    <hr style="display: flex; justify-content: center; width: 100%;  border-top: 1px solid black; background-color: black;">
+
+    <p class="FadeInUp">When a browser reads a style sheet, it will format the HTML document according to the information in the style sheet.</p>
+    <hr>
+
+    <p class="FadeInUp" style="margin-bottom: 0;">There are three ways of inserting a style sheet:</p>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <div class="bullet-number">1</div>
+      <p class="paragraph-spaces"><b>EXTERNAL CSS</b></p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <div class="bullet-number">2</div>
+      <p class="paragraph-spaces"><b>INTERNAL CSS</b></p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <div class="bullet-number">3</div>
+      <p class="paragraph-spaces"><b>INLINE CSS</b></p>
+    </ion-item>
+    <hr>
+
+  </div>
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">External CSS</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section.</p>
+    </ion-item>
+  
+
+  </div> 
+  
+  
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of an HTML page:</p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;link rel="<a>stylesheet</a>" href="<a>mystyle.css</a>"&gt;<br>
+      <br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1&gt;<span>This is a Heading</span>&lt;/h1&gt;<br>
+      &lt;p&gt;<span>This is a paragraph.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0; background-color: #add8e6 ;" >
+      <p style="margin: 0; font-size: 32px; color: #05347e; margin-bottom: 15px; text-align: left; margin-left: 20px;"><b>This is a Heading</b></p>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">This is a paragraph.</p>
+    </ion-card>
+    <br>
+
+  </div>
+
+  <div class="css-main-container" >
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">An external style sheet can be written in any text editor, and must be saved with a .css extension.</p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The external .css file should not contain any HTML tags.</p>
+    </ion-item>
+
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Here is how the "mystyle.css" file looks:</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+    <h1 class="FadeInUp" style="font-size: 22px;">“mystyle.css”</h1>
+
+    <ion-card>
+      body {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;background-color: <a>lightblue</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;margin-left: <a>20px  </a>;<br>
+      &nbsp;&nbsp;&nbsp;color: <a>navy</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      p {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;text-align: <a>center</a>;<br>
+      &nbsp;&nbsp;&nbsp;color: <a>red</a>;<br>
+      {{ '}' }} <br>
+      <br>
+
+    </ion-card>
+
+    <br>
+  </div>
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left;">
+    <p>Note: Do not add a space between the property value (20) and the unit (px):
+      <br>Incorrect (space): <span style="color: #ff3131;">margin-left: 20 px;</span>
+      <br>Correct (no space): <span style="color: #ff3131;">margin-left: 20px;</span></p>
+  </ion-card>
+
+  
+  <div class="css-main-container" >
+    <hr>
+    <h1 class="FadeInUp" style="font-size: 26px;">Internal CSS</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">An internal style sheet may be used if one single HTML page has a unique style.</p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The internal style is defined inside the &lt;style&gt; element, inside the head section.</p>
+    </ion-item>
+  
+  </div> 
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">Internal styles are defined within the &lt;style&gt; element, inside the &lt;head&gt; section of an HTML page:</p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      body {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;background-color: <a>linen</a>;<br>
+      {{ '}' }} <br>
+      <br>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>maroon</a>;<br>
+      &nbsp;&nbsp;&nbsp;margin-left: <a>40px  </a>;<br>
+      {{ '}' }} <br>
+      <br>
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1&gt;<span>This is a Heading</span>&lt;/h1&gt;<br>
+      &lt;p&gt;<span>This is a paragraph.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0; background-color: #ffe6dc ;" >
+      <p style="margin: 0; font-size: 32px; color: #800000; margin-bottom: 15px; text-align: left; margin-left: 40px;"><b>This is a Heading</b></p>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">This is a paragraph.</p>
+    </ion-card>
+    <br>
+    <hr>
+
+  </div>
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">Inline CSS</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">An inline style may be used to apply a unique style for a single element.</p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+    </ion-item>
+  
+  </div> 
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">Inline styles are defined within the "style" attribute of the relevant element:</p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      <br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1 style="<a>color: blue; text-align: center;</a>"&gt;<span>This is a Heading</span>&lt;/h1&gt;<br>
+      &lt;p style="<a>color:red;</a>"&gt;<span>This is a paragraph.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0;" >
+      <p style="margin: 0; font-size: 32px; color: #1777f1; margin-bottom: 15px;"><b>This is a Heading</b></p>
+      <p style="margin: 0; font-size: 15px; color: #ff3131; margin-bottom: 15px; text-align: left;">This is a paragraph.</p>
+    </ion-card>
+    <br>
+
+  </div>
+
+  
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">Multiple Style Sheets</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. </p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Assume that an external style sheet has the following style for the &lt;h1&gt; element:</p>
+    </ion-item>
+  
+  </div> 
+
+  <div class="css-main-container css-second-container">
+    <ion-card>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>navy</a>;<br>
+      {{ '}' }} <br>
+
+    </ion-card>
+  </div>
+
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">Multiple Style Sheets</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Then, assume that an internal style sheet also has the following style for the &lt;h1&gt; element:</p>
+    </ion-item>
+  
+  </div> 
+
+  <div class="css-main-container css-second-container">
+    <ion-card>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>orange</a>;<br>
+      {{ '}' }} <br>
+
+    </ion-card>
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">If the internal style is defined after the link to the external style sheet, the &lt;h1&gt; elements will be "orange":</p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;link rel="<a>stylesheet</a>" type="<a>text/css</a>" href="<a>mystyle.css</a>"&gt;<br>
+      &lt;style&gt;<br>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>orange</a>;<br>
+      {{ '}' }} <br>  
+      &lt;/style&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1&gt;<span>This is a Heading</span>&lt;/h1&gt;<br>
+      &lt;p&gt;<span>The style of this document is a combination of an external stylesheet, and internal style.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0; background-color: #add8e6;" >
+      <p style="margin: 0; font-size: 32px; color: #ffa500; margin-bottom: 15px;"><b>This is a Heading</b></p>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">The style of this document is a combination of an external stylesheet, and internal style.</p>
+    </ion-card>
+    <br>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">However, if the internal style is defined before the link to the external style sheet, the &lt;h1&gt; elements will be "navy": </p>
+    <ion-card  class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;style&gt;<br>
+      h1 {{ '{' }} <br>
+      &nbsp;&nbsp;&nbsp;color: <a>orange</a>;<br>
+      {{ '}' }} <br>  
+      &lt;/style&gt;<br>
+      &lt;link rel="<a>stylesheet</a>" type="<a>text/css</a>" href="<a>mystyle.css</a>"&gt;<br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h1&gt;<span>This is a Heading</span>&lt;/h1&gt;<br>
+      &lt;p&gt;<span>The style of this document is a combination of an external stylesheet, and internal style.</span>&lt;/p&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+    
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: center; padding: 20px 0; background-color: #add8e6;" >
+      <p style="margin: 0; font-size: 32px; color: #000080; margin-bottom: 15px;"><b>This is a Heading</b></p>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">The style of this document is a combination of an external stylesheet, and internal style.</p>
+    </ion-card>
+    <br>
+
+    <hr>
+
+  </div>
+
+
+  <div class="css-main-container" >
+    <h1 class="FadeInUp" style="font-size: 26px;">Cascading Order</h1>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">What style will be used when there is more than one style specified for an HTML element? </p>
+    </ion-item>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:</p>
+    </ion-item>
+
+      <div class="css-main-container" style="margin-left: 35px;">
+
+        <ion-item lines="none"  class="FadeInUp">
+          <div class="bullet-number">1</div>
+          <p class="paragraph-spaces">Inline style (inside an HTML element)</p>
+        </ion-item>
+    
+        <ion-item lines="none"  class="FadeInUp">
+          <div class="bullet-number">2</div>
+          <p class="paragraph-spaces">External and internal style sheets (in the head section)</p>
+        </ion-item>
+    
+        <ion-item lines="none"  class="FadeInUp">
+          <div class="bullet-number">3</div>
+          <p class="paragraph-spaces">Browser default</p>
+        </ion-item>
+    
+      </div>
+  
+    <ion-item lines="none"  class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+    </ion-item>
+
+    <hr>
+  </div>
+
+  
+  <ion-item lines="none"   class="FadeInUp">
+    <ion-button class="test-exercise" shape="round" slot="end" button>click-here</ion-button>
+    <h3><b>Test yourself with some exercises?</b></h3>
+  </ion-item>
+
+  <ion-item lines="none" class="back-next FadeInUp">
+    <ion-button shape="round" slot="start" routerLink="/css-element">BACK</ion-button>
+    <br><br><br><br>
+    <br>
+    <ion-button shape="round" slot="end" routerLink="">NEXT CHAPTER</ion-button>
+  </ion-item>
+
+
+
+</ion-content>

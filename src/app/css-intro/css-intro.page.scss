@@ -40,7 +40,20 @@
 
 .menu-item{
   --ion-item-background: transparent;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
 }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .menu-tool{
   background: transparent;
@@ -49,6 +62,11 @@
 #subtopics{
   margin-left: 20px;
 }
+
+#subTypes{
+  margin-left: 35px;
+}
+
 
 .about{
   margin-bottom: 250px;
@@ -214,7 +232,7 @@ ion-list {
 }
 
 .css-main-container{
-    margin: 20px;
+  margin: 0 20px;
 
 }
 
@@ -230,21 +248,23 @@ hr{
 }
 
 p{
-    font-size: 18px;
+    font-size: 20px;
     color: #1b1b1b;
 
 }
 
 .custom-icon{
-    height: 35px;
-    width: 35px;
+    position: relative;
+    bottom: -5px;
     color: #ec8b70;
     margin-right: 10px;
+    align-self: flex-start;
+
     
 }
 
 .css-second-container h2{
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
 
 }
@@ -258,5 +278,143 @@ p{
     padding: 10px;
     color: #f46138;
     border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+a{
+  color: #1777f1;
+}
+
+span{
+  color: black;
+}
+
+.paragraph-spaces{
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.desc-comment{
+  background-color: #fee8db;
+  margin: 20px 30px;
+  padding: 0 10px;
+  font-size: 5px;
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.desc-comment p{
+  font-size: 15px;
+  color: black;
+}
+
+.test-exercise{
+  text-decoration: underline;
+  --border-radius: 50%;
+  --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+  width: 130px;
+  height: 45px;
+  color: black;
+}
+
+.back-next ion-button{
+  width: 140px;
+  height: 40px;
+  --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+  color: black;
+  font-size: 16px;
+}
+
+.FadeInUp{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  padding: 0;
+}
+
+.FadeInUp:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.FadeInUp:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.FadeInUp:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.FadeInUp:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.FadeInUp:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.FadeInUp:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.FadeInUp:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.FadeInUp:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.FadeInUp:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.FadeInUp:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+.FadeInUp:nth-child(11) {
+  animation-delay: 2s;
+}
+
+.FadeInUp:nth-child(12) {
+  animation-delay: 2.2s;
+}
+
+.FadeInUp:nth-child(13) {
+  animation-delay: 2.4s;
+}
+
+.FadeInUp:nth-child(14) {
+  animation-delay: 2.6s;
+}
+
+.FadeInUp:nth-child(15) {
+  animation-delay: 2.8s;
+}
+
+.FadeInUp:nth-child(16) {
+  animation-delay: 3s;
+}
+
+.FadeInUp:nth-child(17) {
+  animation-delay: 3.2s;
+}
+
+.FadeInUp:nth-child(18) {
+  animation-delay: 3.4s;
+}
+
+.FadeInUp:nth-child(19) {
+  animation-delay: 3.6s;
+}
+
+.FadeInUp:nth-child(20) {
+  animation-delay: 3.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

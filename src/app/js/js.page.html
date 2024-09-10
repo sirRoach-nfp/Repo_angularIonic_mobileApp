@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu-css" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-js" contentId="main-content">
   <ion-header>
     <ion-toolbar style="--background: #f27f60; color: black;">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
@@ -272,6 +272,7 @@
             </ion-list>
           </div>
           
+          
 
         </ion-list>
       <!--Learn menu panel -->
@@ -296,7 +297,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu-css"></ion-menu-button>
+      <ion-menu-button menu="main-menu-js"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -352,22 +353,23 @@
   <a routerLink="/c++" class="active">C++</a>
 </div>
 
+
 <ion-content class="background">
   <div class="background-wrapper">
     <div class="background"></div>
   </div>
-  <!--SIMULA NG HTML-->
-  <h1 class="html">CSS</h1>
+  <!--SIMULA NG js-->
+  <h1 class="html">JavaScript</h1>
   <div class="center-container">
     <div class="htmlfront">
-      <p>A language for styling webpages.</p>
-      <p>To set the layout of your web page with beautiful colors, fonts, and much more.</p>
+      <p>A language for programming webpages.</p>
+      <p>to create dynamic and interactive web pages for your users.</p>
     </div>
   </div>
   <div class="htmlbutton">
-    <ion-button [routerLink]="['/css-intro']"><u>CSS Introduction</u></ion-button>
-    <ion-button [routerLink]="['/css-basic']"><u>CSS Basic</u></ion-button>
-    <ion-button [routerLink]="['/css-element']"><u>CSS Element</u></ion-button>
-    <ion-button [routerLink]="['/css-attributes']"><u>CSS Attributes</u></ion-button>
+    <ion-button [routerLink]="['/js-intro']"><u>JS Introduction</u></ion-button>
+    <ion-button [routerLink]="['/js-basic']"><u>JS Basic</u></ion-button>
+    <ion-button [routerLink]="['/js-element']"><u>JS Element</u></ion-button>
+    <ion-button [routerLink]="['/js-attributes']"><u>JS Attributes</u></ion-button>
   </div>
 </ion-content>
