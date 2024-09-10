@@ -1,0 +1,306 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/python" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>HTML  ATTRIBUTES</h1>
+<hr class="custom-hr1">
+<p>HTML attributes provide additional information about HTML elements.</p>
+<hr class="custom-hr2">
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>All HTML elements can have <b>attributes</b></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Attributes provide <b>additional information</b> about elements</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Attributes are always specified in <b>the start tag</b></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Attributes usually come in name/value pairs like: <b>name="value"</b></p>
+</ion-item>
+<hr class="custom-hr2">
+<h1>The href Attribute</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">&lt;a&lt;</span> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>The href Attribute</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>HTML links are defined with the a tag. The link address is specified in the href attribute</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;a href=<span class="bulletblue">https://www.*appname*.com"</span>"&gt;<span>Visit *APP NAME*</span>&lt;/a&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>The href Attribute</h1>
+    <p>HTML links are defined with the a tag. The link address is specified in the href attribute:</p>
+    <p><span class="bulletblue"><u>Visit *APP NAME*</u></span></p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>The src Attribute</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">&lt;img&gt;</span> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>The href Attribute</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>HTML images are defined with the img tag, and the filename of the image source is specified in the src attribute: </span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;img src=<span class="bulletblue">"img_girl.jpg"</span> width=<span class="bulletblue">"500"</span> height=<span class="bulletblue">"600"</span>&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>The href Attribute</h1>
+    <p>HTML images are defined with the img tag, and the filename of the image source is specified in the src attribute:</p>
+    <img src="../../assets/img/girl.png">
+  </div>
+</div>
+<br>
+<h1 class="custom-h1">There are two ways to specify the URL in the src attribute:</h1>
+<br>
+<ion-item lines="none" class="icon-text-container">
+  <img src="../../assets/icon/no1.png">
+  <div class="text-content">
+    <p class="first-text">Absolute URL</p>
+    <div class="second-icon-text-container">
+      <p class="second-text">= Links to an external image that is hosted on another website. Example: src= "https://www.w3schools.com/ images/img_girl.jpg".</p>
+    </div>
+  </div>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text-container">
+  <img src="../../assets/icon/no2.png">
+  <div class="text-content">
+    <p class="first-text">Relative URL</p>
+    <div class="second-icon-text-container">
+      <p class="second-text">= Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".</p>
+    </div>
+  </div>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Tips: </b>It is almost always best to use relative URLs. They will not break if you change domain.</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>The width and height Attributes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">&lt;img&gt;</span> tag should also contain the <span class="bulletred">width</span> and <span class="bulletred">height</span> attributes, which specify the width and height of the image (in pixels):</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>The alt Attribute</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;img src=<span class="bulletblue">"img_girl.jpg"</span> alt=<span class="bulletblue">"Girl with a jacket"</span> width=<span class="bulletblue">"500"</span> height=<span class="bulletblue">"600"</span>&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>The alt Attribute</h1>
+    <p>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</p>
+    <img src="../../assets/img/girl.png">
+  </div>
+</div>
+</ion-content>
+
+

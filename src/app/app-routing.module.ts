@@ -58,6 +58,14 @@ const routes: Routes = [
     path: 'css-intro',
     loadChildren: () => import('./css-intro/css-intro.module').then( m => m.CssIntroPageModule)
   },
+  {
+    path: 'htmlelement',
+    loadChildren: () => import('./htmlelement/htmlelement.module').then( m => m.HtmlelementPageModule)
+  },
+  {
+    path: 'htmlattri',
+    loadChildren: () => import('./htmlattri/htmlattri.module').then( m => m.HtmlattriPageModule)
+  },
 
 
 ];
