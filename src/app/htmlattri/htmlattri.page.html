@@ -173,7 +173,7 @@
 <h1>The href Attribute</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;a&lt;</span> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
+  <p>The <span class="bulletred">&lt;a&gt;</span> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
 </ion-item>
 <br>
 <h1>EXAMPLE</h1>
@@ -283,10 +283,10 @@
     <p>&lt;html&gt;</p>
     <p>&lt;body&gt;</p>
     <br>
-    <p>&lt;h2&gt;<span>The alt Attribute</span>&lt;/h2&gt;</p>
-    <p>&lt;p&gt;<span>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</span>&lt;/p&gt;</p>
+    <p>&lt;h2&gt;<span>Width and Height Attribites</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>The width and height attribute of the img tag, defines the width and height of the image.</span>&lt;/p&gt;</p>
     <br>
-    <p>&lt;img src=<span class="bulletblue">"img_girl.jpg"</span> alt=<span class="bulletblue">"Girl with a jacket"</span> width=<span class="bulletblue">"500"</span> height=<span class="bulletblue">"600"</span>&gt;</p>
+    <p>&lt;img src=<span class="bulletblue">"img_girl.jpg"</span>  width=<span class="bulletblue">"500"</span> height=<span class="bulletblue">"600"</span>&gt;</p>
     <br>
     <p>&lt;/body&gt;</p>
     <p>&lt;/html&gt;</p>
@@ -296,11 +296,193 @@
 <h1>OUTPUT:</h1>
 <div class="output-container">
   <div class="output1">
-    <h1>The alt Attribute</h1>
-    <p>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</p>
-    <img src="../../assets/img/girl.png">
+    <h1>Width and Height Attributes</h1>
+    <p>The width and height attribute of the img tag, defines the width and height of the image.</p>
+    <img style = "width:500px; height:600px;"src="../../assets/img/girl.png">
   </div>
 </div>
+<hr class="custom-hr2">
+<h1>The alt Attributes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The required<span class="bulletred">&lt;alt&gt;</span> attribute for the <span class="bulletred">&lt;img&gt;</span> tag specifies an alternative text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <span class="bulletred">src</span> attribute, or if the user uses a screen reader.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>The alt Attributes</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>The alt attribute should reflect the image content, so users who cannot see the image get an undertanding of what the image contains.</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;img src=<span class="bulletblue">"img_girl.jpg"</span>  width=<span class="bulletblue">"500"</span> height=<span class="bulletblue">"600"</span>&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>The alt Attributes</h1>
+    <p>The alt attribute should reflect the image content, so users who cannot see the image get an understanding of what the image contains:</p>
+    <img src="../../assets/img/boy.png">
+  </div>
+</div>
+
+<hr class="custom-hr2">
+<h1>The style Attributes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">style</span> attribute is used to add styles to an element, such as color, font, and more.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2&gt;<span>The style Attributes</span>&lt;/h2&gt;</p>
+    <p>&lt;p&gt;<span>The style attribute is used to add styles to an element, such as color:</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;p<span class="bulletred"> style=</span><span class="bulletblue">"color:red;"</span>&gt;<span>This is a red paragraph.</span>&lt;p&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>The style Attributes</h1>
+    <p>The style attribute is used to add styles to an element, such as color:</p>
+    <p style="color:red;">This is a red paragraph.</p>
+  </div>
+</div>
+
+<hr class="custom-hr2">
+<h1>The lang Attributes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You should always include the <span class="bulletred">lang</span> attribute inside the <span class ="bulletred">&lt;html&gt;</span> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example specifies English as the language:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html lang=<span class="bulletblue">"en"</span>&gt;</p>
+    <p>&lt;body&gt;</p>
+    <p><span>...</span></p>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Country codes can also be added to the language code in the <span class="bulletred">lang</span> attribute. So, the first two character define the language of the HTML page, and the last two characters define the country.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example specifies English as the language and United States as the country.</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html lang=<span class="bulletblue">"en - US"</span>&gt;</p>
+    <p>&lt;body&gt;</p>
+    <p><span>...</span></p>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>The title Attributes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">title</span> attribute defines some extra information about an element.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h2 title=<span class="bulletblue">"I'm a header"</span>&gt;<span>The title Attributes</span>&lt;/h2&gt;</p>
+    <p>&lt;p title=<span class="bulletblue">"I'm a tooltip</span>&gt;<span>Mouse over this paragraph, to display the title attribute as a tooltip.</span>&lt;/p&gt;</p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>The title Attributes</h1>
+    <p>Mouse over this paragraph, to display the title attribute as a tooltip.</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>We Suggest: Always Use Lowecae Attributes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The HTML standard does not require lowercase attribute names.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The title attribute &#40;and all other attributes&#41; can be written with uppercase or lowercase like <b>title</b> or <b>TITLE.</b></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>However, CodetTology <b>recommends</b> lowercase attributes in HTML, and <b>demands</b> lowercase attributes for stricter document types like XHTML.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Chapter Summary</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>All HTML elements can have attributes.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">href </span>attribute of <span class="bulletred">&lt;a&gt;</span> specifies the URL of the page the link goes to</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">src</span> attribute of <span class="bulletred">&lt;img&gt;</span> specifies the pathto the image to be displayed.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">width</span> and <span class="bulletred">width</span> attributes of <span class="bulletred">&lt;img&gt;</span> provide size information for images.</p>
+</ion-item>
+
 </ion-content>
 
 
