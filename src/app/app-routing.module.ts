@@ -40,6 +40,14 @@ const routes: Routes = [
     loadChildren: () => import('./htmlbasic/htmlbasic.module').then( m => m.HtmlbasicPageModule)
   },
   {
+    path: 'htmlelement',
+    loadChildren: () => import('./htmlelement/htmlelement.module').then( m => m.HtmlelementPageModule)
+  },
+  {
+    path: 'htmlattri',
+    loadChildren: () => import('./htmlattri/htmlattri.module').then( m => m.HtmlattriPageModule)
+  },
+  {
     path: 'languages',
     loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
@@ -90,7 +98,6 @@ const routes: Routes = [
 
 
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
