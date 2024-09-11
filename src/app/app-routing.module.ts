@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'htmlbasic',
     loadChildren: () => import('./htmlbasic/htmlbasic.module').then( m => m.HtmlbasicPageModule)
-  },  {
+  },
+  {
     path: 'languages',
     loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
@@ -59,14 +60,14 @@ const routes: Routes = [
     loadChildren: () => import('./css-intro/css-intro.module').then( m => m.CssIntroPageModule)
   },
   {
-<<<<<<< HEAD
     path: 'htmlelement',
     loadChildren: () => import('./htmlelement/htmlelement.module').then( m => m.HtmlelementPageModule)
   },
   {
     path: 'htmlattri',
     loadChildren: () => import('./htmlattri/htmlattri.module').then( m => m.HtmlattriPageModule)
-=======
+  },
+  {
     path: 'css-basic',
     loadChildren: () => import('./css-basic/css-basic.module').then( m => m.CssBasicPageModule)
   },
@@ -85,7 +86,6 @@ const routes: Routes = [
   {
     path: 'js-intro',
     loadChildren: () => import('./js-intro/js-intro.module').then( m => m.JsIntroPageModule)
->>>>>>> 414484985e5e0aec7710c60e7fccc46c126c1e29
   },
 
 
