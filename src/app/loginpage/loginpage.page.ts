@@ -24,6 +24,17 @@ export class LoginpagePage implements OnInit {
 
   }
 
+  isEmailEntered = false;
+  isPasswordEntered = false;
+
+  checkInput(field: string) {
+    if (field === 'email') {
+      this.isEmailEntered = this.credential.email.length > 0;
+    } else if (field === 'password') {
+      this.isPasswordEntered = this.credential.password.length > 0;
+    }
+  }
+
 
   login(){
     this.apiService.login(this.credential).subscribe(

@@ -8,13 +8,15 @@
     align-items: center;
     flex-direction: column;
     margin-top: 65px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 img{
-    width: 140px;
+    width: 130px;
     height: 130px;
+    border-radius: 100px;
+    margin-bottom: 30px;
 }
 
 .slanted-card {
@@ -38,7 +40,18 @@ img{
   z-index: 5;
 }
 
-.slanted-card ion-card-content ion-icon{
+// icon size changing!!!!!!
+ion-icon {
+  font-size: 15px;
+  transition: font-size 0.3s ease;
+}
+
+ion-icon.big {
+  font-size: 25px;
+}
+// 
+
+.submit{
   width: 25px;
   height: 25px;
 }
@@ -49,6 +62,7 @@ img{
 }
 
 .fpass a{
+  font-size: 13px;
   color: rgb(61, 60, 60);
 }
 

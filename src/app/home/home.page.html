@@ -128,19 +128,20 @@
 
 
  <!-- Overflow-x Language Options -->
-<div class="option">
+ <div class="option">
   <a [routerLink]="['/html']" class="active">HTML</a>
-  <a href="#css">CSS</a>
-  <a href="#javascript">PHP</a>
-  <a href="#sql">JAVA</a>
-  <a href="#python">PYTHON</a>
-  <a href="#C++">C++</a>
-  <a href="#SQL">SQL</a>
+  <a routerLink="/css" class="active">CSS</a>
+  <a routerLink="/js" class="active">JS</a>
+  <a routerLink="/python" class="active">PYTHON</a>
+  <a routerLink="/sql" class="active">SQL</a>
+  <a routerLink="/php" class="active">PHP</a>
+  <a routerLink="/java" class="active">JAVA</a>
+  <a routerLink="/c++" class="active">C++</a>
 </div>
 
 <ion-content id="content">
   <ion-card class="tag-container"> <!-- Main Content -->
-    <img src="../../assets/img/LOGO.png">
+    <img src="../../assets/img/logo.jpg">
     <h1>Tagline</h1>
   </ion-card>
 

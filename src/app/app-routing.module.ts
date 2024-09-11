@@ -38,7 +38,8 @@ const routes: Routes = [
   {
     path: 'htmlbasic',
     loadChildren: () => import('./htmlbasic/htmlbasic.module').then( m => m.HtmlbasicPageModule)
-  },  {
+  },
+  {
     path: 'languages',
     loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
@@ -69,6 +70,22 @@ const routes: Routes = [
   {
     path: 'review-page',
     loadChildren: () => import('./review-page/review-page.module').then( m => m.ReviewPagePageModule)
+  },
+  {
+    path: 'css',
+    loadChildren: () => import('./css/css.module').then( m => m.CssPageModule)
+  },
+  {
+    path: 'css',
+    loadChildren: () => import('./css/css.module').then( m => m.CssPageModule)
+  },
+  {
+    path: 'css',
+    loadChildren: () => import('./css/css.module').then( m => m.CssPageModule)
+  },
+  {
+    path: 'css-intro',
+    loadChildren: () => import('./css-intro/css-intro.module').then( m => m.CssIntroPageModule)
   },
 
 

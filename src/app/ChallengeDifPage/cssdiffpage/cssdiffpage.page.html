@@ -1,36 +1,58 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>CSSdiffpage</ion-title>
-  </ion-toolbar>
+
+
+  <div class="headerWrapper">
+      <ion-icon name="arrow-back-outline" class="iconBack" (click)="goBack()"></ion-icon>
+      <h1>Test your CSS knowledge!</h1>
+  </div>
+
+
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="options">
-    <div class="optHeader">
-      <div class="iconDiv">
-          <img src="" alt="" class="iconImg">
-      </div>
 
-      <h2 class="header">Levels of Difficulty</h2>
+  <div class="diffWrapper">
+
+    <div class="infHeader">
+      <h1>CSS Activity</h1>
+      <hr class="hrBlack">
+      <p>You can test your CSS skills with *INSERT  APP NAME* Quiz.</p>
+      <hr class="hrGray">
+      <p>The test is not official, it's just a nice way to see how much you know, or don't know, about HTML.</p>
+      <hr class="hrGray">
     </div>
 
-    <div class="optionsWrapper">
-      <div class="option">
-        <ion-button class="buttons" (click)="navigateToExercise('Intro','CSS')">Intro</ion-button>
+    <div class="options">
+      <div class="optHeader">
+        <div class="iconDiv">
+            <img src="assets\langAssets\levels.png" alt="" class="iconImg">
+        </div>
+
+        <h2 class="header">Levels of Difficulty</h2>
       </div>
 
-      <div class="option">
-        <ion-button class="buttons">Basic</ion-button>
+      <div class="optionsWrapper">
+        <div class="option">
+          <ion-button class="buttons" (click)="presentModal('Intro','CSS')">Intro</ion-button>
+        </div>
+
+        <div class="option">
+          <ion-button class="buttons" (click)="presentModal('Basic','CSS')">Basic</ion-button>
+        </div>
+
+        <div class="option">
+          <ion-button class="buttons" (click)="navigateToExercise('Intermediate','HTML')">Intermediate</ion-button>
+        </div>
+
+        <div class="option">
+          <ion-button class="buttons" (click)="navigateToExercise('AbIntermediate','HTML')">Above Intermediate</ion-button>
+        </div>
       </div>
 
-      <div class="option">
-        <ion-button class="buttons">Intermediate</ion-button>
-      </div>
-
-      <div class="option">
-        <ion-button class="buttons">Above Intermediate</ion-button>
-      </div>
     </div>
+
 
   </div>
+
 </ion-content>

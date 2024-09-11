@@ -23,7 +23,8 @@
 
     <ion-button (click)="prevExercise()" [disabled]="currentExerciseIndex === 0" class="navButtons">Prev</ion-button>
     <ion-button (click)="toggleAnswer()" class="navButtonsShow">Show Answer</ion-button>
-    <ion-button (click)="nextExercise()" [disabled]="currentExerciseIndex === exercises.length - 1" class="navButtons">Next</ion-button>
+    <ion-button (click)="nextExercise()" [disabled]="currentExerciseIndex === exercises.length - 1" class="navButtons" *ngIf="!completeExercise">Next</ion-button>
+    <ion-button *ngIf="completeExercise">Return</ion-button>
 
   </div>
 </div>

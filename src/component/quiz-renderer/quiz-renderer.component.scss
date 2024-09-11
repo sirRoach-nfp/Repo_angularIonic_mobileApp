@@ -48,6 +48,8 @@
 
             .navButtons{
                 flex: 1;
+                --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+                --box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
             }
         }
     }
@@ -170,6 +172,9 @@
                     color: rgba(0, 128, 0, 0.509);
                     font-size: 35px;
                     margin-top: 20px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    padding: 9px 20px;
                 }
 
                 .scoreW{
@@ -177,6 +182,9 @@
                     color: rgba(128, 0, 0, 0.509);
                     font-size: 35px;
                     margin-top: 20px;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    padding: 9px 20px;
                 }
             }
         }

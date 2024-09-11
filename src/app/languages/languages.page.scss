@@ -16,9 +16,7 @@
   #container p {
     font-size: 16px;
     line-height: 22px;
-  
     color: #8c8c8c;
-  
     margin: 0;
   }
   
@@ -95,10 +93,9 @@
     text-decoration: none;
     color: rgb(17, 17, 17);
     background-color: #ffe6d5;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border: 1px transparent;
     font-size: 13px;
-  
   }
   
   // Popup Message
@@ -130,6 +127,7 @@
   }
   
   .popup-content p h3{
+    font-size: 19px;
     color: black;
   }
   
@@ -150,13 +148,19 @@
     }
   }
   
-  #content{
-    --background: url(../../assets/img/learn-logo.png) 0 0/100% 100% repeat;
-    height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow-y: scroll;
+  .scrollable-background {
+    background-image: url('../../assets/img/scroll-bg.png');
+    background-size: contain;
+    background-repeat: repeat-y; /* Repeats the background vertically */
+    background-position: center;
+    width: 100%;
+    min-height: 100vh; /* Ensures the background covers at least the full viewport height */
   }
+  
+  .content {
+    padding: 20px;
+  }
+  
   
   #title-code{
       text-align: center;
@@ -172,6 +176,7 @@
   #title-code p{
       color: #0cc0df;
       font-size: 22px;
+
   }
   
   .learn-html{
@@ -183,7 +188,7 @@
       max-width: fit-content;
       margin: 10px;
       padding: 60px;
-      margin-top: 50px;
+      margin-top: 260px;
   }
   
   .learn-html h1{

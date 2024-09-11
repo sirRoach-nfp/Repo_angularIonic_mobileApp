@@ -5,16 +5,20 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { HTMLdiffpagePageRoutingModule } from './htmldiffpage-routing.module';
-
+import { SharedModule } from 'src/component/shared-modules';
 import { HTMLdiffpagePage } from './htmldiffpage.page';
+import { SelectionModalComponent } from 'src/component/selection-modal/selection-modal.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HTMLdiffpagePageRoutingModule
+    HTMLdiffpagePageRoutingModule,
+    SharedModule
+    
   ],
-  declarations: [HTMLdiffpagePage]
+  declarations: [HTMLdiffpagePage],
+ 
 })
 export class HTMLdiffpagePageModule {}

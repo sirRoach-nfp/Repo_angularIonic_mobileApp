@@ -1,7 +1,8 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>exercisePage</ion-title>
-  </ion-toolbar>
+ <div class="headerWrapper">
+    <ion-icon name="logo-html5" *ngIf="isHtml" class="iconLogo"></ion-icon>
+    <ion-icon name="logo-css3" *ngIf="isCss" class="iconLogo"></ion-icon>
+ </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">

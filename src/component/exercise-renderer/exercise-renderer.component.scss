@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     //justify-content: center;
-    border: 1px solid rgb(0, 0, 0);
+   // border: 1px solid rgb(0, 0, 0);
     align-items: center;
     //min-height: 100vh;
     height: fit-content;
@@ -32,6 +32,7 @@
     box-shadow: 10px 10px 3px -1px rgba(0,0,0,0.14);
     -webkit-box-shadow: 10px 10px 3px -1px rgba(0,0,0,0.14);
     -moz-box-shadow: 10px 10px 3px -1px rgba(0,0,0,0.14);
+    background-color: #fee8db;
 }
 
 .answer{
@@ -55,6 +56,7 @@
     overflow: visible; // Prevents additional scrollbars if 
     align-items: center;
     white-space: pre-wrap;
+    color: white;
   }
   
 ::ng-deep code {
@@ -75,18 +77,29 @@
 
 .navigation{
     width: 100%;
-    border: 1px solid red;
+    //border: 1px solid red;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    padding-bottom: 10px;
 
     .navButtons{
-        border: 1px solid red;
+        //border: 1px solid red;
         flex: 1;
+        --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+        --box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+        border: 1px solid black;
+        border-radius: 10px;
+
     }
 
+    ion-button::part(native) {
+        border-radius: 10px;
+    }
     .navButtonsShow{
         flex: 3;
         gap: 5px;
+        --background: linear-gradient(to top , #fb7c57, #ffe6d5);
+        --box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
     }
 }

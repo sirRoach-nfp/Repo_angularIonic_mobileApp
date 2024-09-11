@@ -15,11 +15,20 @@ export class ExercisePagePage implements OnInit {
   lang: string = ''
   constructor(private route:ActivatedRoute) { }
 
+
+  isHtml = false;
+  isCss = false;
+  isPython = false;
+
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
       this.difficulty = params['diff']
       this.lang = params['lang']
 
+
+      this.isHtml = this.lang === 'HTML';
+      this.isCss = this.lang === 'CSS';
+      this.isPython = this.lang === 'Python';
       //console.log(diff + " " + lang)
 
     

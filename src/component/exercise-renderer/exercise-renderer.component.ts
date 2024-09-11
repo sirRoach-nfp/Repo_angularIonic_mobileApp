@@ -41,8 +41,13 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
   @Input() difficulty: string = ''
   @Input() lang: string = ''
 
+
+  isHtml = false;
+  isCss = false
+
   exercise = HTMLbasic;
 
+  completeExercise = false;
   
   exercises: any ={};
   currentExerciseIndex = 0;
@@ -56,12 +61,14 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
   }
 
   ngOnchanges(){
+    
     this.loadExercise();
   }
 
 
   loadExercise(){
     if(this.lang === "HTML"){
+ 
       switch(this.difficulty){
         case "Intro":
           this.exercises = [...HTMLIntro].sort(()=> 0.5 - Math.random()).slice(0,5);
@@ -113,18 +120,78 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
       this.cdr.detectChanges(); // Ensure Angular updates the view
       setTimeout(() => Prism.highlightAll(), 0); // Highlight code after view update
       this.showAnswer = false;
+      this.completeExercise = false;
+      
     }
   }
 
+  /*
+
   nextExercise(){
+    console.log('Before Increment - Current Index:', this.currentExerciseIndex);
+    console.log('Exercise Length:', this.exercises.length);    
     if(this.currentExerciseIndex < this.exercises.length - 1){
       this.currentExerciseIndex++;
+      console.log('After Increment - Current Index:', this.currentExerciseIndex);
       this.cdr.detectChanges(); // Ensure Angular updates the view
       setTimeout(() => Prism.highlightAll(), 0); // Highlight code after view update
       this.showAnswer = false;
     }
+    else{
+      console.log("fin")
+      this.completeExercise = true;
+      this.cdr.detectChanges();
+    }
   }
 
+  */
+
+  /*
+  nextExercise() {
+    console.log('Before Increment - Current Index:', this.currentExerciseIndex);
+    console.log('Exercise Length:', this.exercises.length);
+    
+    if(this.currentExerciseIndex === this.exercises.length - 1){
+      console.log("fin - Complete");
+      this.completeExercise = true;
+      this.cdr.detectChanges(); // Ensure the view is updated
+      console.log("completeExercise is now:", this.completeExercise);
+    }
+    if (this.currentExerciseIndex < this.exercises.length - 1) {
+      this.currentExerciseIndex++;
+      console.log('After Increment - Current Index:', this.currentExerciseIndex);
+      
+      this.cdr.detectChanges(); // Ensure Angular updates the view
+      setTimeout(() => Prism.highlightAll(), 0); // Highlight code after view update
+      this.showAnswer = false;
+    } 
+  }
+  */
+
+
+  nextExercise() {
+    console.log('Before Increment - Current Index:', this.currentExerciseIndex);
+    console.log('Exercise Length:', this.exercises.length);
+  
+
+  
+
+    if (this.currentExerciseIndex < this.exercises.length - 1) {
+      this.currentExerciseIndex++;
+      console.log('After Increment - Current Index:', this.currentExerciseIndex);
+      this.cdr.detectChanges(); // Ensure Angular updates the view
+      setTimeout(() => Prism.highlightAll(), 0); // Highlight code after view update
+      this.showAnswer = false;
+
+      if(this.currentExerciseIndex === this.exercises.length - 1){
+        console.log("fin - Complete");
+        this.completeExercise = true;
+        this.cdr.detectChanges(); // Ensure the view is updated
+        console.log("completeExercise is now:", this.completeExercise);
+      }
+    }
+  }
+  
 
   toggleAnswer() {
     this.showAnswer = !this.showAnswer; // Toggle answer visibility

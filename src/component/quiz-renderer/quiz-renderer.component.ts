@@ -52,6 +52,7 @@ export class QuizRendererComponent  implements OnInit {
         case "Intro":
           this.quizData = [...HTMLintroQD].sort(()=> 0.5 - Math.random()).slice(0,5);
           break;
+
         default:
           this.quizData = []
           break

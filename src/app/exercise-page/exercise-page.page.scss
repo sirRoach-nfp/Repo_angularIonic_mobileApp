@@ -2,3 +2,27 @@
 ion-content{
     --background: white;
 }
+
+
+.headerWrapper{
+   
+    color: black;
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    max-height: 56px;;
+    background-image: linear-gradient(to right, #fb7c57, #fd9971, #ffb48f, #ffceb0, #ffe6d5);
+
+    h1{
+            font-size: 20px;
+            margin: 0;
+            font-weight: 600;
+    }
+
+    .iconBack{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
