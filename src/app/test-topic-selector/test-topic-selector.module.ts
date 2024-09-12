@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { TestTopicSelectorPageRoutingModule } from './test-topic-selector-routing.module';
 
-import { TestTopicSelectorPage } from './test-topic-selector.page';
+//import { TestTopicSelectorPage } from './test-topic-selector.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { TestTopicSelectorPage } from './test-topic-selector.page';
     IonicModule,
     TestTopicSelectorPageRoutingModule
   ],
-  declarations: [TestTopicSelectorPage]
+  declarations: []
 })
 export class TestTopicSelectorPageModule {}

@@ -1,3 +1,4 @@
+/*
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { ExerciseServiceService } from '../GPTservice/exercise-service.service';
@@ -36,3 +37,4 @@ export class TestTopicSelectorPage implements OnInit {
   }
 
 }
+*/

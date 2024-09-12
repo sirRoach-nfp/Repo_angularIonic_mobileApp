@@ -16,7 +16,7 @@ import { LessonRendererComponent } from 'src/component/lesson-renderer/lesson-re
 import { SharedModule } from 'src/component/shared-modules';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { ExerciseServiceService } from './GPTservice/exercise-service.service';
+//import { ExerciseServiceService } from './GPTservice/exercise-service.service';
 @NgModule({
   declarations: [AppComponent],
   imports: [FormsModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule, StoreModule.forRoot({user:userReducer}), StoreDevtoolsModule.instrument({
