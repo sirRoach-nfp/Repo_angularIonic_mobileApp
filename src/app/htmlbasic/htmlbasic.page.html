@@ -127,15 +127,16 @@
 </ion-modal>
 
 <ion-content>
-<div class="option">
-  <a [routerLink]="['/html']" class="active">HTML</a>
-  <a href="#css">CSS</a>
-  <a href="#javascript">PHP</a>
-  <a href="#sql">JAVA</a>
-  <a href="#python">PYTHON</a>
-  <a href="#C++">C++</a>
-  <a href="#SQL">SQL</a>
-</div>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/python" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
 
 
 
@@ -366,7 +367,7 @@
     </ion-item>
     <div class="home-next">
       <ion-button [routerLink]="['/html']">HOME</ion-button>
-      <ion-button [routerLink]="['/htmlbasic']">Next Chapter</ion-button>
+      <ion-button [routerLink]="['/htmlelement']">Next Chapter</ion-button>
     </div>
     <br><br>
   

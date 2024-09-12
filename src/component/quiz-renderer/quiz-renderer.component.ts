@@ -1,6 +1,11 @@
 import { Component, OnInit,Input } from '@angular/core';
+
 import { HTMLintroQD } from 'src/TestData/QuizData/HTML/HTMLintroQD';
 
+
+import { CSSintroQD } from 'src/TestData/QuizData/CSS/CSSintroQD';
+import { CSSbasicQD } from 'src/TestData/QuizData/CSS/CSSbasicQD';
+import { Router } from '@angular/router';
 
 interface QuizOption {
   [key: string]: string;
@@ -33,7 +38,12 @@ export class QuizRendererComponent  implements OnInit {
   wrongAnswers:{question:string,selectedAnswer: string, correctAnswer: string}[]=[];
 
 
-  constructor() { }
+  constructor(private router:Router) { }
+
+
+  returnToMenu(){
+    this.router.navigate(['/exercise-selector'])
+  }
 
   ngOnInit() {
     this.loadQuiz();
@@ -52,10 +62,24 @@ export class QuizRendererComponent  implements OnInit {
         case "Intro":
           this.quizData = [...HTMLintroQD].sort(()=> 0.5 - Math.random()).slice(0,5);
           break;
+        case "Basic":
+          this.quizData = [...HTMLintroQD].sort(()=> 0.5 - Math.random()).slice(0,10);
+          break;
 
         default:
           this.quizData = []
           break
+      }
+    }
+
+    if(this.lang === "CSS"){
+      switch(this.diff){
+        case "Intro":
+          this.quizData = [...CSSintroQD].sort(()=>0.5 - Math.random()).slice(0,5)
+          break;
+        case "Basic":
+          this.quizData = [...CSSbasicQD].sort(()=>0.5 - Math.random()).slice(0,10)
+          break;
       }
     }
   }

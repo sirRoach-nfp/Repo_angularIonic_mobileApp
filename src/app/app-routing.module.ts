@@ -40,6 +40,14 @@ const routes: Routes = [
     loadChildren: () => import('./htmlbasic/htmlbasic.module').then( m => m.HtmlbasicPageModule)
   },
   {
+    path: 'htmlelement',
+    loadChildren: () => import('./htmlelement/htmlelement.module').then( m => m.HtmlelementPageModule)
+  },
+  {
+    path: 'htmlattri',
+    loadChildren: () => import('./htmlattri/htmlattri.module').then( m => m.HtmlattriPageModule)
+  },
+  {
     path: 'languages',
     loadChildren: () => import('./languages/languages.module').then( m => m.LanguagesPageModule)
   },
@@ -87,10 +95,37 @@ const routes: Routes = [
     path: 'css-intro',
     loadChildren: () => import('./css-intro/css-intro.module').then( m => m.CssIntroPageModule)
   },
+  {
+    path: 'htmlelement',
+    loadChildren: () => import('./htmlelement/htmlelement.module').then( m => m.HtmlelementPageModule)
+  },
+  {
+    path: 'htmlattri',
+    loadChildren: () => import('./htmlattri/htmlattri.module').then( m => m.HtmlattriPageModule)
+  },
+  {
+    path: 'css-basic',
+    loadChildren: () => import('./css-basic/css-basic.module').then( m => m.CssBasicPageModule)
+  },
+  {
+    path: 'css-element',
+    loadChildren: () => import('./css-element/css-element.module').then( m => m.CssElementPageModule)
+  },
+  {
+    path: 'css-attributes',
+    loadChildren: () => import('./css-attributes/css-attributes.module').then( m => m.CssAttributesPageModule)
+  },
+  {
+    path: 'js',
+    loadChildren: () => import('./js/js.module').then( m => m.JsPageModule)
+  },
+  {
+    path: 'js-intro',
+    loadChildren: () => import('./js-intro/js-intro.module').then( m => m.JsIntroPageModule)
+  },
 
 
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

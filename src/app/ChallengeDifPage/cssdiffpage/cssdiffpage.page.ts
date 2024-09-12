@@ -24,6 +24,11 @@ export class CSSdiffpagePage implements OnInit {
     this.router.navigate([`/exercise-page`],{queryParams:{diff,lang}})
   }
 
+
+  navigateToSelector(){
+    this.router.navigate(['/exercise-selector'])
+  }
+
   goBack() {
     this.navCtrl.back(); 
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-review-page',
   templateUrl: './review-page.page.html',
@@ -20,7 +20,7 @@ export class ReviewPagePage implements OnInit {
   isJava = false
   isCpp = false
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router:Router) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params=>{
@@ -33,5 +33,8 @@ export class ReviewPagePage implements OnInit {
       this.isPython = this.language === 'Python';
     })
   }
+
+
+
 
 }

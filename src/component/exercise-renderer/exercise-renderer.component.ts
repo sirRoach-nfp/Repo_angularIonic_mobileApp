@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewChecked,ChangeDetectorRef, OnChanges , Input} from '@angular/core';
-
+import { Router } from '@angular/router';
 import { HTMLbasic } from 'src/TestData/htmlBasics';
 import { HTMLIntro } from 'src/TestData/htmlIntro';
 import { CSSintro } from 'src/TestData/cssIntro';
@@ -54,7 +54,7 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
 
   showAnswer = false;
 
-  constructor(private cdr:ChangeDetectorRef) { }
+  constructor(private cdr:ChangeDetectorRef, private router: Router) { }
 
   ngOnInit() {
     this.loadExercise()
@@ -65,6 +65,9 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
     this.loadExercise();
   }
 
+  returnToMenu(){
+    this.router.navigate(['/exercise-selector'])
+  }
 
   loadExercise(){
     if(this.lang === "HTML"){
