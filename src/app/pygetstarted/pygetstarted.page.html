@@ -131,7 +131,7 @@
     <a [routerLink]="['/html']" class="active">HTML</a>
     <a routerLink="/css" class="active">CSS</a>
     <a routerLink="/js" class="active">JS</a>
-    <a routerLink="/python" class="active">PYTHON</a>
+    <a routerLink="/py" class="active">PYTHON</a>
     <a routerLink="/sql" class="active">SQL</a>
     <a routerLink="/php" class="active">PHP</a>
     <a routerLink="/java" class="active">JAVA</a>
@@ -144,259 +144,170 @@
 
 
 
-<!--//wag buburahin code ko to (warnings)-->
 
-<h1>HTML ELEMENT</h1>
+<!-- wag buburahin-->
+<h1>PYTHON GETTING STARTED</h1>
 <hr class="custom-hr1">
-<p>An HTML element is defined by a start tag, some content, and an end tag:</p>
-<hr class="custom-hr2">
 <div class="anime1">
+<h1>Python Install</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The HTML element is everything from the start tag to the end tag:</p>
-</ion-item> 
-<h1 class="custom-h1">Examples of some HTML elements:</h1>
-  <div class="table-container">
-    <table class="element-table">
-      <thead>
-        <tr>
-          <th>Start Tag</th>
-          <th>Element Content</th>
-          <th>End Tag</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&lt;h1&gt;</td>
-          <td>My first heading</td>
-          <td>&lt;/h1&gt;</td>
-        </tr>
-        <tr>
-          <td>&lt;p&gt;</td>
-          <td>My first paragraph</td>
-          <td>&lt;/p&gt;</td>
-        </tr>
-        <tr>
-          <td>&lt;br&gt;</td>
-          <td>none</td>
-          <td>none</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <p>Many PCs and Macs will have python already installed.</p>
+</ion-item>
 <br>
-<div class="note-container">
-  <div class="note-1">
-    <p><b>Note:</b> Some HTML elements have no content (like the &lt;br&gt; element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python --version</p>
   </div>
 </div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">python --version</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If you find that you do not have Python installed on your computer, then you can download it for free from the following website: <a href="https://www.python.org/" style="color: #f17177;">https://www.python.org/</a></p>
+</ion-item>
 <br>
 <hr class="custom-hr2">
-<h1>Nested HTML Elements</h1>
+<h1>Python Quickstart</h1>
+<br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>HTML elements can be nested (this means that elements can contain other elements).</p>
+  <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>All HTML documents consist of nested HTML elements.</p>
+  <p>The way to run a python file is like this on the command line:</p>
 </ion-item>
 <br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The following example contains four HTML elements (&lt;html&gt;, &lt;body&gt;, &lt;h1&gt; and &lt;p&gt;):</p>
-</ion-item>
-<br>
-<h1>EXAMPLE</h1>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;!DOCTYPE html&gt;</p>
-    <p>&lt;html&gt;</p>
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-    <br>
-    <p>&lt;/body&gt;</p>
-    <p>&lt;/html&gt;</p>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python helloworld.py</p>
   </div>
 </div>
 <br>
-<h1>OUTPUT:</h1>
-<div class="output-container">
-  <div class="output1">
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-  </div>
-</div>
-<h1 class="custom-h1">Example Explained:</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;html&gt;</span> element is the root element and it defines the whole HTML document.</p>
+  <p>Where "helloworld.py" is the name of your python file.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;html&gt;</span> and an end tag <span class="bulletred">&lt;/html&gt;</span>.</p>
-</ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>Then, inside the <span class="bulletred">&lt;html&gt;</span> element there is a <span class="bulletred">&lt;body&gt;</span> element:</p>
+  <p>Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
 </ion-item>
 <br>
 <div class="example-container">
   <div class="example1">
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-    <br>
-    <p>&lt;/body&gt;</p>
+    <p>print <span class="bulletblue">(<span style="color: rgb(11, 10, 10);">"Hello World!</span>)</span></p>
   </div>
 </div>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;body&gt;</span> element defines the document's body.</p>
+  <p>Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:</p>
 </ion-item>
 <br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;body&gt;</span> and an end tag <span class="bulletred">&lt;/body&gt;</span>.</p>
-</ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>Then, inside the <span class="bulletred">&lt;body&gt;</span> element there are two other elements: <span class="bulletred">&lt;h1&gt;</span> and <span class="bulletred">&lt;p&gt;</span>:</p>
-</ion-item>
-<br>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python helloworld.py</p>
   </div>
 </div>
 <br>
 <ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;h1&gt;</span> element defines a heading.</p>
+  <p>The output should read:</p>
 </ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;h1&gt;</span> and an end tag <span class="bulletred">&lt;/h1&gt;</span>:</p>
-</ion-item>
-<br>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">Hello World!</p>
   </div>
 </div>
 <br>
 <ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;p&gt;</span> element defines a paragraph.</p>
+  <p>Congratulations, you have written and executed your first Python program.</p>
 </ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;p&gt;</span> and an end tag <span class="bulletred">&lt;/p&gt;</span>:</p>
-</ion-item>
-<br>
-<div class="example-container">
-<div class="example1">
-  <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-</div>
-</div>
-<br>
-<h1>Never Skip the End Tag</h1>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>Some HTML elements will display correctly, even if you forget the end tag:</p>
-</ion-item>
-<br>
-<h1>EXAMPLE</h1>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;!DOCTYPE html&gt;</p>
-    <p>&lt;html&gt;</p>
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;p&gt;<span>This is a paragraph.</span></p>
-    <p>&lt;p&gt;<span>This is a paragraph.</span></p>
-    <br>
-    <p>&lt;/body&gt;</p>
-    <p>&lt;/html&gt;</p>
-  </div>
-</div>
-<br>
-<h1>OUTPUT:</h1>
-<div class="output-container">
-  <div class="output1">
-    <p>This is a paragraph.</p>
-    <p>This is a paragraph.</p>
-  </div>
-</div>
-<div class="note-container">
-  <div class="note-1">
-    <p><b>However, never rely on this! Unexpected results and errors may occur if you forget the end tag!</b></p>
-  </div>
-</div>
 <br>
 <hr class="custom-hr2">
-<br>
-<h1>Empty HTML Elements</h1>
+<h1>The Python Command Line</h1>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>HTML elements with no content are called empty elements.</p>
+  <p>To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;br&gt;</span> tag defines a line break, and is an empty element without a closing tag:</p>
+  <p>Type the following on the Windows, Mac or Linux command line:</p>
 </ion-item>
 <br>
-<h1>EXAMPLE</h1>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;!DOCTYPE html&gt;</p>
-    <p>&lt;html&gt;</p>
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;p&gt;<span>This is a </span>&lt;br&gt; <span>paragraph with a line break.</span>&lt;/p&gt;</p>
-    <br>
-    <p>&lt;/body&gt;</p>
-    <p>&lt;/html&gt;</p>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python</p>
   </div>
 </div>
 <br>
-<h1>OUTPUT:</h1>
-<div class="output-container">
-  <div class="output1">
-    <p>This is a</p>
-    <p>paragraph with a line break.</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p> If the "python" command did not work, you can try "py":</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>py</p>
   </div>
 </div>
-<hr class="custom-hr2">
-<h1>HTML is Not Case Sensitive </h1>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>HTML tags are not case sensitive: <span class="bulletred">&lt;P&gt;</span> means the same as <span class="bulletred">&lt;p&gt;</span>.</p>
+  <p>From there you can write any python, including our hello world example from earlier in the tutorial:</p>
 </ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(100, 98, 98);">C:\Users\<i>Your Name</i>>python</p>
+    <p style="color: rgb(100, 98, 98);">Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32</p>
+    <p style="color: rgb(100, 98, 98);">Type "help", "copyright", "credits" or "license" for more information.</p>
+    <p style="color: rgb(255, 245, 245);">>>> print("Hello, World!")</p>
+  </div>
+</div>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The HTML standard does not require lowercase tags, but *APP  NAME* <b>recommends</b> lowercase in HTML, and <b>demands</b> lowercase for stricter document types like XHTML.</p>
+  <p>Which will write "Hello, World!" in the command line:</p>
 </ion-item>
 <br>
-<div class="note-container">
-  <div class="note-1">
-    <p>At *APP NAME* we always use lowercase tag names.</p>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(100, 98, 98);">C:\Users\<i>Your Name</i>>python</p>
+    <p style="color: rgb(100, 98, 98);">Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32</p>
+    <p style="color: rgb(100, 98, 98);">Type "help", "copyright", "credits" or "license" for more information.</p>
+    <p style="color: rgb(100, 98, 98);">>>> print("Hello, World!")</p>
+    <p style="color: rgb(255, 245, 245);">Hello, World!</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">exit()</p>
   </div>
 </div>
 </div>
@@ -407,8 +318,8 @@
   <ion-button class="click-here">Click here</ion-button>
 </ion-item>
 <div class="home-next">
-  <ion-button [routerLink]="['/html']">HOME</ion-button>
-  <ion-button [routerLink]="['/htmlattri']">Next Chapter</ion-button>
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+  <ion-button [routerLink]="['/pysyntax']">Next Chapter</ion-button>
 </div>
 <br><br>
 </ion-content>

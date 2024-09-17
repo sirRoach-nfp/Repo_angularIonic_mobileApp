@@ -122,7 +122,47 @@ const routes: Routes = [
   {
     path: 'js-intro',
     loadChildren: () => import('./js-intro/js-intro.module').then( m => m.JsIntroPageModule)
+  },  {
+    path: 'py',
+    loadChildren: () => import('./py/py.module').then( m => m.PyPageModule)
   },
+  {
+    path: 'sql',
+    loadChildren: () => import('./sql/sql.module').then( m => m.SqlPageModule)
+  },
+  {
+    path: 'sqlintro',
+    loadChildren: () => import('./sqlintro/sqlintro.module').then( m => m.SqlintroPageModule)
+  },
+  {
+    path: 'sqlsyntax',
+    loadChildren: () => import('./sqlsyntax/sqlsyntax.module').then( m => m.SqlsyntaxPageModule)
+  },
+  {
+    path: 'sqlselect',
+    loadChildren: () => import('./sqlselect/sqlselect.module').then( m => m.SqlselectPageModule)
+  },
+  {
+    path: 'sqlinsert',
+    loadChildren: () => import('./sqlinsert/sqlinsert.module').then( m => m.SqlinsertPageModule)
+  },
+  {
+    path: 'pyintro',
+    loadChildren: () => import('./pyintro/pyintro.module').then( m => m.PyintroPageModule)
+  },
+  {
+    path: 'pygetstarted',
+    loadChildren: () => import('./pygetstarted/pygetstarted.module').then( m => m.PygetstartedPageModule)
+  },
+  {
+    path: 'pysyntax',
+    loadChildren: () => import('./pysyntax/pysyntax.module').then( m => m.PysyntaxPageModule)
+  },
+  {
+    path: 'pyvariables',
+    loadChildren: () => import('./pyvariables/pyvariables.module').then( m => m.PyvariablesPageModule)
+  },
+
 
 
 ];

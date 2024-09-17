@@ -1,0 +1,511 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/python" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>SQL INSERT INTO Statement</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<h1>The SQL INSERT INTO Statement</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">INSERT INTO</span> statement is used to insert new records in a table.</p>
+</ion-item>
+<br>
+<h3>INSERT INTO Syntax</h3>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>It is possible to write the <span class="bulletred">INSERT INTO</span> statement in two ways:</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text-container">
+  <img src="../../assets/icon/no1.png">
+  <div class="text-content">
+    <p class="first-text">Specify both the column names and the values to be inserted:</p>
+  </div>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>INSERT INTO <span class="bulletblue"><i>table_name </i> (<i>column1, column2, column3, ...</i>)</span></p>
+    <p>VALUES <span class="bulletblue">(<i>value1, value2, value3, ...</i>);</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text-container">
+  <img src="../../assets/icon/no2.png">
+  <div class="text-content">
+    <p class="first-text">If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the <span class="bulletred">INSERT INTO</span> syntax would be as follows:</p>
+  </div>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>INSERT INTO <span class="bulletblue"><i>table_name </i></span></p>
+    <p>VALUES <span class="bulletblue">(<i>value1, value2, value3, ...</i>);</span></p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Demo Database</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Below is a selection from the Customers table used in the examples:</p>
+</ion-item>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+        <th>ContactNumber</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>PostalCode</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>INSERT INTO Example</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following SQL statement inserts a new record in the "Customers" table:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>INSERT INTO <span class="bulletblue"> Customers (<span style="color: black;">CustomerName, ContactNumber, Address, City, PostalCode, Country</span>)</span></p>
+    <p>VALUES <span class="bulletblue">(<span style="color: black;">'Gian Carlo Mito', '09662067296', 'Marelo', 'Gapan City', '3105', 'Philippines' </span>);</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The selection from the "Customers" table will now look like this:</p>
+</ion-item>
+<br>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+        <th>ContactNumber</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>PostalCode</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Gian Carlo Mito</td>
+        <td>09662067296</td>
+        <td>Marelo</td>
+        <td>Gapan City</td>
+        <td>3105</td>
+        <td>Philippines</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Insert Data Only in Specified Columns</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>It is also possible to only insert data in specific columns.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following SQL statement will insert a new record, but only insert data in the "CustomerName", "City", and "Country" columns (CustomerID will be updated automatically):</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>INSERT INTO <span class="bulletblue"> Customers (<span style="color: black;">CustomerName, City, Country</span>)</span></p>
+    <p>VALUES <span class="bulletblue">(<span style="color: black;">'Gian Carlo Mito', 'Gapan City', 'Philippines' </span>);</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The selection from the "Customers" table will now look like this:</p>
+</ion-item>
+<br>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+        <th>ContactNumber</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>PostalCode</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Gian Carlo Mito</td>
+        <td>null</td>
+        <td>null</td>
+        <td>Gapan City</td>
+        <td>null</td>
+        <td>Philippines</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr class="custom-hr2">
+<h1>Insert Multiple Rows</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>It is also possible to insert multiple rows in one statement.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To insert multiple rows of data, we use the same INSERT INTO statement, but with multiple values:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>INSERT INTO <span class="bulletblue"> Customers (<span style="color: black;">CustomerName, ContactNumber, Address, City, PostalCode, Country</span>)</span></p>
+    <p>VALUES</p>
+    <p><span class="bulletblue">(<span style="color: black;">'Gian Carlo Mito', '09662067296', 'Marelo', Gapan City', '3105', 'Philippines' </span>),</span></p>
+    <p><span class="bulletblue">(<span style="color: black;">'Gian Carlo Mito', '09662067296', 'Marelo', Gapan City', '3105', 'Philippines' </span>),</span></p>
+    <p><span class="bulletblue">(<span style="color: black;">'Gian Carlo Mito', '09662067296', 'Marelo', Gapan City', '3105', 'Philippines' </span>);</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Make sure you separate each set of values with a comma  <span class="bulletred">,</span>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The selection from the "Customers" table will now look like this:</p>
+</ion-item>
+<br>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+        <th>ContactNumber</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>PostalCode</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Gian Carlo Mito</td>
+        <td>09662067296</td>
+        <td>Marelo</td>
+        <td>Gapan City</td>
+        <td>3105</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Gian Carlo Mito</td>
+        <td>09662067296</td>
+        <td>Marelo</td>
+        <td>Gapan City</td>
+        <td>3105</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Gian Carlo Mito</td>
+        <td>09662067296</td>
+        <td>Marelo</td>
+        <td>Gapan City</td>
+        <td>3105</td>
+        <td>Philippines</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+</div>
+<br><br>
+</ion-content>

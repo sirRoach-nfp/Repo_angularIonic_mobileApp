@@ -1,0 +1,654 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a routerLink="/html" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a [routerLink]="['/py']" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>PYTHON VARIABLES</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<h1>Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Variables are containers for storing data values.</p>
+</ion-item>
+<hr class="custom-hr2">
+<h1>Creating Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python has no command for declaring a variable.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable is created the moment you first assign a value to it.</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>x <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">5</span>
+      <br>
+      y <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">"Rhonalyn"</span><br><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">x</span>)</span><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">y</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>5 <br> Rhonalyn</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Variables do not need to be declared with any particular type, and can even change type after they have been set.</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>x <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">4</span> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: green;"># x is a type of int</span>
+      <br>
+      x <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">"Rhonalyn"</span> &nbsp; &nbsp; <span style="color: green;"># x is now a type of str</span><br><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">x</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Rhonalyn</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Casting</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If you want to specify the data type of a variable, this can be done with casting.</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>x <span class="bulletblue"> = </span>str<span style="color: rgb(8, 8, 8)">(3)</span> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: green;"># x will be '3'</span>
+      <br>
+      y <span class="bulletblue"> = </span>int<span style="color: rgb(8, 8, 8)">(3)</span> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: green;"># y will be 3</span>
+      <br>
+      z <span class="bulletblue"> = </span>float<span style="color: rgb(8, 8, 8)">(3)</span> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <span style="color: green;"># z will be 3.0</span><br>
+      <br>print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">x</span>)</span><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">y</span>)</span><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">z</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br><h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>
+      3 <br>3 <br>3.0
+    </p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Get the Type</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You can get the data type of a variable with the <span class="bulletred">type()</span> function.</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>x <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">4</span> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: green;"># x is a type of int</span>
+      <br>
+      x <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">"Rhonalyn"</span> &nbsp; &nbsp; <span style="color: green;"># x is now a type of str</span><br><br>
+      print <span class="bulletblue">(<span style="color: #f17177">type</span><span style="color: rgb(8, 8, 8);">(x)</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>
+      &lt;class 'int'><br>
+      &lt;class 'str'>
+    </p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Single or Double Quotes?</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>String variables can be declared either by using single or double quotes:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>x <span class="bulletblue"> = </span><span>"Rhonalyn"</span>
+      <br> print <span class="bulletblue">(<span>x</span>)</span><br>
+      <span style="color: green;">#double quotes are the same as single quotes:</span>
+      x <span class="bulletblue"> = </span><span>'Rhonalyn'</span> &nbsp; &nbsp;<br>
+      print <span class="bulletblue">(<span>x</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>
+     Rhonalyn <br>Rhonalyn
+    </p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Case Sensitive</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Variable names are case-sensitive.</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>a <span class="bulletblue"> = </span><span>16</span><br>
+      A <span class="bulletblue"> = </span><span>"Rhonalyn"</span> &nbsp; &nbsp;<br>
+      <span style="color: green;">##A will not overwrite a</span><br><br>
+      print <span class="bulletblue">(<span>a</span>)</span><br>
+      print <span class="bulletblue">(<span>A</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>
+     16 <br>Rhonalyn
+    </p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Variable Names</h1>
+<p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name must start with a letter or the underscore character</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name cannot start with a number</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Variable names are case-sensitive (age, Age and AGE are three different variables)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name cannot be any of the <a href="/pykeywords" style="color: #f17177;">Python keywords</a>.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<p>Legal variable names:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      myvar = "Rhona" <br>
+      my_var = "Rhona" <br>
+      _my_var = "Rhona" <br>
+      myVar = "Rhona" <br>
+      MYVAR = "Rhona" <br>
+      myvar2 = "Rhona"
+    </p>
+  </div>
+</div>
+<br>
+<h1>EXAMPLE</h1>
+<p>Illegal variable names:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      2myvar = "Rhona" <br>
+      my-var = "Rhona" <br>
+      my var = "Rhona"
+    </p>
+  </div>
+</div>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Remember that variable names are case-sensitive</b></p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Multi Words Variable Names</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Variable names with more than one word can be difficult to read.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>There are several techniques you can use to make them more readable:</p>
+</ion-item>
+<h1>Camel Case</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Each word, except the first, starts with a capital letter:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>myVariableName <span class="bulletblue">= "<span>Rhona</span>"</span></p>
+  </div>
+</div>
+<h1>Pascal Case</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Each word starts with a capital letter:</p>
+</ion-item>
+<div class="example-container">
+  <div class="example1">
+    <p>MyVariableName <span class="bulletblue">= "<span>Rhona</span>"</span></p>
+  </div>
+</div>
+<h1>Snake Case</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Each word is separated by an underscore character:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>my_variable_name <span class="bulletblue">= "<span>Rhona</span>"</span></p>
+  </div>
+</div>
+<br><br>
+<hr class="custom-hr2">
+<h1>Many Values to Multiple Variables</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python allows you to assign values to multiple variables in one line:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x, y, z <span class="bulletblue">= </span> <span>"Orange" , "Banana", "Cherry"</span><br>
+      print <span class="bulletblue">(<span>x</span>)</span> <br>
+      print <span class="bulletblue">(<span>y</span>)</span> <br>
+      print <span class="bulletblue">(<span>z</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>
+      Orange <br> Banana <br> Cherry
+    </p>
+  </div>
+</div>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note:</b> Make sure the number of variables matches the number of values, or else you will get an error.</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>One Value to Multiple Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>And you can assign the same value to multiple variables in one line:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x = y = z <span class="bulletblue">= </span> <span>"Orange"</span><br>
+      print <span class="bulletblue">(<span>x</span>)</span> <br>
+      print <span class="bulletblue">(<span>y</span>)</span> <br>
+      print <span class="bulletblue">(<span>z</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>
+      Orange <br> Orange <br> Orange
+    </p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Unpack a Collection</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      fruits <span class="bulletblue">= [<span>"apple", "banana", "cherry"</span>]</span> 
+      x, y, z <span class="bulletblue">= </span> <span>fruits</span><br>
+      print <span class="bulletblue">(<span>x</span>)</span> <br>
+      print <span class="bulletblue">(<span>y</span>)</span> <br>
+      print <span class="bulletblue">(<span>z</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>apple <br> banana <br> cherry</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Output Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The Python <span class="bulletred">print()</span> function is often used to output variables.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x <span class="bulletblue">= </span> <span>"Python is awesome"</span><br>
+      print <span class="bulletblue">(<span>x</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Python is awesome</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In the <span class="bulletred">print()</span> function, you output multiple variables, separated by a comma:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x <span class="bulletblue"> = </span><span>"Python "</span><br>
+      y <span class="bulletblue"> = </span><span>"is "</span><br>
+      y <span class="bulletblue"> = </span><span>"awesome "</span><br><br>
+      print <span class="bulletblue">(<span>x, y, z</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Python is awesome</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You can also use the + operator to output multiple variables:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x <span class="bulletblue"> = </span><span>"Python "</span><br>
+      y <span class="bulletblue"> = </span><span>"is "</span><br>
+      y <span class="bulletblue"> = </span><span>"awesome "</span><br><br>
+      print <span class="bulletblue">(<span>x + y + z</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Python is awesome</p>
+  </div>
+</div>
+<div class="note-container">
+  <div class="note-1">
+    <p>Notice the space character after <span class="bulletred">"Python "</span> and <span class="bulletred">"is "</span>, without them the result would be "Pythonisawesome".</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>For numbers, the <span class="bulletred">+</span> character works as a mathematical operator:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x <span class="bulletblue"> = </span><span>5</span><br>
+      y <span class="bulletblue"> = </span><span>10</span><br>
+      print <span class="bulletblue">(<span>x + y</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>15</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In the <span class="bulletred">print()</span> function, when you try to combine a string and a number with the + operator, Python will give you an error:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x <span class="bulletblue"> = </span><span>5</span><br>
+      y <span class="bulletblue"> = </span><span>" Rhona"</span><br>
+      print <span class="bulletblue">(<span>x + y</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>TypeError: unsupported operand type(s) for +: 'int' and 'str'</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The best way to output multiple variables in the print() function is to separate them with commas, which even support different data types:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      x <span class="bulletblue"> = </span><span>5</span><br>
+      y <span class="bulletblue"> = </span><span>" Rhona"</span><br>
+      print <span class="bulletblue">(<span>x, y</span>)</span><br>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>5 Rhona</p>
+  </div>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+</div>
+<br><br>
+</ion-content>

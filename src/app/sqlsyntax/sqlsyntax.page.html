@@ -144,261 +144,214 @@
 
 
 
-<!--//wag buburahin code ko to (warnings)-->
 
-<h1>HTML ELEMENT</h1>
+<!-- wag buburahin-->
+<h1>SQL SYNTAX</h1>
 <hr class="custom-hr1">
-<p>An HTML element is defined by a start tag, some content, and an end tag:</p>
-<hr class="custom-hr2">
 <div class="anime1">
+<h1>SQL Statements</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The HTML element is everything from the start tag to the end tag:</p>
-</ion-item> 
-<h1 class="custom-h1">Examples of some HTML elements:</h1>
-  <div class="table-container">
-    <table class="element-table">
-      <thead>
-        <tr>
-          <th>Start Tag</th>
-          <th>Element Content</th>
-          <th>End Tag</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&lt;h1&gt;</td>
-          <td>My first heading</td>
-          <td>&lt;/h1&gt;</td>
-        </tr>
-        <tr>
-          <td>&lt;p&gt;</td>
-          <td>My first paragraph</td>
-          <td>&lt;/p&gt;</td>
-        </tr>
-        <tr>
-          <td>&lt;br&gt;</td>
-          <td>none</td>
-          <td>none</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<br>
-<div class="note-container">
-  <div class="note-1">
-    <p><b>Note:</b> Some HTML elements have no content (like the &lt;br&gt; element). These elements are called empty elements. Empty elements do not have an end tag!</p>
-  </div>
-</div>
-<br>
-<hr class="custom-hr2">
-<h1>Nested HTML Elements</h1>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>HTML elements can be nested (this means that elements can contain other elements).</p>
+  <p>Most of the actions you need to perform on a database are done with SQL statements.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>All HTML documents consist of nested HTML elements.</p>
+  <p>SQL statements consists of keywords that are easy to understand.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The following example contains four HTML elements (&lt;html&gt;, &lt;body&gt;, &lt;h1&gt; and &lt;p&gt;):</p>
+  <p>The following SQL statement returns all records from a table named "Customers":</p>
 </ion-item>
 <br>
 <h1>EXAMPLE</h1>
 <div class="example-container">
   <div class="example1">
-    <p>&lt;!DOCTYPE html&gt;</p>
-    <p>&lt;html&gt;</p>
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-    <br>
-    <p>&lt;/body&gt;</p>
-    <p>&lt;/html&gt;</p>
+    <p>&lt;SELECT <span class="bulletblue">*</span> FROM <span class="bulletblue">Customers</span>&gt;</p>
   </div>
 </div>
 <br>
-<h1>OUTPUT:</h1>
+<p>Click "Run SQL" to see the result.</p>
+<ion-button>Run the SQL</ion-button>
+<br>
+<h1>Result:</h1>
 <div class="output-container">
   <div class="output1">
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <p>Click 'Run SQL' to execute the SQL statement above.</p>
   </div>
 </div>
-<h1 class="custom-h1">Example Explained:</h1>
+<p>We will teach you all about the different SQL statements.</p>
+<hr class="custom-hr2">
+<h1>Database Tables</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;html&gt;</span> element is the root element and it defines the whole HTML document.</p>
+  <p>A database most often contains one or more tables. Each table is identified by a name (e.g. "Customers" or "Orders"), and contain records (rows) with data.</p>
 </ion-item>
-<br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;html&gt;</span> and an end tag <span class="bulletred">&lt;/html&gt;</span>.</p>
+  <p>We will use the well-known Northwind sample database (included in MS Access and MS SQL Server).</p>
 </ion-item>
-<br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>Then, inside the <span class="bulletred">&lt;html&gt;</span> element there is a <span class="bulletred">&lt;body&gt;</span> element:</p>
+  <p>Below is a selection from the Customers table used in the examples:</p>
 </ion-item>
-<br>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-    <br>
-    <p>&lt;/body&gt;</p>
-  </div>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+        <th>ContactNumber</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>PostalCode</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;body&gt;</span> element defines the document's body.</p>
+  <p>The table above contains five records (one for each customer) and seven columns (CustomerID, CustomerName, ContactNumber, Address, City, PostalCode, and Country).</p>
 </ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;body&gt;</span> and an end tag <span class="bulletred">&lt;/body&gt;</span>.</p>
-</ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>Then, inside the <span class="bulletred">&lt;body&gt;</span> element there are two other elements: <span class="bulletred">&lt;h1&gt;</span> and <span class="bulletred">&lt;p&gt;</span>:</p>
-</ion-item>
-<br>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-    <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-  </div>
-</div>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;h1&gt;</span> element defines a heading.</p>
-</ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;h1&gt;</span> and an end tag <span class="bulletred">&lt;/h1&gt;</span>:</p>
-</ion-item>
-<br>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
-  </div>
-</div>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;p&gt;</span> element defines a paragraph.</p>
-</ion-item>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>It has a start tag <span class="bulletred">&lt;p&gt;</span> and an end tag <span class="bulletred">&lt;/p&gt;</span>:</p>
-</ion-item>
-<br>
-<div class="example-container">
-<div class="example1">
-  <p>&lt;p&gt;<span>My first paragraph.</span>&lt;/p&gt;</p>
-</div>
-</div>
-<br>
-<h1>Never Skip the End Tag</h1>
-<br>
-<ion-item lines="none" class="icon-text">
-  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>Some HTML elements will display correctly, even if you forget the end tag:</p>
-</ion-item>
-<br>
-<h1>EXAMPLE</h1>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;!DOCTYPE html&gt;</p>
-    <p>&lt;html&gt;</p>
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;p&gt;<span>This is a paragraph.</span></p>
-    <p>&lt;p&gt;<span>This is a paragraph.</span></p>
-    <br>
-    <p>&lt;/body&gt;</p>
-    <p>&lt;/html&gt;</p>
-  </div>
-</div>
-<br>
-<h1>OUTPUT:</h1>
-<div class="output-container">
-  <div class="output1">
-    <p>This is a paragraph.</p>
-    <p>This is a paragraph.</p>
-  </div>
-</div>
-<div class="note-container">
-  <div class="note-1">
-    <p><b>However, never rely on this! Unexpected results and errors may occur if you forget the end tag!</b></p>
-  </div>
-</div>
 <br>
 <hr class="custom-hr2">
-<br>
-<h1>Empty HTML Elements</h1>
+<h1>Keep in Mind That...</h1>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>HTML elements with no content are called empty elements.</p>
+  <p>SQL keywords are NOT case sensitive: <span class="bulletred">select</span> is the same as <span class="bulletred">SELECT</span>.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The <span class="bulletred">&lt;br&gt;</span> tag defines a line break, and is an empty element without a closing tag:</p>
+  <p>In this tutorial we will write all SQL keywords in upper-case.</p>
 </ion-item>
 <br>
-<h1>EXAMPLE</h1>
-<div class="example-container">
-  <div class="example1">
-    <p>&lt;!DOCTYPE html&gt;</p>
-    <p>&lt;html&gt;</p>
-    <p>&lt;body&gt;</p>
-    <br>
-    <p>&lt;p&gt;<span>This is a </span>&lt;br&gt; <span>paragraph with a line break.</span>&lt;/p&gt;</p>
-    <br>
-    <p>&lt;/body&gt;</p>
-    <p>&lt;/html&gt;</p>
-  </div>
-</div>
-<br>
-<h1>OUTPUT:</h1>
-<div class="output-container">
-  <div class="output1">
-    <p>This is a</p>
-    <p>paragraph with a line break.</p>
-  </div>
-</div>
 <hr class="custom-hr2">
-<h1>HTML is Not Case Sensitive </h1>
-<br>
+<h1>Semicolon after SQL Statements?</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>HTML tags are not case sensitive: <span class="bulletred">&lt;P&gt;</span> means the same as <span class="bulletred">&lt;p&gt;</span>.</p>
+  <p>Some database systems require a semicolon at the end of each SQL statement.</p>
 </ion-item>
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
-  <p>The HTML standard does not require lowercase tags, but *APP  NAME* <b>recommends</b> lowercase in HTML, and <b>demands</b> lowercase for stricter document types like XHTML.</p>
+  <p>Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.</p>
 </ion-item>
 <br>
-<div class="note-container">
-  <div class="note-1">
-    <p>At *APP NAME* we always use lowercase tag names.</p>
-  </div>
-</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In this tutorial, we will use semicolon at the end of each SQL statement.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Some of The Most Important SQL Commands</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">SELECT</span> - extracts data from a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">UPDATE</span> - updates data in a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">DELETE</span> - deletes data from a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">INSERT INTO</span> - inserts new data into a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">CREATE DATABASE</span> - creates a new database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">ALTER DATABASE</span> - modifies a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">CREATE TABLE</span> - creates a new table</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">ALTER TABLE</span> - modifies a table</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">DROP TABLE</span> - deletes a table</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">CREATE INDEX</span> - creates an index (search key)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">DROP INDEX</span> - deletes an index</p>
+</ion-item>
+<br>
 </div>
 <br>
 <hr class="custom-hr2">
@@ -407,8 +360,8 @@
   <ion-button class="click-here">Click here</ion-button>
 </ion-item>
 <div class="home-next">
-  <ion-button [routerLink]="['/html']">HOME</ion-button>
-  <ion-button [routerLink]="['/htmlattri']">Next Chapter</ion-button>
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+  <ion-button [routerLink]="['/sqlselect']">Next Chapter</ion-button>
 </div>
 <br><br>
 </ion-content>
