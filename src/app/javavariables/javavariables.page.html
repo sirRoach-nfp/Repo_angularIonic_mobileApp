@@ -1,0 +1,382 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/py" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>JAVA VARIABLES</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<h1>Java Variables</h1>
+<p>Variables are containers for storing data values.</p>
+<p>In Java, there are different <b>types</b> of variables, for example:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">String</span> - stores text, such as "Hello". String values are surrounded by double quotes</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">int</span> - stores integers (whole numbers), without decimals, such as 123 or -123</p>
+</ion-item>
+<br><ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">float</span> - stores floating point numbers, with decimals, such as 19.99 or -19.99</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">char</span> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">boolean</span> - stores values with two states: true or false</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Declaring (Creating) Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To create a variable, you must specify the type and assign it a value:</p>
+</ion-item>
+<h1>Syntax</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      <i>type variableName = value;</i>
+    </p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Where type is one of Java's types (such as <span class="bulletred">int</span> or <span class="bulletred">String</span>), and variableName is the name of the variable (such as <b>x</b> or <b>name</b>). The <b>equal sign</b> is used to assign values to the variable.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To create a variable that should store text, look at the following example:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<p>Create a variable called <b>myNum</b> of type <span class="bulletred">int</span> and assign it the value <b>int</b>:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>public class <span class="bulletblue">Main</span> &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void <span class="bulletblue">main</span>(<span class="bulletblue">String</span>[] args) &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <span class="bulletblue">myNum =  <span>15</span>;</span> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">System.out.print(<span>myNum</span>);</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;
+    <br>&#125;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+      <p>15</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>public class <span class="bulletblue">Main</span> &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void <span class="bulletblue">main</span>(<span class="bulletblue">String</span>[] args) &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <span class="bulletblue"> = myNum;</span> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">myNum =  <span>15</span>;</span> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">System.out.print(<span>myNum</span>);</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;
+    <br>&#125;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+      <p>15</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>public class <span class="bulletblue">Main</span> &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void <span class="bulletblue">main</span>(<span class="bulletblue">String</span>[] args) &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int <span class="bulletblue">myNum =  <span>15</span>;</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">myNum =  <span>20</span>;</span> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">System.out.print(<span>myNum</span>);</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;
+    <br>&#125;</p>
+  </div>
+</div>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+      <p>20</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Final Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If you don't want others (or yourself) to overwrite existing values, use the <span class="bulletred">final</span> keyword (this will declare the variable as "final" or "constant", which means unchangeable and read-only):</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>public class <span class="bulletblue">Main</span> &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public static void <span class="bulletblue">main</span>(<span class="bulletblue">String</span>[] args) &#123; <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;final int <span class="bulletblue">myNum =  <span>15</span>;</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">myNum =  <span>20</span>;</span> <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">System.out.print(<span>myNum</span>);</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#125;
+    <br>&#125;</p>
+  </div>
+</div>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+      <p>
+        Main.java:4: error: cannot assign a value to final variable myNum <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myNum = 20; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^ <br>
+        1 error
+      </p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Other Types</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A demonstration of how to declare variables of other types:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      int <span class="bulletblue">myNum =  <span>5</span>;</span><br>
+      float <span class="bulletblue">myFloatNum =  <span>5.99</span>;</span><br>
+      char <span class="bulletblue">myLetter =  <span>'R'</span>;</span><br>
+      boolean <span class="bulletblue">myBool =  <span>true</span>;</span><br>
+     String <span class="bulletblue">myText =  <span>"Hello"</span>;</span><br>
+    </p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Java Identifiers</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>All Java <b>variables</b> must be <b>identified</b> with <b>unique names</b>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>These unique names are called <b>identifiers</b>.</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      <span style="color: gray;">// Good</span>
+      int <span class="bulletblue">minutesPerHour =  <span>60</span>;</span><br><br>
+      <span style="color: gray;">// OK, but not so easy to understand what m actually is</span>
+      int <span class="bulletblue">m =  <span>60</span>;</span><br>
+    </p>
+  </div>
+</div>
+<p>The general rules for naming variables are:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names can contain letters, digits, underscores, and dollar signs</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names must begin with a letter</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names should start with a lowercase letter, and cannot contain whitespace</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names can also begin with $ and _ </p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names are case-sensitive ("myVar" and "myvar" are different variables)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Reserved words (like Java keywords, such as <span class="bulletred">int</span> or <span class="bulletred">boolean</span>) cannot be used as names</p>
+</ion-item>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/javasyntax']">Prev</ion-button>
+</div>
+<br><br>
+</ion-content>

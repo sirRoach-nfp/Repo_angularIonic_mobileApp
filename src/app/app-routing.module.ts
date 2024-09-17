@@ -162,6 +162,26 @@ const routes: Routes = [
     path: 'pyvariables',
     loadChildren: () => import('./pyvariables/pyvariables.module').then( m => m.PyvariablesPageModule)
   },
+  {
+    path: 'java',
+    loadChildren: () => import('./java/java.module').then( m => m.JavaPageModule)
+  },
+  {
+    path: 'javaintro',
+    loadChildren: () => import('./javaintro/javaintro.module').then( m => m.JavaintroPageModule)
+  },
+  {
+    path: 'javagetstarted',
+    loadChildren: () => import('./javagetstarted/javagetstarted.module').then( m => m.JavagetstartedPageModule)
+  },
+  {
+    path: 'javasyntax',
+    loadChildren: () => import('./javasyntax/javasyntax.module').then( m => m.JavasyntaxPageModule)
+  },
+  {
+    path: 'javavariables',
+    loadChildren: () => import('./javavariables/javavariables.module').then( m => m.JavavariablesPageModule)
+  },
 
 
 
