@@ -150,7 +150,7 @@
 <hr class="custom-hr1">
 <p>SQL is a standard language for accessing and manipulating databases.</p>
 <hr class="custom-hr2">
-<div class="anime1">
+<div class="anime">
 <h1>What is SQL</h1>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
@@ -282,14 +282,58 @@
 </div>
 <br>
 <p>Click "Run SQL" to see the result.</p>
-<ion-button>Run the SQL</ion-button>
+<ion-button (click)="runSQL()">Run the SQL</ion-button>
 <br>
 <h1>Result:</h1>
 <div class="output-container">
-  <div class="output1">
+  <div *ngIf="showOutput1" class="output1">
     <p>Click 'Run SQL' to execute the SQL statement above.</p>
   </div>
+  <div *ngIf="showTable" class="output-table">
+    <div class="table-container">
+      <table class="element-table">
+        <thead>
+          <tr>
+            <th>Customer ID</th>
+            <th>ContactName</th>
+            <th>ContactNumber</th>
+            <th>Address</th>
+            <th>PostalCode</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Rhonalyn Ortiz</td>
+            <td>09662067296</td>
+            <td>Gapan City</td>
+            <td>3106</td>
+            <td>Philippines</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Rhonalyn Ortiz</td>
+            <td>09662067296</td>
+            <td>Gapan City</td>
+            <td>3106</td>
+            <td>Philippines</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Rhonalyn Ortiz</td>
+            <td>09662067296</td>
+            <td>Gapan City</td>
+            <td>3106</td>
+            <td>Philippines</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
+
+
 <br>
 <ion-item lines="none" class="icon-text">
   <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>

@@ -320,6 +320,7 @@ span {
 .example-container {
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
 .example-container-cmd {
     display: flex;
@@ -841,4 +842,35 @@ span {
     transform: translateY(0);
     opacity: 1;
   }
+}
+.example11 {
+  height: auto;
+  width: 93%;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  background-color: white;
+}
+.example11 p {
+  font-size: 15px;
+  margin-left: 2px;
+  margin-top: 18px;
+  color: #f17177;
+}
+.helloworldpycontainer {
+  width: 30%;
+  height: 40px;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 8px 8px 0px 0px;
+  margin-left: 16px; 
+}
+
+.helloworldpy p{
+  margin-left: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transform: translateY(-10px);
 }

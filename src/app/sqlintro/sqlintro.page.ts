@@ -28,4 +28,14 @@ export class SqlintroPage{
       this.menu.close();
   }
 
+
+
+  
+  showOutput1: boolean = true;
+  showTable: boolean = false;
+
+  runSQL() {
+    this.showOutput1 = false;
+    this.showTable = true;
+  }
 }
