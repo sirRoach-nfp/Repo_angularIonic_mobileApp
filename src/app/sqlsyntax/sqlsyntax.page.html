@@ -1,0 +1,367 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/python" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>SQL SYNTAX</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<h1>SQL Statements</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Most of the actions you need to perform on a database are done with SQL statements.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>SQL statements consists of keywords that are easy to understand.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following SQL statement returns all records from a table named "Customers":</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;SELECT <span class="bulletblue">*</span> FROM <span class="bulletblue">Customers</span>&gt;</p>
+  </div>
+</div>
+<br>
+<p>Click "Run SQL" to see the result.</p>
+<ion-button>Run the SQL</ion-button>
+<br>
+<h1>Result:</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Click 'Run SQL' to execute the SQL statement above.</p>
+  </div>
+</div>
+<p>We will teach you all about the different SQL statements.</p>
+<hr class="custom-hr2">
+<h1>Database Tables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A database most often contains one or more tables. Each table is identified by a name (e.g. "Customers" or "Orders"), and contain records (rows) with data.</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>We will use the well-known Northwind sample database (included in MS Access and MS SQL Server).</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Below is a selection from the Customers table used in the examples:</p>
+</ion-item>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>CustomerName</th>
+        <th>ContactNumber</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>PostalCode</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Rhonalyn Ortiz</td>
+        <td>09326578793</td>
+        <td>Tabon</td>
+        <td>San Isidro</td>
+        <td>3106</td>
+        <td>Philippines</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The table above contains five records (one for each customer) and seven columns (CustomerID, CustomerName, ContactNumber, Address, City, PostalCode, and Country).</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Keep in Mind That...</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>SQL keywords are NOT case sensitive: <span class="bulletred">select</span> is the same as <span class="bulletred">SELECT</span>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In this tutorial we will write all SQL keywords in upper-case.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Semicolon after SQL Statements?</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Some database systems require a semicolon at the end of each SQL statement.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Semicolon is the standard way to separate each SQL statement in database systems that allow more than one SQL statement to be executed in the same call to the server.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In this tutorial, we will use semicolon at the end of each SQL statement.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Some of The Most Important SQL Commands</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">SELECT</span> - extracts data from a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">UPDATE</span> - updates data in a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">DELETE</span> - deletes data from a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">INSERT INTO</span> - inserts new data into a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">CREATE DATABASE</span> - creates a new database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">ALTER DATABASE</span> - modifies a database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">CREATE TABLE</span> - creates a new table</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">ALTER TABLE</span> - modifies a table</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">DROP TABLE</span> - deletes a table</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">CREATE INDEX</span> - creates an index (search key)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">DROP INDEX</span> - deletes an index</p>
+</ion-item>
+<br>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+  <ion-button [routerLink]="['/sqlselect']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

@@ -179,4 +179,44 @@ export class JsIntroPage implements OnInit {
       console.error(`Element with id "${elementId}" not found.`);
     }
   }
+
+//
+  sizeIncreased: boolean = false; // Track whether size has already increased
+
+  changeTextSize() {
+    const textChange = document.getElementById('default-size');
+    
+    if (textChange && !this.sizeIncreased) {
+      textChange.style.fontSize = '29px'; 
+      this.sizeIncreased = true; 
+    }
+  }
+
+  //
+
+  //
+  textHideDisplay(){
+    const hide = document.getElementById('textHide');
+
+    if (hide) {
+      hide.style.display = 'none';
+    } 
+  }
+  //
+
+    //
+    textShowDisplay(){
+      const hide = document.getElementById('textShow');
+  
+      if (hide) {
+        hide.style.display = 'block';
+      } 
+    }
+    //
+
 }
+
+
+
+
+

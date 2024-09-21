@@ -122,7 +122,8 @@ const routes: Routes = [
   {
     path: 'js-intro',
     loadChildren: () => import('./js-intro/js-intro.module').then( m => m.JsIntroPageModule)
-  },  {
+  },
+  {
     path: 'pythondiffpage',
     loadChildren: () => import('./pythondiffpage/pythondiffpage.module').then( m => m.PythondiffpagePageModule)
   },
@@ -145,6 +146,79 @@ const routes: Routes = [
   {
     path: 'javadiffpage',
     loadChildren: () => import('./ChallengeDifPage/javadiffpage/javadiffpage.module').then( m => m.JavadiffpagePageModule)
+  },
+
+  {
+    path: 'py',
+    loadChildren: () => import('./py/py.module').then( m => m.PyPageModule)
+  },
+  {
+    path: 'sql',
+    loadChildren: () => import('./sql/sql.module').then( m => m.SqlPageModule)
+  },
+  {
+    path: 'sqlintro',
+    loadChildren: () => import('./sqlintro/sqlintro.module').then( m => m.SqlintroPageModule)
+  },
+  {
+    path: 'sqlsyntax',
+    loadChildren: () => import('./sqlsyntax/sqlsyntax.module').then( m => m.SqlsyntaxPageModule)
+  },
+  {
+    path: 'sqlselect',
+    loadChildren: () => import('./sqlselect/sqlselect.module').then( m => m.SqlselectPageModule)
+  },
+  {
+    path: 'sqlinsert',
+    loadChildren: () => import('./sqlinsert/sqlinsert.module').then( m => m.SqlinsertPageModule)
+  },
+  {
+    path: 'pyintro',
+    loadChildren: () => import('./pyintro/pyintro.module').then( m => m.PyintroPageModule)
+  },
+  {
+    path: 'pygetstarted',
+    loadChildren: () => import('./pygetstarted/pygetstarted.module').then( m => m.PygetstartedPageModule)
+  },
+  {
+    path: 'pysyntax',
+    loadChildren: () => import('./pysyntax/pysyntax.module').then( m => m.PysyntaxPageModule)
+  },
+  {
+    path: 'pyvariables',
+    loadChildren: () => import('./pyvariables/pyvariables.module').then( m => m.PyvariablesPageModule)
+  },
+  {
+    path: 'java',
+    loadChildren: () => import('./java/java.module').then( m => m.JavaPageModule)
+  },
+  {
+    path: 'javaintro',
+    loadChildren: () => import('./javaintro/javaintro.module').then( m => m.JavaintroPageModule)
+  },
+  {
+    path: 'javagetstarted',
+    loadChildren: () => import('./javagetstarted/javagetstarted.module').then( m => m.JavagetstartedPageModule)
+  },
+  {
+    path: 'javasyntax',
+    loadChildren: () => import('./javasyntax/javasyntax.module').then( m => m.JavasyntaxPageModule)
+  },
+  {
+    path: 'javavariables',
+    loadChildren: () => import('./javavariables/javavariables.module').then( m => m.JavavariablesPageModule)
+  },
+  {
+    path: 'js-output',
+    loadChildren: () => import('./js-output/js-output.module').then( m => m.JsOutputPageModule)
+  },
+  {
+    path: 'js-statements',
+    loadChildren: () => import('./js-statements/js-statements.module').then( m => m.JsStatementsPageModule)
+  },
+  {
+    path: 'js-whereto',
+    loadChildren: () => import('./js-whereto/js-whereto.module').then( m => m.JsWheretoPageModule)
   },
 
 

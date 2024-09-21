@@ -1,0 +1,357 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a routerLink="/html" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a [routerLink]="['/py']" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>PYTHON SYNTAX</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<h1>Execute Python Syntax</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>As we learned in the previous page, Python syntax can be executed by writing directly in the Command Line:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">>> print("Hello, World!")</p>
+    <p style="color: rgb(255, 245, 245);">Hello, World!</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Or by creating a python file on the server, using the .py file extension, and running it in the Command Line:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python myfile.py/p>
+  </div>
+</div>
+<br><br>
+<hr class="custom-hr2">
+<h1>Python Indentation</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Indentation refers to the spaces at the beginning of a code line.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python uses indentation to indicate a block of code.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>if <span style="color: rgb(8, 8, 8)">5 </span><span class="bulletblue">> </span><span style="color: rgb(8, 8, 8);">2</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">Five is greater than two!"</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Five is greater than two!</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python will give you an error if you skip the indentation:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>if <span style="color: rgb(8, 8, 8)">5 </span><span class="bulletblue">> </span><span style="color: rgb(8, 8, 8);">2</span>
+      <br>print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">Five is greater than two!"</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>&nbsp;&nbsp;&nbsp;File "demo_indentation_test.py", line 2
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Five is greater than two!")
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
+      <br>IndentationError: expected an indented block
+    </p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The number of spaces is up to you as a programmer, the most common use is four, but it has to be at least one.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>if <span style="color: rgb(8, 8, 8)">5 </span><span class="bulletblue">> </span><span style="color: rgb(8, 8, 8);">2</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">Five is greater than two!"</span>)</span><br>
+      if <span style="color: rgb(8, 8, 8)">5 </span><span class="bulletblue">> </span><span style="color: rgb(8, 8, 8);">2</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">Five is greater than two!"</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Five is greater than two!<br>Five is greater than two!</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You have to use the same number of spaces in the same block of code, otherwise Python will give you an error:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>if <span style="color: rgb(8, 8, 8)">5 </span><span class="bulletblue">> </span><span style="color: rgb(8, 8, 8);">2</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">Five is greater than two!"</span>)</span>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">Five is greater than two!"</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>&nbsp;&nbsp;&nbsp;File "demo_indentation_test.py", line 3
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Five is greater than two!")
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
+      <br>IndentationError: unexpected indent
+    </p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Python Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In Python, variables are created when you assign a value to it:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>x <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">5</span>
+      <br>
+      y <span class="bulletblue"> = </span><span style="color: rgb(8, 8, 8)">"Hello, World!"</span><br><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">x</span>)</span><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8);">y</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>5 <br> Hello, World!
+    </p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python has no command for declaring a variable.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You will learn more about variables in the <a href="/pyvariables" style="color:#f17177;">Python Variables chapter</a>.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Comments</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python has commenting capability for the purpose of in-code documentation.</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Comments start with a #, and Python will render the rest of the line as a comment:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      <span style="color: green">#This is a comment</span><br>
+      print <span class="bulletblue">(<span style="color: rgb(8, 8, 8)">"Hello, World!"</span>)</span>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Hello, World!</p>
+  </div>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+  <ion-button [routerLink]="['/pyvariables']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

@@ -1,0 +1,831 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-js-whereto" contentId="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: #f27f60; color: black;">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline"
+          class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+      <ion-list id="subtopics" [class.hidden]="!showSubtopics" class="menu-tool">
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeHtml()" (click)="toggleArrowHtml()">
+            <ion-icon [name]="arrowIconHtml" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>HTML</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml" class="menu-tool">
+
+            <ion-item button routerLink="/htmlintro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/htmlbasic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/htmlelement" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/htmlattribute" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeCss()" (click)="toggleArrowCss()">
+            <ion-icon [name]="arrowIconCss" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>CSS</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesCss" class="menu-tool">
+
+            <ion-item button routerLink="/css-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/css-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/css-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Selectors</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/css-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>How to</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeJs()" (click)="toggleArrowJs()">
+            <ion-icon [name]="arrowIconJs" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>JavaScript</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesJs" class="menu-tool">
+
+            <ion-item button routerLink="/js-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Where to</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Output</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Statements</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypePy()" (click)="toggleArrowPy()">
+            <ion-icon [name]="arrowIconPy" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>Python</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesPy" class="menu-tool">
+
+            <ion-item button routerLink="/py-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/py-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/py-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/py-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeSQL()" (click)="toggleArrowSQL()">
+            <ion-icon [name]="arrowIconSQL" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>SQL</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesSQL" class="menu-tool">
+            <ion-item button routerLink="/sql-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sql-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sql-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sql-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypePHP()" (click)="toggleArrowPHP()">
+            <ion-icon [name]="arrowIconPHP" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>PHP</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesPHP" class="menu-tool">
+            <ion-item button routerLink="/php-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/php-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/php-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/php-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeJava()" (click)="toggleArrowJava()">
+            <ion-icon [name]="arrowIconJava" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>Java</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesJava" class="menu-tool">
+            <ion-item button routerLink="/java-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/java-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/java-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/java-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeCpp()" (click)="toggleArrowCpp()">
+            <ion-icon [name]="arrowIconCpp" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>C++</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesCpp" class="menu-tool">
+            <ion-item button routerLink="/cpp-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cpp-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cpp-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cpp-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+      </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-js-whereto"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.." class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item>
+</ion-header>
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+<!-- Overflow-x Language Options -->
+<div class="option">
+  <a [routerLink]="['/html']" class="active">HTML</a>
+  <a routerLink="/css" class="active">CSS</a>
+  <a routerLink="/js" class="active">JS</a>
+  <a routerLink="/python" class="active">PYTHON</a>
+  <a routerLink="/sql" class="active">SQL</a>
+  <a routerLink="/php" class="active">PHP</a>
+  <a routerLink="/java" class="active">JAVA</a>
+  <a routerLink="/c++" class="active">C++</a>
+</div>
+
+<ion-content>
+
+  <div class="css-main-container">
+    <h1 class="FadeInUp">JavaScript IntroductioJavaScript Where To</h1>
+    <hr
+      style="display: flex; justify-content: center; width: 100%;  border-top: 1px solid black; background-color: black;">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">The &lt;script&gt; Tag</h1>
+    <p class="FadeInUp">In HTML, JavaScript code is inserted between
+      <span style="color: #ff5757"> &lt;script&gt;</span> and
+      <span style="color: #ff5757"> &lt;/script&gt; </span> tags.
+    </p>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">One of many JavaScript HTML methods is <span
+          style="color: #ff5757;">getElementById().</span></p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The example below "finds" an HTML element (with id="demo"), and changes the element
+        content (innerHTML) to "Hello JavaScript":</p>
+    </ion-item>
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of
+      an HTML page:</p>
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaSCript in Body</span>&lt;/h2&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+
+      &lt;script&gt;<br>
+      <a>document.getElementById("demo").innerHTML = "My First JavaScript";</a><br>
+      &lt;/script&gt;<br>
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaSCript in Body</b></p>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">My First JavaScript</p>
+
+    </ion-card>
+    <br>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>Old JavaScript examples may use a type attribute: &lt;script type="text/javascript"&gt;.</p>
+    <p>The type attribute is not required. JavaScript is the default scripting language in HTML.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Functions and Events</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">A JavaScript <span style="color: #ff5757;">function</span> is a block of JavaScript
+        code, that can be executed when "called" for.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">For example, a function can be called when an <b>event</b> occurs, like when the user
+        clicks a button.</p>
+    </ion-item>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>You will learn much more about functions and events in later chapters.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript in &lt;head&gt; or &lt;body&gt;</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">You can place any number of scripts in an HTML document.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Scripts can be placed in the
+        <span style="color: #ff5757;">&lt;body&gt;</span>, or in the
+        <span style="color: #ff5757;">&lt;head&gt;</span> section of an HTML page, or in both.
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript in &lt;head&gt;</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">In this example, a JavaScript
+        <span style="color: #ff5757;">function</span> is placed in the
+        <span style="color: #ff5757;">&lt;head&gt;</span> section of an HTML page.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The function is invoked (called) when a button is clicked:</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of
+      an HTML page:</p>
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;head&gt;<br>
+      &lt;script&gt;<br>
+      function myFunction() {{ '{' }} <br>
+      <a>document.getElementById("demo").innerHTML = "Paragraph changed.";</a><br>
+      {{ '}' }} <br>
+      &lt;/script&gt;<br>
+      <br>
+      &lt;/head&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>Demo JavaScript in Head</span>&lt;/h2&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span>A Paragraph.</span>&lt;/p&gt;<br>
+      &lt;button type="<a>button</a> onclick="<a>myFunction()"</a>"&gt;<span> Try it</span>&lt;/button&gt;
+      <br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>Demo JavaScript in Head</b></p>
+      <p id="function" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">A Paragraph.</p>
+      <ion-button button (click)="fuctionTry()"><u>Try it</u></ion-button>
+
+    </ion-card>
+    <br>
+
+  </div>
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>You will learn much more about functions and events in later chapters.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript in &lt;body&gt;</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">In this example, a JavaScript
+        <span style="color: #ff5757;">function</span> is placed in the
+        <span style="color: #ff5757;">&lt;body&gt;</span> section of an HTML page.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">TThe function is invoked (called) when a button is clicked:</p>
+    </ion-item>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <p class="FadeInUp">External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of
+      an HTML page:</p>
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>Demo JavaScript in Head</span>&lt;/h2&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span>A Paragraph.</span>&lt;/p&gt;<br>
+      &lt;button type="<a>button</a> onclick="<a>myFunction()"</a>"&gt;<span> Try it</span>&lt;/button&gt;
+      <br>
+      <br>
+      &lt;script&gt;<br>
+      function myFunction() {{ '{' }} <br>
+      <a>document.getElementById("demo").innerHTML = "Paragraph changed.";</a><br>
+      {{ '}' }} <br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>Demo JavaScript in Body</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">A Paragraph.</p>
+      <ion-button button (click)="fuctionTry2()"><u>Try it</u></ion-button>
+
+    </ion-card>
+    <br>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>Placing scripts at the bottom of the &lt;body&gt; element improves the display speed, because script
+      interpretation slows down the display.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">External JavaScript</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Scripts can also be placed in external files:</p>
+    </ion-item>
+
+    <h2 class="FadeInUp">External file: myScript.js </h2>
+
+    <div class="css-main-container css-second-container">
+      <ion-card class="FadeInUp">
+        function myFunction() {{ '{' }} <br>
+        <a>document.getElementById("demo").innerHTML = "Paragraph changed.";</a><br>
+        {{ '}' }} <br>
+      </ion-card>
+    </div>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">External scripts are practical when the same code is used in many different web pages.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript files have the file extension .js.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">To use an external script, put the name of the script file in the
+        <span style="color: #ff5757;">src </span>(source) attribute of a
+        <span style="color: #ff5757;">&lt;script&gt;</span> tag:
+      </p>
+
+    </ion-item>
+
+    <br>
+
+  </div>
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>Demo External JavaScript</span>&lt;/h2&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span>A Paragraph.</span>&lt;/p&gt;<br>
+      &lt;button type="<a>button</a> onclick="<a>myFunction()"</a>"&gt;<span> Try it</span>&lt;/button&gt;
+      <br>
+      &lt;p&gt;<span>This example links to "myScript.js".</span>&lt;/p&gt;<br>
+      &lt;p&gt;<span>(myFunction is stored in "myScript.js")</span>&lt;/p&gt;<br>
+      <br>
+      &lt;script src="<a>myScript.js</a>"&gt;&lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br><br><br><br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>Demo JavaScript in Body</b></p>
+      <p id="function4" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">A Paragraph.</p>
+      <ion-button button (click)="fuctionTry4()"><u>Try it</u></ion-button>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">This example links to "myScript.js".
+      </p>
+      <p style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">(myFunction is stored in
+        "myScript.js")</p>
+
+    </ion-card>
+    <br>
+
+  </div>
+
+
+  <div class="css-main-container">
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">You can place an external script reference in
+        <span style="color: #ff5757;">&lt;head&gt;</span> or
+        <span style="color: #ff5757;">&lt;body&gt; </span>as you like.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The script will behave as if it was located exactly where the
+        <span style="color: #ff5757;">&lt;script&gt;</span> tag is located.
+      </p>
+
+    </ion-item>
+
+    <br>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>External scripts cannot contain &lt;script&gt; tags.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">External JavaScript Advantages</h1>
+    <p>Placing scripts in external files has some advantages:</p>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">It separates HTML and code</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">It makes HTML and JavaScript easier to read and maintain</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Cached JavaScript files can speed up page loads</p>
+    </ion-item>
+
+    <p>To add several script files to one page - use several script tags:</p>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+    <ion-card class="FadeInUp">
+      &lt;script src="<a>myScript1.js</a>"&gt;&lt;/script&gt;<br>
+      &lt;script src="<a>myScript2.js</a>"&gt;&lt;/script&gt;<br>
+    </ion-card>
+
+    <hr>
+  </div>
+
+  <div class="css-main-container">
+    <h1 class="FadeInUp">External References</h1>
+    <p class="FadeInUp">An external script can be referenced in 3 different ways:</p>
+    <hr>
+
+    <div style="margin-left: 35px;">
+      <ion-item lines="none" class="FadeInUp">
+        <div class="bullet-number">1</div>
+        <p class="paragraph-spaces">With a full URL {{ '(' }} a full web address</p>
+      </ion-item>
+
+      <ion-item lines="none" class="FadeInUp">
+        <div class="bullet-number">2</div>
+        <p class="paragraph-spaces">With a file path (like /js/)</p>
+      </ion-item>
+
+      <ion-item lines="none" class="FadeInUp">
+        <div class="bullet-number">3</div>
+        <p class="paragraph-spaces">Without any path</p>
+      </ion-item>
+    </div>
+
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">This example uses a <b>full URL</b> to link to myScript.js:</p>
+    </ion-item>
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+      <ion-card class="FadeInUp">
+        &lt;script src="<a>https://www.w3schools.com/js/myScript.js</a>"&gt;&lt;/script&gt;<br>
+      </ion-card>
+
+    </div>
+
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">This example uses a <b>file path</b> to link to myScript.js:</p>
+    </ion-item>
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+      <ion-card class="FadeInUp">
+        &lt;script src="<a>/js/myScript.js</a>"&gt;&lt;/script&gt;<br>
+      </ion-card>
+
+    </div>
+
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">This example uses <b>no path </b>to link to myScript.js:</p>
+    </ion-item>
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+      <ion-card class="FadeInUp">
+        &lt;script src="<a>myScript.js</a>"&gt;&lt;/script&gt;<br>
+      </ion-card>
+
+      <hr>
+    </div>
+
+
+  </div>
+
+  <ion-item lines="none" class="FadeInUp">
+    <ion-button class="test-exercise" shape="round" slot="end" button>click-here</ion-button>
+    <h3><b>Test yourself with some exercises?</b></h3>
+  </ion-item>
+
+  <ion-item lines="none" class="back-next FadeInUp">
+    <ion-button shape="round" slot="start" routerLink="/js-intro">BACK</ion-button>
+    <br><br><br><br>
+    <br>
+    <ion-button shape="round" slot="end" routerLink="/js-output">NEXT CHAPTER</ion-button>
+  </ion-item>
+
+</ion-content>

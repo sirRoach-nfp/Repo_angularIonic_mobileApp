@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { HtmlattriPageRoutingModule } from './htmlattri-routing.module';
 
 import { HtmlattriPage } from './htmlattri.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HtmlattriPageRoutingModule
+    HtmlattriPageRoutingModule,
+    SharedModule
   ],
   declarations: [HtmlattriPage]
 })

@@ -1,0 +1,330 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/py" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>PYTHON GETTING STARTED</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<h1>Python Install</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Many PCs and Macs will have python already installed.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To check if you have python installed on a Windows PC, search in the start bar for Python or run the following on the Command Line (cmd.exe):</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python --version</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">python --version</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If you find that you do not have Python installed on your computer, then you can download it for free from the following website: <a href="https://www.python.org/" style="color: #f17177;">https://www.python.org/</a></p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Python Quickstart</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The way to run a python file is like this on the command line:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python helloworld.py</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Where "helloworld.py" is the name of your python file.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Let's write our first Python file, called helloworld.py, which can be done in any text editor.</p>
+</ion-item>
+<br>
+<div class="helloworldpycontainer">
+  <div class="helloworldpy">
+    <p>helloworld.py</p>
+  </div>
+</div>
+<div class="example-container">
+  <div class="example11">
+    <p>print <span class="bulletblue">(<span style="color: rgb(11, 10, 10);">"Hello World!</span>)</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Simple as that. Save your file. Open your command line, navigate to the directory where you saved your file, and run:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python helloworld.py</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <p>The output should read:</p>
+</ion-item>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">Hello World!</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <p>Congratulations, you have written and executed your first Python program.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>The Python Command Line</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Type the following on the Windows, Mac or Linux command line:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>python</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p> If the "python" command did not work, you can try "py":</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">C:\Users\<i>Your Name</i>>py</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>From there you can write any python, including our hello world example from earlier in the tutorial:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(100, 98, 98);">C:\Users\<i>Your Name</i>>python</p>
+    <p style="color: rgb(100, 98, 98);">Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32</p>
+    <p style="color: rgb(100, 98, 98);">Type "help", "copyright", "credits" or "license" for more information.</p>
+    <p style="color: rgb(255, 245, 245);">>>> print("Hello, World!")</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Which will write "Hello, World!" in the command line:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(100, 98, 98);">C:\Users\<i>Your Name</i>>python</p>
+    <p style="color: rgb(100, 98, 98);">Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32</p>
+    <p style="color: rgb(100, 98, 98);">Type "help", "copyright", "credits" or "license" for more information.</p>
+    <p style="color: rgb(100, 98, 98);">>>> print("Hello, World!")</p>
+    <p style="color: rgb(255, 245, 245);">Hello, World!</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Whenever you are done in the python command line, you can simply type the following to quit the python command line interface:</p>
+</ion-item>
+<br>
+<div class="example-container-cmd">
+  <div class="example1-cmd">
+    <p style="color: rgb(255, 245, 245);">exit()</p>
+  </div>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+  <ion-button [routerLink]="['/pysyntax']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

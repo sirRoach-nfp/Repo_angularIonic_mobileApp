@@ -1,0 +1,844 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-js-whereto" contentId="main-content">
+  <ion-header>
+    <ion-toolbar style="--background: #f27f60; color: black;">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline"
+          class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+      <ion-list id="subtopics" [class.hidden]="!showSubtopics" class="menu-tool">
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeHtml()" (click)="toggleArrowHtml()">
+            <ion-icon [name]="arrowIconHtml" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>HTML</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml" class="menu-tool">
+
+            <ion-item button routerLink="/htmlintro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/htmlbasic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/htmlelement" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/htmlattribute" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeCss()" (click)="toggleArrowCss()">
+            <ion-icon [name]="arrowIconCss" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>CSS</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesCss" class="menu-tool">
+
+            <ion-item button routerLink="/css-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/css-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/css-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Selectors</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/css-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>How to</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeJs()" (click)="toggleArrowJs()">
+            <ion-icon [name]="arrowIconJs" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>JavaScript</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesJs" class="menu-tool">
+
+            <ion-item button routerLink="/js-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Where to</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Output</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Statements</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypePy()" (click)="toggleArrowPy()">
+            <ion-icon [name]="arrowIconPy" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>Python</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesPy" class="menu-tool">
+
+            <ion-item button routerLink="/py-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/py-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/py-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/py-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeSQL()" (click)="toggleArrowSQL()">
+            <ion-icon [name]="arrowIconSQL" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>SQL</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesSQL" class="menu-tool">
+            <ion-item button routerLink="/sql-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sql-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sql-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sql-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypePHP()" (click)="toggleArrowPHP()">
+            <ion-icon [name]="arrowIconPHP" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>PHP</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesPHP" class="menu-tool">
+            <ion-item button routerLink="/php-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/php-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/php-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/php-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeJava()" (click)="toggleArrowJava()">
+            <ion-icon [name]="arrowIconJava" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>Java</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesJava" class="menu-tool">
+            <ion-item button routerLink="/java-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/java-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/java-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/java-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeCpp()" (click)="toggleArrowCpp()">
+            <ion-icon [name]="arrowIconCpp" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>C++</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesCpp" class="menu-tool">
+            <ion-item button routerLink="/cpp-intro" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cpp-basic" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cpp-element" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cpp-attributes" class="menu-item">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+      </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-js-whereto"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.." class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item>
+</ion-header>
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+<!-- Overflow-x Language Options -->
+<div class="option">
+  <a [routerLink]="['/html']" class="active">HTML</a>
+  <a routerLink="/css" class="active">CSS</a>
+  <a routerLink="/js" class="active">JS</a>
+  <a routerLink="/python" class="active">PYTHON</a>
+  <a routerLink="/sql" class="active">SQL</a>
+  <a routerLink="/php" class="active">PHP</a>
+  <a routerLink="/java" class="active">JAVA</a>
+  <a routerLink="/c++" class="active">C++</a>
+</div>
+
+<ion-content>
+
+
+  <div class="css-main-container">
+    <h1 class="FadeInUp">JavaScript Statements</h1>
+    <hr
+      style="display: flex; justify-content: center; width: 100%;  border-top: 1px solid black; background-color: black;">
+
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+
+      <ion-card class="FadeInUp">
+
+        let <span> x, y, z</span>; <span style="color: #00bf63;">// Statement 4</span><br>
+        <span>x</span> = <a>5</a>; <span style="color: #00bf63;">// Statement 4</span><br>
+        <span>y</span> = <a>6</a>; <span style="color: #00bf63;">// Statement 4</span><br>
+        <span>z</span> = <a>x + y</a>; <span style="color: #00bf63;">// Statement 4</span><br>
+
+      </ion-card>
+      <hr>
+    </div>
+
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Programs</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">A <b>compter program</b> is a list of "instructions" to be "executed" by a computer.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">In a programming language, these programming instructions are called
+        <b>statements</b>.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">A <b>JavaScript program</b> is a list of programming <b>statements</b>.</p>
+    </ion-item>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>In HTML, JavaScript programs are executed by the web browser.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Programs</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript statements are composed of:
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Values, Operators, Expressions, Keywords, and Comments.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">This statement tells the browser to write "Hello Dolly." inside an HTML element with
+        id="demo":</p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaScript Statements</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>In HTML, JavaScript statements are executed by the browser.</span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      <a>document.getElementById("demo").innerHTML = "Hello Dolly.";</a><br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaScript Statements</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">In HTML, JavaScript
+        statements are executed by the browser.
+      </p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">Hello Dolly.</p>
+
+    </ion-card>
+    <br>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Most JavaScript programs contain many JavaScript statements.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The statements are executed, one by one, in the same order as they are written.
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>JavaScript programs (and JavaScript statements) are often called JavaScript code.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">Semicolons ; </h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Semicolons separate JavaScript statements.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Add a semicolon at the end of each executable statement:
+      </p>
+    </ion-item>
+
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+
+      <ion-card class="FadeInUp">
+
+        let <span> a, b, c</span>; <span style="color: #00bf63;">// Declare 3 variables</span><br>
+        <span>a</span> = <a>5</a>; <span style="color: #00bf63;">// Assign the value 5 to a</span><br>
+        <span>b</span> = <a>6</a>; <span style="color: #00bf63;">// Assign the value 6 to b</span><br>
+        <span>c</span> = <a>a + b</a>; <span style="color: #00bf63;">// Assign the value a and b to c </span><br>
+
+      </ion-card>
+
+    </div>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">When separated by semicolons, multiple statements on one line are allowed:
+      </p>
+    </ion-item>
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+
+      <ion-card class="FadeInUp">
+
+        <span>a</span> = <a>5</a>;
+        <span>b</span> = <a>6</a>;
+        <span>c</span> = <a>a + b</a>;
+
+      </ion-card>
+      <hr>
+    </div>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>On the web, you might see examples without semicolons. Ending statements with semicolon is not required, but
+      highly recommended.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript White Space</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript ignores multiple spaces. You can add white space to your script to make it
+        more readable.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The following lines are equivalent:
+      </p>
+    </ion-item>
+
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <ion-card class="FadeInUp">
+      let <span>person</span> = "<a>Hege</a>";<br>
+      let <span>person</span> = "<a>Hege</a>";
+    </ion-card>
+  </div>
+
+
+  <div class="css-main-container">
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">A good practice is to put spaces around operators ( = + - * / ):
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <ion-card class="FadeInUp">
+      let <span>x</span> = <a>y + z</a>;
+    </ion-card>
+    <hr>
+  </div>
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Line Length and Line Breaks</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">For best readability, programmers often like to avoid code lines longer than 80
+        characters.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">If a JavaScript statement does not fit on one line, the best place to break it is
+        after an operator:
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaScript Statements</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>The best place to break a code line is after an operator or a comma.</span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      <a>document.getElementById("demo").innerHTML = "Hello Dolly!";</a><br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaScript Statements</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">The best place to
+        break a code line is after an operator or a comma.
+      </p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">Hello Dolly!</p>
+
+    </ion-card>
+    <br>
+    <hr>
+  </div>
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Code Blocks</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript statements can be grouped together in code blocks, inside curly brackets
+        {{ '{' }}... {{ '}' }}.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The purpose of code blocks is to define statements to be executed together.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">One place you will find statements grouped together in blocks, is in JavaScript
+        functions:
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaScript Statements</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>JavaScript code blocks are written between {{ '{' }} and {{ '}' }}</span>&lt;/p&gt;<br>
+      <br>
+      &lt;button type="<a>button</a>" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;<br><br>
+      &lt;p id=“<a>demo1</a>”&gt;<span></span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo2</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      function myFunction() {{ '{' }}
+      <a>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo1").innerHTML = "Hello Dolly!"; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo2").innerHTML = "How are you?";</a><br>
+      {{ '}' }}<br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaScript Statements</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">
+        JavaScript code blocks are written between {{ '{' }} and {{ '}' }}<br></p>
+
+      <ion-button (click)="showText = !showText" style="margin-bottom: 15px;"> Click me!</ion-button>
+
+      <p *ngIf="showText" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">Hello Dolly!</p>
+      <p *ngIf="showText" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">How are you?</p>
+
+
+    </ion-card>
+    <br>
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>In this tutorial we use 2 spaces of indentation for code blocks.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Keywords</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript statements often start with a keyword to identify the JavaScript action to
+        be performed.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Our <u>Reserved Words Reference</u> lists all JavaScript keywords.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Here is a list of some of the keywords you will learn about in this tutorial:</p>
+    </ion-item>
+    <br><br>
+
+    <table>
+      <tr>
+        <th>Keyword</th>
+        <th>Description</th>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>var</td>
+        <td>declares a variable</td>
+      </tr>
+
+
+      <tr>
+        <td>let</td>
+        <td>declares a block variable</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>const</td>
+        <td>declares a block constant</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>if</td>
+        <td>marks a block of statements to be executed on a condition</td>
+      </tr>
+
+
+      <tr>
+        <td>switch</td>
+        <td>marks a block of statements to be executed in different cases</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>for</td>
+        <td>marks a block of statements to be executed in a loop</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>function</td>
+        <td>declares a function</td>
+      </tr>
+
+
+      <tr>
+        <td>return</td>
+        <td>exits a function</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>try</td>
+        <td>implements error handling to a block of statements</td>
+      </tr>
+
+
+    </table>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <ion-item lines="none" class="FadeInUp">
+    <ion-button class="test-exercise" shape="round" slot="end" button>click-here</ion-button>
+    <h3><b>Test yourself with some exercises?</b></h3>
+  </ion-item>
+
+  <ion-item lines="none" class="back-next FadeInUp">
+    <ion-button shape="round" slot="start" routerLink="/js-output">BACK</ion-button>
+    <br><br><br><br>
+    <br>
+    <ion-button shape="round" slot="end" routerLink="js">NEXT CHAPTER</ion-button>
+  </ion-item>
+
+</ion-content>

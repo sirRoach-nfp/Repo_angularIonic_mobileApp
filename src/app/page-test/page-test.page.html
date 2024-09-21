@@ -1,25 +1,8 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>pageTest</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<app-nav-bar></app-nav-bar>
 
 <ion-content>
 
 
 
-<app-lesson-renderer
-  [text]="lesson.content"
-  [imageUrls]="lessonImages"
-  [topic]="lesson.topic"
-  [topicDesc]="lesson.topicDesc"
-  >
-</app-lesson-renderer>
-
-<div class="buttonDiv">
-  <ion-button (click)="previousLesson()" [disabled] = "lessonIndex === 0">Previous Topic</ion-button>
-  <ion-button (click)="nextLesson()" [disabled]="lessonIndex === lessonData.length-1">Next Topic</ion-button>
-</div>
 
 </ion-content>
