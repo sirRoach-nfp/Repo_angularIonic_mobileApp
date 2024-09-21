@@ -1,12 +1,45 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-
+import { Router,NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
 @Component({
-  selector: 'app-js-intro',
-  templateUrl: './js-intro.page.html',
-  styleUrls: ['./js-intro.page.scss'],
+  selector: 'app-nav-bar',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.scss'],
 })
-export class JsIntroPage implements OnInit {
+export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
+
+  @Input() id: string = ""
+  uniqueId: string = ""
+  routerSubscription: Subscription | undefined;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['id']) {
+      this.uniqueId = changes['id'].currentValue;
+      console.log('Updated uniqueId:', this.uniqueId); // Check if the value is updating
+    }
+  }
+
+  ngOnDestroy(){
+  
+
+    this.routerSubscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.clearUniqueId(); // Clear the uniqueId when the navigation ends
+      }
+    });
+
+    this.closeMenu()
+
+    console.log("dewstory")
+  }
+
+  clearUniqueId() {
+    this.uniqueId = "";
+    console.log('Cleared uniqueId:', this.uniqueId); // Check if the value is cleared
+  }
+
+
 
   isPopupVisible = false;
   showSubtopics = false;
@@ -122,101 +155,99 @@ export class JsIntroPage implements OnInit {
 
   closePopup() {
     this.isPopupVisible = false;
+    console.log("tst")
   }
 
   toggleSubtopics() {
     this.showSubtopics = !this.showSubtopics;
   }
 
-  
-  constructor(private menu: MenuController) {
-
-  }
+  constructor(private menu: MenuController, private router: Router) {}
 
   closeMenu() {
       this.menu.close();
+      console.log("test")
   }
+
+  
 
   ngOnInit() {
-  }
+    this.uniqueId = this.id;
+    console.log('Initial uniqueId:', this.uniqueId);
 
-  changeContent() {
-    const demoElement = document.getElementById('demo');
-    if (demoElement) {
-      demoElement.innerHTML = 'Hello JavaScript!';
-    } else {
-      console.error('Element with id "demo" not found.');
-    }
+    // Subscribe to Router events to clear the uniqueId when the route changes
+
   }
 
 
-  ngAfterViewInit() {
-    this.addEventListeners();
-  }
 
-  addEventListeners() {
-    const turnOnButton = document.querySelector('button[onclick*="LOGO.png"]');
-    const turnOffButton = document.querySelector('button[onclick*="GOOGLE-LOGO.png"]');
-
-    if (turnOnButton) {
-      turnOnButton.addEventListener('click', () => {
-        this.changeImageSrc('myImage', 'assets/img/LOGO.png');
-      });
-    }
-
-    if (turnOffButton) {
-      turnOffButton.addEventListener('click', () => {
-        this.changeImageSrc('myImage', 'assets/img/GOOGLE-LOGO.png');
-      });
-    }
-  }
-
-  changeImageSrc(elementId: string, src: string) {
-    const imgElement = document.getElementById(elementId) as HTMLImageElement;
-    if (imgElement) {
-      imgElement.src = src;
-    } else {
-      console.error(`Element with id "${elementId}" not found.`);
-    }
-  }
-
-//
-  sizeIncreased: boolean = false; // Track whether size has already increased
-
-  changeTextSize() {
-    const textChange = document.getElementById('default-size');
+  html(){
+    this.router.navigate(['/html'])
     
-    if (textChange && !this.sizeIncreased) {
-      textChange.style.fontSize = '29px'; 
-      this.sizeIncreased = true; 
-    }
+    //this.closeMenu()
   }
 
-  //
-
-  //
-  textHideDisplay(){
-    const hide = document.getElementById('textHide');
-
-    if (hide) {
-      hide.style.display = 'none';
-    } 
+  css(){
+    this.router.navigate(['/css'])
   }
-  //
 
-    //
-    textShowDisplay(){
-      const hide = document.getElementById('textShow');
-  
-      if (hide) {
-        hide.style.display = 'block';
-      } 
-    }
-    //
+  python(){
+    this.router.navigate(['/py'])
+  }
+
+  javascript(){
+    this.router.navigate(['/js'])
+  }
+
+  sql(){
+    this.router.navigate(['/sql'])
+  }
+
+  java(){
+    this.router.navigate(['/java'])
+  }
+
+  php(){
+    this.router.navigate(['/php'])
+  }
+
+  cpp(){
+    this.router.navigate(['/c++'])
+  }
+
+
+  home(){
+    this.router.navigate(['/home'])
+    
+    //this.closeMenu()
+  }
+
+
+
+  //HTML lessons link
+
+  htmlIntro(){
+    this.router.navigate(['/htmlintro'])
+    
+    //this.closeMenu()
+  }
+
+  htmlBasic(){
+    this.router.navigate(['/htmlbasic'])
+   
+    //this.closeMenu()
+  }
+
+  htmlElement(){
+    this.router.navigate(['/htmlelement'])
+    
+    //this.closeMenu()
+  }
+
+  htmlAttri(){
+    this.router.navigate(['/htmlattri'])
+    
+    //this.closeMenu()
+  }
 
 }
-
-
-
-
-

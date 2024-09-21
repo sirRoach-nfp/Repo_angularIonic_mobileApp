@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HtmlPageRoutingModule } from './html-routing.module';
+import { JsStatementsPageRoutingModule } from './js-statements-routing.module';
 
-import { HtmlPage } from './html.page';
-import { SharedModule } from 'src/component/shared-modules';
+import { JsStatementsPage } from './js-statements.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HtmlPageRoutingModule,
-    SharedModule
+    JsStatementsPageRoutingModule
   ],
-  declarations: [HtmlPage]
+  declarations: [JsStatementsPage]
 })
-export class HtmlPageModule {}
+export class JsStatementsPageModule {}

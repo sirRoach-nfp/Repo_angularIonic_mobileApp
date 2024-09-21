@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu-js-intro" contentId="main-content">
+<ion-menu side="start" menuId="main-menu-js-whereto" contentId="main-content">
   <ion-header>
     <ion-toolbar style="--background: #f27f60; color: black;">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline"
@@ -295,7 +295,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu-js-intro"></ion-menu-button>
+      <ion-menu-button menu="main-menu-js-whereto"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.." class="input"><!-- Search button, Input -->
@@ -352,308 +352,482 @@
 
 <ion-content>
 
+
   <div class="css-main-container">
-    <h1 class="FadeInUp">JavaScript Introduction</h1>
+    <h1 class="FadeInUp">JavaScript Statements</h1>
     <hr
       style="display: flex; justify-content: center; width: 100%;  border-top: 1px solid black; background-color: black;">
 
-    <p class="FadeInUp">This page contains some examples of what JavaScript can do.</p>
-    <hr>
 
-    <h1 class="FadeInUp" style="font-size: 26px;">External CSS</h1>
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+
+      <ion-card class="FadeInUp">
+
+        let <span> x, y, z</span>; <span style="color: #00bf63;">// Statement 4</span><br>
+        <span>x</span> = <a>5</a>; <span style="color: #00bf63;">// Statement 4</span><br>
+        <span>y</span> = <a>6</a>; <span style="color: #00bf63;">// Statement 4</span><br>
+        <span>z</span> = <a>x + y</a>; <span style="color: #00bf63;">// Statement 4</span><br>
+
+      </ion-card>
+      <hr>
+    </div>
+
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Programs</h1>
 
     <ion-item lines="none" class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">One of many JavaScript HTML methods is <span
-          style="color: #ff5757;">getElementById().</span></p>
+      <p class="paragraph-spaces">A <b>compter program</b> is a list of "instructions" to be "executed" by a computer.
+      </p>
     </ion-item>
 
     <ion-item lines="none" class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">The example below "finds" an HTML element (with id="demo"), and changes the element
-        content (innerHTML) to "Hello JavaScript":</p>
+      <p class="paragraph-spaces">In a programming language, these programming instructions are called
+        <b>statements</b>.
+      </p>
     </ion-item>
 
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">A <b>JavaScript program</b> is a list of programming <b>statements</b>.</p>
+    </ion-item>
 
   </div>
 
-
-  <div class="css-main-container css-second-container">
-
-    <h2 class="FadeInUp">EXAMPLE: </h2>
-    <p class="FadeInUp">External styles are defined within the &lt;link&gt; element, inside the &lt;head&gt; section of
-      an HTML page:</p>
-    <ion-card class="FadeInUp">
-
-      &lt;!DOCTYPE html&gt;<br>
-      &lt;html&gt;<br>
-      &lt;body&gt;<br>
-      <br>
-      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
-      &lt;p id=“<a>demo</a>”&gt;<span>JavaScript can change HTML content.</span>&lt;/p&gt;<br>
-      <br>
-      &lt;button type="<a>button</a>" onclick='<a>document.getElementById("demo").innerHTML = "Hello
-        JavaScript!"</a>'&gt;Click Me!&lt;/button&gt;<br>
-      <br>
-      &lt;/body&gt;<br>
-      &lt;/html&gt;<br>
-
-    </ion-card>
-
-    <br><br><br><br>
-    <h2 class="FadeInUp">OUTPUT: </h2>
-    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
-
-      <p style="margin: 0; font-size: 27px; margin-bottom: 15px; text-align: left;"><b>What Can JavaScript Do?</b></p>
-      <p id="demo" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">JavaScript can change HTML
-        content.</p>
-
-      <ion-button (click)="changeContent()">Click Me!</ion-button>
-    </ion-card>
-    <br>
-
-  </div>
 
   <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
-    <p>JavaScript accepts both double and single quotes:</p>
+    <p>In HTML, JavaScript programs are executed by the web browser.</p>
   </ion-card>
   <hr style="width: 90%;">
 
 
   <div class="css-main-container">
 
-    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Can Change HTML Attribute Values</h1>
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Programs</h1>
 
     <ion-item lines="none" class="FadeInUp">
       <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">In this example JavaScript changes the value of the <span
-          style="color: #ff5757;">src</span> (source) attribute of an <span style="color: #ff5757;">&lt;img&gt;</span>
-        tag:</p>
-    </ion-item>
-
-    <ion-item lines="none" class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">The example below "finds" an HTML element (with id="demo"), and changes the element
-        content (innerHTML) to "Hello JavaScript":</p>
-    </ion-item>
-
-
-  </div>
-
-
-  <div class="css-main-container css-second-container">
-
-    <h2 class="FadeInUp">EXAMPLE: </h2>
-    <ion-card class="FadeInUp">
-
-      &lt;!DOCTYPE html&gt;<br>
-      &lt;html&gt;<br>
-      &lt;body&gt;<br>
-      <br>
-      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
-      &lt;p id=“<a>demo</a>”&gt;<span>JavaScript can change HTML attribute values.</span>&lt;/p&gt;<br>
-      &lt;p id=“<a>demo</a>”&gt;<span>In this case JavaScript changes the value of the src (source) attribute of an
-        image.</span>&lt;/p&gt;<br>
-      <br>
-      &lt;button type="<a>button</a>" onclick='<a>document.getElementById('myImage').src='pic_bulbon.gif'"</a>'&gt;Turn
-      on the light&lt;/button&gt;<br>
-      <br>
-      &lt;img id="<a>myImage</a>" src="<a>pic_bulboff.gif</a>" style="<a>width:100px</a>" &gt;<br>
-      <br>
-      &lt;button type="<a>button</a>" onclick='<a>document.getElementById('myImage').src='pic_bulboff.gif'"</a>'&gt;Turn
-      off the light&lt;/button&gt;<br>
-      <br>
-      &lt;/body&gt;<br>
-      &lt;/html&gt;<br>
-
-    </ion-card>
-
-    <br><br><br><br>
-    <h2 class="FadeInUp">OUTPUT: </h2>
-    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
-
-      <p style="margin: 0; font-size: 27px; margin-bottom: 15px; text-align: left;"><b>What Can JavaScript Do?</b></p>
-      <p id="demo" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">JavaScript can change HTML
-        attribute values.</p>
-      <p id="demo" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">In this case JavaScript
-        changes the value of the src (source) attribute of an image.</p>
-      <div style="display: flex; justify-content: center;">
-        <button style="width: 100px; height: 30px; border: 1px solid black;"
-          onclick="document.getElementById('myImage').src='../../assets/img/bulb-on.png'">Turn on the light</button>
-
-        <img id="myImage" src="../../assets/img/bulb-off.png" style="width: 100px; height: 100px;">
-
-        <button style="width: 100px; height: 30px; border: 1px solid black;"
-          onclick="document.getElementById('myImage').src='../../assets/img/bulb-off.png'">Turn off the light</button>
-      </div>
-    </ion-card>
-    <br>
-
-  </div>
-
-  <div class="css-main-container">
-
-    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Can Change HTML Styles (CSS)</h1>
-
-    <ion-item lines="none" class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
-    </ion-item>
-
-  </div>
-
-
-  <div class="css-main-container css-second-container">
-
-    <h2 class="FadeInUp">EXAMPLE: </h2>
-    <ion-card class="FadeInUp">
-
-      &lt;!DOCTYPE html&gt;<br>
-      &lt;html&gt;<br>
-      &lt;body&gt;<br>
-      <br>
-      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
-      &lt;p id=“<a>demo</a>”&gt;<span>JavaScript can change the style of an HTML element.</span>&lt;/p&gt;<br>
-      <br>
-      &lt;button type="<a>button</a>" onclick="<a>document.getElementById('demo').style.fontSize='35px'"</a>'&gt;Click
-      Me!&lt;/button&gt;<br>
-      <br>
-      &lt;/body&gt;<br>
-      &lt;/html&gt;<br>
-
-    </ion-card>
-
-    <br><br><br><br>
-    <h2 class="FadeInUp">OUTPUT: </h2>
-    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
-
-      <p style="margin: 0; font-size: 27px; margin-bottom: 20px; text-align: left;"><b>What Can JavaScript Do?</b></p>
-      <p id="default-size" style="margin: 0; font-size: 15px; margin-bottom: 20px; text-align: left;">JavaScript can
-        change the style of an HTML element.</p>
-      <div style="display: flex; justify-content: left;">
-        <ion-button (click)="changeTextSize()">Click Me!</ion-button>
-      </div>
-    </ion-card>
-    <br>
-
-  </div>
-
-
-  <div class="css-main-container">
-
-    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Can Hide HTML Elements</h1>
-
-    <ion-item lines="none" class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">Hiding HTML elements can be done by changing the display style:</p>
-    </ion-item>
-
-  </div>
-
-
-  <div class="css-main-container css-second-container">
-
-    <h2 class="FadeInUp">EXAMPLE: </h2>
-    <ion-card class="FadeInUp">
-
-      &lt;!DOCTYPE html&gt;<br>
-      &lt;html&gt;<br>
-      &lt;body&gt;<br>
-      <br>
-      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
-      &lt;p id=“<a>demo</a>”&gt;<span>JavaScript can hide HTML elements</span>&lt;/p&gt;<br>
-      <br>
-      &lt;button type="<a>button</a>"
-      onclick="<a>onclick="document.getElementById('demo').style.display='none'</a>'&gt;Click Me!&lt;/button&gt;<br>
-      <br>
-      &lt;/body&gt;<br>
-      &lt;/html&gt;<br>
-
-    </ion-card>
-
-    <br><br><br><br>
-    <h2 class="FadeInUp">OUTPUT: </h2>
-    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
-
-      <p style="margin: 0; font-size: 27px; margin-bottom: 20px; text-align: left;"><b>What Can JavaScript Do?</b></p>
-      <p id="textHide" style="margin: 0; font-size: 15px; margin-bottom: 20px; text-align: left;">JavaScript can hide
-        HTML elements</p>
-      <div style="display: flex; justify-content: left;">
-        <ion-button (click)="textHideDisplay()">Click Me!</ion-button>
-      </div>
-    </ion-card>
-    <br>
-
-  </div>
-
-
-  <div class="css-main-container">
-
-    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Can Show HTML Elements</h1>
-
-    <ion-item lines="none" class="FadeInUp">
-      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
-      <p class="paragraph-spaces">Showing hidden HTML elements can also be done by changing the display style:</p>
-    </ion-item>
-
-  </div>
-
-
-  <div class="css-main-container css-second-container">
-
-    <h2 class="FadeInUp">EXAMPLE: </h2>
-    <ion-card class="FadeInUp">
-
-      &lt;!DOCTYPE html&gt;<br>
-      &lt;html&gt;<br>
-      &lt;body&gt;<br>
-      <br>
-      &lt;h2&gt;<span>What Can JavaScript Do?</span>&lt;/h2&gt;<br>
-      &lt;p&gt;<span>JavaScript can hide HTML elements.</span>&lt;/p&gt;<br>
-      &lt;p id=“<a>demo</a>” style="<a>display:none"</a> &gt;<span>Hello JavaScript!</span>&lt;/p&gt;<br>
-      <br>
-      &lt;button type="<a>button</a>" onclick="<a>document.getElementById('demo').style.display='block'"</a>'&gt;Click
-      Me!&lt;/button&gt;<br>
-      <br>
-      &lt;/body&gt;<br>
-      &lt;/html&gt;<br>
-
-    </ion-card>
-
-    <br><br><br><br>
-    <h2 class="FadeInUp">OUTPUT: </h2>
-    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
-
-      <p style="margin: 0; font-size: 27px; margin-bottom: 20px; text-align: left;"><b>What Can JavaScript Do?</b></p>
-      <p style="margin: 0; font-size: 15px; margin-bottom: 20px; text-align: left;">JavaScript can hide HTML elements.
+      <p class="paragraph-spaces">JavaScript statements are composed of:
       </p>
-      <p id="textShow" style="margin: 0; font-size: 15px; margin-bottom: 20px; text-align: left; display: none;">Hello
-        JavaScript!</p>
-      <div style="display: flex; justify-content: left;">
-        <ion-button (click)="textShowDisplay()">Click Me!</ion-button>
-      </div>
-    </ion-card>
-    <br>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Values, Operators, Expressions, Keywords, and Comments.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">This statement tells the browser to write "Hello Dolly." inside an HTML element with
+        id="demo":</p>
+    </ion-item>
 
   </div>
 
-  <ion-card class="desc-comment FadeInUp" style="text-align: left;">
-    <p>Did You Know?</p>
-    <div></div>
-    <ul style="margin: 0; color: black; font-size: 15px; font-weight: 5;">
-      <li>
-        JavaScript and <u>Java</u> are completely different languages, both in concept and design.
-      </li>
-      <li>
-        JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
-      </li>
-      <li style="margin-bottom: 15px;">
-        ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
-      </li>
-    </ul>
-  </ion-card>
 
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaScript Statements</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>In HTML, JavaScript statements are executed by the browser.</span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      <a>document.getElementById("demo").innerHTML = "Hello Dolly.";</a><br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaScript Statements</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">In HTML, JavaScript
+        statements are executed by the browser.
+      </p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">Hello Dolly.</p>
+
+    </ion-card>
+    <br>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Most JavaScript programs contain many JavaScript statements.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The statements are executed, one by one, in the same order as they are written.
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>JavaScript programs (and JavaScript statements) are often called JavaScript code.</p>
+  </ion-card>
   <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">Semicolons ; </h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Semicolons separate JavaScript statements.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Add a semicolon at the end of each executable statement:
+      </p>
+    </ion-item>
+
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+
+      <ion-card class="FadeInUp">
+
+        let <span> a, b, c</span>; <span style="color: #00bf63;">// Declare 3 variables</span><br>
+        <span>a</span> = <a>5</a>; <span style="color: #00bf63;">// Assign the value 5 to a</span><br>
+        <span>b</span> = <a>6</a>; <span style="color: #00bf63;">// Assign the value 6 to b</span><br>
+        <span>c</span> = <a>a + b</a>; <span style="color: #00bf63;">// Assign the value a and b to c </span><br>
+
+      </ion-card>
+
+    </div>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">When separated by semicolons, multiple statements on one line are allowed:
+      </p>
+    </ion-item>
+
+    <div class="css-main-container css-second-container">
+
+      <h2 class="FadeInUp">EXAMPLE: </h2>
+
+      <ion-card class="FadeInUp">
+
+        <span>a</span> = <a>5</a>;
+        <span>b</span> = <a>6</a>;
+        <span>c</span> = <a>a + b</a>;
+
+      </ion-card>
+      <hr>
+    </div>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>On the web, you might see examples without semicolons. Ending statements with semicolon is not required, but
+      highly recommended.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript White Space</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript ignores multiple spaces. You can add white space to your script to make it
+        more readable.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The following lines are equivalent:
+      </p>
+    </ion-item>
+
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <ion-card class="FadeInUp">
+      let <span>person</span> = "<a>Hege</a>";<br>
+      let <span>person</span> = "<a>Hege</a>";
+    </ion-card>
+  </div>
+
+
+  <div class="css-main-container">
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">A good practice is to put spaces around operators ( = + - * / ):
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <ion-card class="FadeInUp">
+      let <span>x</span> = <a>y + z</a>;
+    </ion-card>
+    <hr>
+  </div>
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Line Length and Line Breaks</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">For best readability, programmers often like to avoid code lines longer than 80
+        characters.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">If a JavaScript statement does not fit on one line, the best place to break it is
+        after an operator:
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaScript Statements</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>The best place to break a code line is after an operator or a comma.</span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      <a>document.getElementById("demo").innerHTML = "Hello Dolly!";</a><br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaScript Statements</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">The best place to
+        break a code line is after an operator or a comma.
+      </p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">Hello Dolly!</p>
+
+    </ion-card>
+    <br>
+    <hr>
+  </div>
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Code Blocks</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript statements can be grouped together in code blocks, inside curly brackets
+        {{ '{' }}... {{ '}' }}.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">The purpose of code blocks is to define statements to be executed together.
+      </p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">One place you will find statements grouped together in blocks, is in JavaScript
+        functions:
+      </p>
+    </ion-item>
+
+  </div>
+
+
+  <div class="css-main-container css-second-container">
+
+    <h2 class="FadeInUp">EXAMPLE: </h2>
+
+    <ion-card class="FadeInUp">
+
+      &lt;!DOCTYPE html&gt;<br>
+      &lt;html&gt;<br>
+      &lt;body&gt;<br>
+      <br>
+      &lt;h2&gt;<span>JavaScript Statements</span>&lt;/h2&gt;<br>
+      &lt;p&gt;<span>JavaScript code blocks are written between {{ '{' }} and {{ '}' }}</span>&lt;/p&gt;<br>
+      <br>
+      &lt;button type="<a>button</a>" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;<br><br>
+      &lt;p id=“<a>demo1</a>”&gt;<span></span>&lt;/p&gt;<br>
+      &lt;p id=“<a>demo2</a>”&gt;<span></span>&lt;/p&gt;<br>
+      <br>
+      &lt;script&gt;<br>
+      function myFunction() {{ '{' }}
+      <a>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo1").innerHTML = "Hello Dolly!"; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("demo2").innerHTML = "How are you?";</a><br>
+      {{ '}' }}<br>
+      &lt;/script&gt;<br>
+      &lt;/body&gt;<br>
+      &lt;/html&gt;<br>
+
+    </ion-card>
+
+    <br>
+    <h2 class="FadeInUp">OUTPUT: </h2>
+    <ion-card class="FadeInUp" style="text-align: left; padding: 20px 0;">
+
+      <p style="margin: 0; font-size: 27px; margin-bottom: 27px; text-align: left;"><b>JavaScript Statements</b></p>
+      <p id="function2" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">
+        JavaScript code blocks are written between {{ '{' }} and {{ '}' }}<br></p>
+
+      <ion-button (click)="showText = !showText" style="margin-bottom: 15px;"> Click me!</ion-button>
+
+      <p *ngIf="showText" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">Hello Dolly!</p>
+      <p *ngIf="showText" style="margin: 0; font-size: 15px; margin-bottom: 15px; text-align: left;">How are you?</p>
+
+
+    </ion-card>
+    <br>
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>In this tutorial we use 2 spaces of indentation for code blocks.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
+
+  <div class="css-main-container">
+
+    <h1 class="FadeInUp" style="font-size: 26px;">JavaScript Keywords</h1>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">JavaScript statements often start with a keyword to identify the JavaScript action to
+        be performed.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Our <u>Reserved Words Reference</u> lists all JavaScript keywords.</p>
+    </ion-item>
+
+    <ion-item lines="none" class="FadeInUp">
+      <ion-icon slot="start" class="custom-icon" name="radio-button-on-outline"></ion-icon>
+      <p class="paragraph-spaces">Here is a list of some of the keywords you will learn about in this tutorial:</p>
+    </ion-item>
+    <br><br>
+
+    <table>
+      <tr>
+        <th>Keyword</th>
+        <th>Description</th>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>var</td>
+        <td>declares a variable</td>
+      </tr>
+
+
+      <tr>
+        <td>let</td>
+        <td>declares a block variable</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>const</td>
+        <td>declares a block constant</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>if</td>
+        <td>marks a block of statements to be executed on a condition</td>
+      </tr>
+
+
+      <tr>
+        <td>switch</td>
+        <td>marks a block of statements to be executed in different cases</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>for</td>
+        <td>marks a block of statements to be executed in a loop</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>function</td>
+        <td>declares a function</td>
+      </tr>
+
+
+      <tr>
+        <td>return</td>
+        <td>exits a function</td>
+      </tr>
+
+
+      <tr style="background-color: #ffe6d5;">
+        <td>try</td>
+        <td>implements error handling to a block of statements</td>
+      </tr>
+
+
+    </table>
+
+  </div>
+
+
+  <ion-card class="desc-comment FadeInUp" style="text-align: left; border: none;">
+    <p>JavaScript keywords are reserved words. Reserved words cannot be used as names for variables.</p>
+  </ion-card>
+  <hr style="width: 90%;">
+
 
   <ion-item lines="none" class="FadeInUp">
     <ion-button class="test-exercise" shape="round" slot="end" button>click-here</ion-button>
@@ -661,11 +835,10 @@
   </ion-item>
 
   <ion-item lines="none" class="back-next FadeInUp">
-    <ion-button shape="round" slot="start" routerLink="/js">BACK</ion-button>
+    <ion-button shape="round" slot="start" routerLink="/js-output">BACK</ion-button>
     <br><br><br><br>
     <br>
-    <ion-button shape="round" slot="end" routerLink="/js-whereto">NEXT CHAPTER</ion-button>
+    <ion-button shape="round" slot="end" routerLink="js">NEXT CHAPTER</ion-button>
   </ion-item>
-
 
 </ion-content>

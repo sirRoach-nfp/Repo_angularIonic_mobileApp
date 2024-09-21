@@ -1,5 +1,5 @@
 <!-- Menu, Search, Profile -->
-<ion-menu side="start" menuId="main-menu-cssl" contentId="main-content">
+<ion-menu side="start" menuId="uniqueId" contentId="main-content">
   <ion-header>
     <ion-toolbar style="--background: #f27f60; color: black;">
       <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
@@ -7,10 +7,11 @@
     </ion-toolbar>
   </ion-header>
 
+
   <ion-content class="color-menu"> <!-- Menu Panel -->
     <ion-list class="menu-tool">
 
-      <ion-item button routerLink="/home" class="menu-item">
+      <ion-item button routerLink="/home" (click)="home()" class="menu-item">
         <ion-icon slot="start" name="home-outline"></ion-icon>
         <ion-label>Home</ion-label>
       </ion-item>
@@ -32,22 +33,22 @@
 
             <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml"  class="menu-tool">
               
-              <ion-item button routerLink="/htmlintro" class="menu-item">
+              <ion-item button routerLink="/htmlintro" (click)="htmlIntro()" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
                   <ion-label>Introduction</ion-label>
               </ion-item>
     
-              <ion-item button routerLink="/htmlbasic" class="menu-item">
+              <ion-item button routerLink="/htmlbasic"  (click)="htmlBasic()" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
                   <ion-label>Basic</ion-label>
               </ion-item>
     
-              <ion-item button routerLink="/htmlelement" class="menu-item">
+              <ion-item button routerLink="/htmlelement"  (click)="htmlElement()" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
                   <ion-label>Element</ion-label>
               </ion-item>
     
-              <ion-item button routerLink="/htmlattribute" class="menu-item">
+              <ion-item button routerLink="/htmlattribute"  (click)="htmlAttri()" class="menu-item">
                   <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
                   <ion-label>Attributes</ion-label>
               </ion-item>
@@ -296,7 +297,7 @@
   <ion-item id="main-content">
 
     <ion-buttons slot="start"><!-- Menu Button -->
-      <ion-menu-button menu="main-menu-cssl"></ion-menu-button>
+      <ion-menu-button menuId="uniqueId"></ion-menu-button>
     </ion-buttons>
 
     <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
@@ -342,32 +343,14 @@
 <!-- WAG BUBURAHIN -->
 <!-- Background settings -->
 <div class="option">
-  <a [routerLink]="['/html']" class="active">HTML</a>
-  <a routerLink="/css" class="active">CSS</a>
-  <a routerLink="/js" class="active">JS</a>
-  <a routerLink="/python" class="active">PYTHON</a>
-  <a routerLink="/sql" class="active">SQL</a>
-  <a routerLink="/php" class="active">PHP</a>
-  <a routerLink="/java" class="active">JAVA</a>
-  <a routerLink="/c++" class="active">C++</a>
+  <a (click)="html()" class="active">HTML</a>
+  <a  (click)="css()" class="active">CSS</a>
+  <a  (click)="javascript()" class="active">JS</a>
+  <a  (click)="python()" class="active">PYTHON</a>
+  <a  (click)="sql()" class="active">SQL</a>
+  <a (click)="php()"class="active">PHP</a>
+  <a (click)="java()"class="active">JAVA</a>
+  <a (click)="cpp()"class="active">C++</a>
 </div>
-
-<ion-content class="background">
-  <div class="background-wrapper">
-    <div class="background"></div>
-  </div>
-  <!--SIMULA NG HTML-->
-  <h1 class="html">CSS</h1>
-  <div class="center-container">
-    <div class="htmlfront">
-      <p>A language for styling webpages.</p>
-      <p>To set the layout of your web page with beautiful colors, fonts, and much more.</p>
-    </div>
-  </div>
-  <div class="htmlbutton">
-    <ion-button [routerLink]="['/css-intro']"><u>CSS Introduction</u></ion-button>
-    <ion-button [routerLink]="['/css-basic']"><u>CSS Basic</u></ion-button>
-    <ion-button [routerLink]="['/css-element']"><u>CSS Element</u></ion-button>
-    <ion-button [routerLink]="['/css-attributes']"><u>CSS Attributes</u></ion-button>
-  </div>
-</ion-content>
+<h2>{{uniqueId}}</h2>
+<h2>twst</h2>

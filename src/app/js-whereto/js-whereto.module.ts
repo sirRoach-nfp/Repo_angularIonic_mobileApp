@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HtmlPageRoutingModule } from './html-routing.module';
+import { JsWheretoPageRoutingModule } from './js-whereto-routing.module';
 
-import { HtmlPage } from './html.page';
-import { SharedModule } from 'src/component/shared-modules';
+import { JsWheretoPage } from './js-whereto.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HtmlPageRoutingModule,
-    SharedModule
+    JsWheretoPageRoutingModule
   ],
-  declarations: [HtmlPage]
+  declarations: [JsWheretoPage]
 })
-export class HtmlPageModule {}
+export class JsWheretoPageModule {}

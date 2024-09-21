@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-js-intro',
-  templateUrl: './js-intro.page.html',
-  styleUrls: ['./js-intro.page.scss'],
+  selector: 'app-js-statements',
+  templateUrl: './js-statements.page.html',
+  styleUrls: ['./js-statements.page.scss'],
 })
-export class JsIntroPage implements OnInit {
+export class JsStatementsPage implements OnInit {
 
   isPopupVisible = false;
   showSubtopics = false;
@@ -31,10 +31,10 @@ export class JsIntroPage implements OnInit {
 
   showSubTypesJava = false;
   arrowIconJava: string = 'caret-forward-outline';
-  
+
   showSubTypesCpp = false;
   arrowIconCpp: string = 'caret-forward-outline';
-  
+
 
   //
   toggleTypeHtml() {
@@ -128,95 +128,20 @@ export class JsIntroPage implements OnInit {
     this.showSubtopics = !this.showSubtopics;
   }
 
-  
+
   constructor(private menu: MenuController) {
 
   }
 
   closeMenu() {
-      this.menu.close();
+    this.menu.close();
   }
 
   ngOnInit() {
   }
 
-  changeContent() {
-    const demoElement = document.getElementById('demo');
-    if (demoElement) {
-      demoElement.innerHTML = 'Hello JavaScript!';
-    } else {
-      console.error('Element with id "demo" not found.');
-    }
-  }
 
+  showText: boolean = false;
 
-  ngAfterViewInit() {
-    this.addEventListeners();
-  }
-
-  addEventListeners() {
-    const turnOnButton = document.querySelector('button[onclick*="LOGO.png"]');
-    const turnOffButton = document.querySelector('button[onclick*="GOOGLE-LOGO.png"]');
-
-    if (turnOnButton) {
-      turnOnButton.addEventListener('click', () => {
-        this.changeImageSrc('myImage', 'assets/img/LOGO.png');
-      });
-    }
-
-    if (turnOffButton) {
-      turnOffButton.addEventListener('click', () => {
-        this.changeImageSrc('myImage', 'assets/img/GOOGLE-LOGO.png');
-      });
-    }
-  }
-
-  changeImageSrc(elementId: string, src: string) {
-    const imgElement = document.getElementById(elementId) as HTMLImageElement;
-    if (imgElement) {
-      imgElement.src = src;
-    } else {
-      console.error(`Element with id "${elementId}" not found.`);
-    }
-  }
-
-//
-  sizeIncreased: boolean = false; // Track whether size has already increased
-
-  changeTextSize() {
-    const textChange = document.getElementById('default-size');
-    
-    if (textChange && !this.sizeIncreased) {
-      textChange.style.fontSize = '29px'; 
-      this.sizeIncreased = true; 
-    }
-  }
-
-  //
-
-  //
-  textHideDisplay(){
-    const hide = document.getElementById('textHide');
-
-    if (hide) {
-      hide.style.display = 'none';
-    } 
-  }
-  //
-
-    //
-    textShowDisplay(){
-      const hide = document.getElementById('textShow');
-  
-      if (hide) {
-        hide.style.display = 'block';
-      } 
-    }
-    //
 
 }
-
-
-
-
-

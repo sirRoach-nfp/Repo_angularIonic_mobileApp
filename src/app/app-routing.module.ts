@@ -182,6 +182,18 @@ const routes: Routes = [
     path: 'javavariables',
     loadChildren: () => import('./javavariables/javavariables.module').then( m => m.JavavariablesPageModule)
   },
+  {
+    path: 'js-output',
+    loadChildren: () => import('./js-output/js-output.module').then( m => m.JsOutputPageModule)
+  },
+  {
+    path: 'js-statements',
+    loadChildren: () => import('./js-statements/js-statements.module').then( m => m.JsStatementsPageModule)
+  },
+  {
+    path: 'js-whereto',
+    loadChildren: () => import('./js-whereto/js-whereto.module').then( m => m.JsWheretoPageModule)
+  },
 
 
 

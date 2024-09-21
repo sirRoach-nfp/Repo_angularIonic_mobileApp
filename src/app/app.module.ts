@@ -15,9 +15,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LessonRendererComponent } from 'src/component/lesson-renderer/lesson-renderer.component';
 import { SharedModule } from 'src/component/shared-modules';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 //import { ExerciseServiceService } from './GPTservice/exercise-service.service';
 @NgModule({
+  schemas:[NO_ERRORS_SCHEMA],
   declarations: [AppComponent],
   imports: [FormsModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule, StoreModule.forRoot({user:userReducer}), StoreDevtoolsModule.instrument({
     maxAge: 30,
