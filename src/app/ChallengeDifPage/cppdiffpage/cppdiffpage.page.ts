@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { SelectionModalComponent } from 'src/component/selection-modal/selection-modal.component';
 
 
+
 @Component({
-  selector: 'app-cssdiffpage',
-  templateUrl: './cssdiffpage.page.html',
-  styleUrls: ['./cssdiffpage.page.scss'],
+  selector: 'app-cppdiffpage',
+  templateUrl: './cppdiffpage.page.html',
+  styleUrls: ['./cppdiffpage.page.scss'],
 })
-export class CSSdiffpagePage implements OnInit {
+export class CppdiffpagePage implements OnInit {
 
   constructor(private router: Router,private modalController: ModalController,private navCtrl: NavController) { }
 
@@ -51,5 +53,6 @@ export class CSSdiffpagePage implements OnInit {
       }
     }
   }
+
 
 }

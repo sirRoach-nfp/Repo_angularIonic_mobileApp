@@ -122,7 +122,31 @@ const routes: Routes = [
   {
     path: 'js-intro',
     loadChildren: () => import('./js-intro/js-intro.module').then( m => m.JsIntroPageModule)
+  },  {
+    path: 'pythondiffpage',
+    loadChildren: () => import('./pythondiffpage/pythondiffpage.module').then( m => m.PythondiffpagePageModule)
   },
+  {
+    path: 'pythondifpage',
+    loadChildren: () => import('./ChallengeDifPage/pythondifpage/pythondifpage.module').then( m => m.PythondifpagePageModule)
+  },
+  {
+    path: 'javascriptdiffpage',
+    loadChildren: () => import('./ChallengeDifPage/javascriptdiffpage/javascriptdiffpage.module').then( m => m.JavascriptdiffpagePageModule)
+  },
+  {
+    path: 'phpdiffpage',
+    loadChildren: () => import('./ChallengeDifPage/phpdiffpage/phpdiffpage.module').then( m => m.PhpdiffpagePageModule)
+  },
+  {
+    path: 'cppdiffpage',
+    loadChildren: () => import('./ChallengeDifPage/cppdiffpage/cppdiffpage.module').then( m => m.CppdiffpagePageModule)
+  },
+  {
+    path: 'javadiffpage',
+    loadChildren: () => import('./ChallengeDifPage/javadiffpage/javadiffpage.module').then( m => m.JavadiffpagePageModule)
+  },
+
 
 
 ];

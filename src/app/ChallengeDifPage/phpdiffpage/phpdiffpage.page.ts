@@ -3,19 +3,18 @@ import { Router } from '@angular/router';
 import { ModalController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { SelectionModalComponent } from 'src/component/selection-modal/selection-modal.component';
-
-
 @Component({
-  selector: 'app-cssdiffpage',
-  templateUrl: './cssdiffpage.page.html',
-  styleUrls: ['./cssdiffpage.page.scss'],
+  selector: 'app-phpdiffpage',
+  templateUrl: './phpdiffpage.page.html',
+  styleUrls: ['./phpdiffpage.page.scss'],
 })
-export class CSSdiffpagePage implements OnInit {
+export class PhpdiffpagePage implements OnInit {
 
   constructor(private router: Router,private modalController: ModalController,private navCtrl: NavController) { }
 
   ngOnInit() {
   }
+
 
 
 

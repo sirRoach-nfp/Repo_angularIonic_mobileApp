@@ -2,9 +2,32 @@ import { Component, OnInit,Input } from '@angular/core';
 
 import { HTMLintroQD } from 'src/TestData/QuizData/HTML/HTMLintroQD';
 
-
+//CSS
 import { CSSintroQD } from 'src/TestData/QuizData/CSS/CSSintroQD';
 import { CSSbasicQD } from 'src/TestData/QuizData/CSS/CSSbasicQD';
+
+
+//Python
+import { pythonIntroQD } from 'src/TestData/QuizData/PYTHON/PYTHONintroQD';
+import { pythonBasicQD } from 'src/TestData/QuizData/PYTHON/PYTHONbasicQD';
+
+//Javascript
+import { JSintroQD } from 'src/TestData/QuizData/JAVASCRIPT/JSintroQD';
+import { JSbasicQD } from 'src/TestData/QuizData/JAVASCRIPT/JSbasicQD';
+
+//Java
+import { JavaintroQD } from 'src/TestData/QuizData/JAVA/JAVAintroQD';
+import { JavabasicQD } from 'src/TestData/QuizData/JAVA/JAVAbasicQD';
+
+//PHP
+import { PHPintroQD } from 'src/TestData/QuizData/PHP/PHPintroQD';
+import { PHPbasicQD } from 'src/TestData/QuizData/PHP/PHPbasicQD';
+
+
+//c++
+import { CppIntroQD } from 'src/TestData/QuizData/CPP/CPPintroQD';
+import { CppBasicQD } from 'src/TestData/QuizData/CPP/CPPbasicQD';
+
 import { Router } from '@angular/router';
 
 interface QuizOption {
@@ -15,6 +38,7 @@ interface QuizQuestion {
   question: string;
   options: QuizOption;
   correctAnswer: string;
+  explanation: string,
 }
 
 
@@ -35,7 +59,7 @@ export class QuizRendererComponent  implements OnInit {
   userAnswers: {[key:number]: string}={};
   score = 0;
   quizCompleted = false;
-  wrongAnswers:{question:string,selectedAnswer: string, correctAnswer: string}[]=[];
+  wrongAnswers:{question:string,selectedAnswer: string, correctAnswer: string,explanation: string}[]=[];
 
 
   constructor(private router:Router) { }
@@ -82,6 +106,72 @@ export class QuizRendererComponent  implements OnInit {
           break;
       }
     }
+
+    if(this.lang === "Python"){
+      switch(this.diff){
+        case "Intro":
+          this.quizData = [...pythonIntroQD].sort(()=>0.5 - Math.random()).slice(0,5)
+          break;
+        case "Basic":
+          this.quizData = [...pythonBasicQD].sort(()=>0.5 - Math.random()).slice(0,10)
+          break;
+      }
+    }
+
+
+    if(this.lang === "Javascript"){
+      switch(this.diff){
+        case "Intro":
+          this.quizData = [...JSintroQD].sort(()=>0.5 - Math.random()).slice(0,5)
+          break;
+        case "Basic":
+          this.quizData = [...JSbasicQD].sort(()=>0.5 - Math.random()).slice(0,10)
+          break;
+      }
+    }
+
+
+    if(this.lang === "PHP"){
+      switch(this.diff){
+        case "Intro":
+          this.quizData = [...PHPintroQD].sort(()=>0.5 - Math.random()).slice(0,5)
+          break;
+        case "Basic":
+          this.quizData = [...PHPbasicQD].sort(()=>0.5 - Math.random()).slice(0,10)
+          break;
+      }
+    }
+
+
+    if(this.lang === "CPP"){
+      switch(this.diff){
+        case "Intro":
+          this.quizData = [...CppIntroQD].sort(()=>0.5 - Math.random()).slice(0,5)
+          break;
+        case "Basic":
+          this.quizData = [...CppBasicQD].sort(()=>0.5 - Math.random()).slice(0,10)
+          break;
+      }
+    }
+
+
+
+    if(this.lang === "Java"){
+      switch(this.diff){
+        case "Intro":
+          this.quizData = [...JavaintroQD].sort(()=>0.5 - Math.random()).slice(0,5)
+          break;
+        case "Basic":
+          this.quizData = [...JavabasicQD].sort(()=>0.5 - Math.random()).slice(0,10)
+          break;
+      }
+    }
+
+
+
+
+
+
   }
 
 
@@ -115,7 +205,8 @@ export class QuizRendererComponent  implements OnInit {
         this.wrongAnswers.push({
           question: question.question,
           selectedAnswer: userAnswer,
-          correctAnswer: question.correctAnswer
+          correctAnswer: question.correctAnswer,
+          explanation: question.explanation,
         });
         return acc;
       }

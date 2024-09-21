@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { IonicModule } from '@ionic/angular';
+
+import { PythondifpagePageRoutingModule } from './pythondifpage-routing.module';
+
+import { PythondifpagePage } from './pythondifpage.page';
+import { SharedModule } from 'src/component/shared-modules';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    PythondifpagePageRoutingModule,
+    SharedModule
+  ],
+  declarations: [PythondifpagePage]
+})
+export class PythondifpagePageModule {}

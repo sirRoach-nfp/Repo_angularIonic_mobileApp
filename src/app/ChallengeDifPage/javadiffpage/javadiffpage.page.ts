@@ -4,19 +4,17 @@ import { ModalController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { SelectionModalComponent } from 'src/component/selection-modal/selection-modal.component';
 
-
 @Component({
-  selector: 'app-cssdiffpage',
-  templateUrl: './cssdiffpage.page.html',
-  styleUrls: ['./cssdiffpage.page.scss'],
+  selector: 'app-javadiffpage',
+  templateUrl: './javadiffpage.page.html',
+  styleUrls: ['./javadiffpage.page.scss'],
 })
-export class CSSdiffpagePage implements OnInit {
+export class JavadiffpagePage implements OnInit {
 
   constructor(private router: Router,private modalController: ModalController,private navCtrl: NavController) { }
 
   ngOnInit() {
   }
-
 
 
   navigateToExercise(diff: string,lang: string){

@@ -1,16 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+
+
+
+
 import { Router } from '@angular/router';
+
 import { ModalController } from '@ionic/angular';
 import { NavController } from '@ionic/angular';
 import { SelectionModalComponent } from 'src/component/selection-modal/selection-modal.component';
 
 
+
+
 @Component({
-  selector: 'app-cssdiffpage',
-  templateUrl: './cssdiffpage.page.html',
-  styleUrls: ['./cssdiffpage.page.scss'],
+  selector: 'app-pythondifpage',
+  templateUrl: './pythondifpage.page.html',
+  styleUrls: ['./pythondifpage.page.scss'],
 })
-export class CSSdiffpagePage implements OnInit {
+export class PythondifpagePage implements OnInit {
 
   constructor(private router: Router,private modalController: ModalController,private navCtrl: NavController) { }
 
@@ -19,6 +26,8 @@ export class CSSdiffpagePage implements OnInit {
 
 
 
+
+  
   navigateToExercise(diff: string,lang: string){
     this.router.navigate([`/exercise-page`],{queryParams:{diff,lang}})
   }
@@ -52,4 +61,5 @@ export class CSSdiffpagePage implements OnInit {
     }
   }
 
+  
 }
