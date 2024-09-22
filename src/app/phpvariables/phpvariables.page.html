@@ -1,0 +1,394 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a routerLink="/html" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a [routerLink]="['/py']" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>PHP VARIABLES</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<p>Variables are "containers" for storing information.</p>
+<hr class="custom-hr2">
+<h1>Creating (Declaring) PHP Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In PHP, a variable starts with the <span class="bulletred">$</span> sign, followed by the name of the variable:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p>$x <span class="bulletblue">=</span><span> 5</span>;</p>
+    <p>$y <span class="bulletblue">= </span><span style="color: rgb(14, 148, 14);">"Rhona"</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>5</p>
+    <p>Rhona</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In the example above, the variable <span class="bulletred">$x</span> will hold the value <span class="bulletred">5</span>, and the variable <span class="bulletred">$y</span> will hold the value <span class="bulletred">"Rhona"</span>.</p>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>When you assign a text value to a variable, put quotes around the value.</p>
+  </div>
+</div>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>Unlike other programming languages, PHP has no command for declaring a variable. It is created the moment you first assign a value to it.</p>
+    <p>Think of variables as containers for storing data.</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>PHP Variables</h1>
+<p>A variable can have a short name (like <span class="bulletred">$x</span> and <span class="bulletred">$y</span>) or a more descriptive name (<span class="bulletred">$age</span>, <span class="bulletred">$carname</span>, <span class="bulletred">$total_volume</span>).</p>
+<p>Rules for PHP variables:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable starts with the <span class="bulletred">$</span> sign, followed by the name of the variable</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name must start with a letter or the underscore character</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name cannot start with a number</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Variable names are case-sensitive (<span class="bulletred">$age</span> and <span class="bulletred">$AGE</span> are two different variables)</p>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p>Remember that PHP variable names are case-sensitive!</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Output Variables</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The PHP <span class="bulletred">echo</span> statement is often used to output data to the screen.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example will show how to output text and a variable:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      <?php
+      <br>
+      $txt <span class="bulletblue">=</span><span style="color: rgb(14, 148, 14) ;"> "CodeTology</span>;
+      <br>
+      <span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"I love </span>$txt<span style="color:rgb(14, 148, 14) ;">!"</span>;
+      <br>
+      ?>
+    </p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>I love CodeTology!</p>
+  </div>
+</div>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>You will learn more about the <span class="bulletred">echo</span> statement and how to output data to the screen in the <a href="/phpecho" style="color: #f17177;">PHP Echo/Print chapter</a></p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>PHP is a Loosely Types Language</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In the example above, notice that we did not have to tell PHP which data type the variable is.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP automatically associates a data type to the variable, depending on its value. Since the data types are not set in a strict sense, you can do things like adding a string to an integer without causing an error.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In PHP 7, type declarations were added. This gives an option to specify the data type expected when declaring a function, and by enabling the strict requirement, it will throw a "Fatal Error" on a type mismatch.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Variable Types</h1>
+<p>PHP has no command for declaring a variable, and the data type depends on the value of the variable.</p>
+<p>PHP supports the following data types:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>String</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Integer</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Float (floating point numbers - also called double)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Boolean</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Array</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Object</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>NULL</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Resource</p>
+</ion-item>
+<hr class="custom-hr2">
+<h1>Get the Type</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To get the data type of a variable, use the <span class="bulletred">var_dump()</span> function.</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<p>The <span class="bulletred">var_dump()</span> function returns the data type and the value:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p>$x <span class="bulletblue">= </span><span>5</span>;</p>
+    <p>var_dump <span>(</span>$x<span>)</span></p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>int(5)</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>Assign String to a Variable</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Assigning a string to a variable is done with the variable name followed by an equal sign and the string:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>$x <span class="bulletblue">= </span> <span style="color: rgb(14, 148, 14);">"Rhona"</span>;</p>
+    <p><span class="bulletblue">echo </span> $x;</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>String variables can be declared either by using double or single quotes, but you should be aware of the differences.</p>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>However; all variable names are case-sensitive!</p>
+  </div>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/phpsyntax']">Prev</ion-button>
+  <ion-button [routerLink]="['/phpecho']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

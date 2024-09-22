@@ -1,0 +1,354 @@
+<!-- Menu, Search, Profile -->
+<ion-menu side="start" menuId="main-menu-html" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="color-menu"> <!-- Menu Panel -->
+    <ion-list class="menu-tool">
+
+      <ion-item button routerLink="/home" class="menu-item">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-item>
+
+      <!--Learn menu panel -->
+      <ion-item button routerLink="/learn" (click)="toggleSubtopics()" class="menu-item">
+        <ion-icon slot="start" name="book-outline"></ion-icon>
+        <ion-label>Learn</ion-label>
+      </ion-item>
+        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+          <ion-item button routerLink="/subtopic" class="menu-item">
+              <ion-icon slot="start" name="caret-forward-outline"></ion-icon>
+              <ion-label>Topics</ion-label>
+          </ion-item>
+
+        </ion-list>
+      <!--Learn menu panel -->
+
+
+      <ion-item button routerLink="/challenges" class="menu-item">
+        <ion-icon slot="start" name="trophy-outline"></ion-icon>
+        <ion-label>Challenges</ion-label>
+      </ion-item>
+
+      <ion-item button routerLink="/tutorials" class="menu-item">
+        <ion-icon slot="start" name="school-outline"></ion-icon>
+        <ion-label>Tutorials</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-header [translucent]="true" id="head">
+  <ion-item id="main-content">
+
+    <ion-buttons slot="start"><!-- Menu Button -->
+      <ion-menu-button menu="main-menu-html"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    </ion-input>
+    
+    <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
+      <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
+    </ion-buttons>
+
+  </ion-item> 
+</ion-header> 
+
+<!-- Popup Message -->
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+  <ng-template>
+    <ion-content class="popup-container">
+      
+      <div class="popup-content">
+        <ion-buttons class="back">
+          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+        </ion-buttons>
+
+        <ion-item>
+
+          <ion-icon slot="start" name="person-outline"></ion-icon>
+          <ion-header>
+            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-subtitle>
+              ortizrhonalynmail.com
+            </ion-card-subtitle>
+          </ion-header>
+        </ion-item>
+
+        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+      </div>
+    
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-content>
+  <div class="option">
+    <a [routerLink]="['/html']" class="active">HTML</a>
+    <a routerLink="/css" class="active">CSS</a>
+    <a routerLink="/js" class="active">JS</a>
+    <a routerLink="/py" class="active">PYTHON</a>
+    <a routerLink="/sql" class="active">SQL</a>
+    <a routerLink="/php" class="active">PHP</a>
+    <a routerLink="/java" class="active">JAVA</a>
+    <a routerLink="/c++" class="active">C++</a>
+  </div>
+
+
+
+
+
+
+
+
+<!-- wag buburahin-->
+<h1>PHP INTRODUCTION</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<p>PHP code is executed on the server.</p>
+<hr class="custom-hr2">
+<h1>What You Should Already Know</h1>
+<p>Before you continue you should have a basic understanding of the following:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>HTML</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>CSS</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>JavaScript</p>
+</ion-item>
+<p>If you want to study these subjects first, find the tutorials on our <a href="/home" style="color: #f17177;">Home page</a>.</p>
+<hr class="custom-hr2">
+<h1>What is PHP</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP is an acronym for "PHP: Hypertext Preprocessor"</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP is a widely-used, open source scripting language</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP scripts are executed on the server</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP is free to download and use</p>
+</ion-item>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>PHP is an amazing and popular language!</b></p>
+    <p>It is powerful enough to be at the core of the biggest blogging system on the web (WordPress)!</p>
+    <p>It is deep enough to run large social networks!</p>
+    <p>It is also easy enough to be a beginner's first server side language!</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Why is a PHP File?</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP files can contain text, HTML, CSS, JavaScript, and PHP code</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP code is executed on the server, and the result is returned to the browser as plain HTML</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP files have extension "<span class="bulletred">.php</span>"</p>
+</ion-item>
+<hr class="custom-hr2">
+<h1>What Can PHP Do?</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can generate dynamic page content</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can create, open, read, write, delete, and close files on the server</p>
+</ion-item>
+<br><ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can collect form datal</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can send and receive cookies</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can add, delete, modify data in your database</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can be used to control user-access</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP can encrypt data</p>
+</ion-item>
+<p>With PHP you are not limited to output HTML. You can output images or PDF files. You can also output any text, such as XHTML and XML.</p>
+<br>
+<hr class="custom-hr2">
+<h1>Why PHP?</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP is compatible with almost all servers used today (Apache, IIS, etc.)</p>
+</ion-item>
+<br><ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP supports a wide range of databases</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP is free. Download it from the official PHP resource: <a href="https://www.php.net/" style="color: #f17177;">www.php.net</a></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP is easy to learn and runs efficiently on the server side</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>What's New in PHP 7</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP 7 is much faster than the previous popular stable release (PHP 5.6)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP 7 has improved Error Handling</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP 7 supports stricter Type Declarations for function arguments</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>PHP 7 supports new operators (like the spaceship operator: <span class="bulletred"><=></span>)</p>
+</ion-item>
+<br>
+<hr class="custom-hr1">
+<h1>PHP INSTALLATION</h1>
+<br>
+<h1>What Do I Need?</h1>
+<p>To start uing PHP, you can:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Find a web host with PHP and MySQL support</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Install a web server on your own PC, and then install PHP and MySQL</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Use a Web Host With PHP Support</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If your server has activated support for PHP you do not need to do anything.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Just create some <span class="bulletred">.php</span> files, place them in your web directory, and the server will automatically parse them for you.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You do not need to compile anything or install any extra tools.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Because PHP is free, most web hosts offer PHP support.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Set Up PHP on Your Own PC</h1>
+<p>However, if your server does not support PHP, you must:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>install a web server</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>install PHP</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>install a database, such as MySQL</p>
+</ion-item>
+<p>The official PHP website (PHP.net) has installation instructions for PHP: <a href="https://www.php.net/manual/en/install.php" style="color: #f17177;">http://php.net/manual/en/install.php</a></p>
+</div>
+<br>
+<hr class="custom-hr2">
+<div class="home-next">
+  <ion-button [routerLink]="['/home']">HOME</ion-button>
+  <ion-button [routerLink]="['/phpsyntax']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

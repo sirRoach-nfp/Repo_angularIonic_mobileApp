@@ -219,7 +219,27 @@ const routes: Routes = [
   {
     path: 'js-whereto',
     loadChildren: () => import('./js-whereto/js-whereto.module').then( m => m.JsWheretoPageModule)
+  },  {
+    path: 'php',
+    loadChildren: () => import('./php/php.module').then( m => m.PhpPageModule)
   },
+  {
+    path: 'phpintro',
+    loadChildren: () => import('./phpintro/phpintro.module').then( m => m.PhpintroPageModule)
+  },
+  {
+    path: 'phpsyntax',
+    loadChildren: () => import('./phpsyntax/phpsyntax.module').then( m => m.PhpsyntaxPageModule)
+  },
+  {
+    path: 'phpvariables',
+    loadChildren: () => import('./phpvariables/phpvariables.module').then( m => m.PhpvariablesPageModule)
+  },
+  {
+    path: 'phpecho',
+    loadChildren: () => import('./phpecho/phpecho.module').then( m => m.PhpechoPageModule)
+  },
+
 
 
 
