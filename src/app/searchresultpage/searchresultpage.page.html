@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <div class="headerWrapper">
+      <ion-icon name="arrow-back-outline" class="iconBack" (click)="goPrev()"></ion-icon>
+      <h1>Result for : "{{query}}"</h1>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="resultWrapperpos"  *ngIf="searchResults.length > 0">
+    <!-- Loop through the search results -->
+   
+
+    <ion-card *ngFor="let result of searchResults" >
+      <img  [src]="result.cover" />
+      <ion-card-header>
+        <ion-card-title>{{result.title}}</ion-card-title>
+     
+      </ion-card-header>
+
+      <ion-card-content>
+       {{result.desc}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+
+  <div class="resultNull" *ngIf="searchResults.length === 0">
+    <h1>no res</h1>
+  </div>
+</ion-content>

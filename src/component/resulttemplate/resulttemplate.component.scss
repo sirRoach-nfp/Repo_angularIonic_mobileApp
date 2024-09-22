@@ -1,0 +1,38 @@
+
+
+
+
+.componentWrapper{
+    width: 95%;
+    border: 1px solid red;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    
+
+    .thumbnailDiv{
+        flex: 2;
+        border: 1px solid black;
+        height: 100px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .titleDiv{
+        flex: 3;
+        border: 1px solid black;
+        padding-top: 3px;
+        padding-left: 3px;
+
+
+        span{
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}

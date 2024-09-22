@@ -19,4 +19,18 @@ export class ApiService {
   login(userCredential:any): Observable<any>{
     return this.http.post(`${this.baseUrl}/api/auth/login`,userCredential)
   }
+
+
+
+
+  fetchBlogById(blogId: string): Observable<any>{
+    return this.http.get(`${this.baseUrl}/api/blog/fetchBlog/${blogId}`);
+  }
+
+
+  searchBlogs(searchValue:String): Observable <any> {
+    return this.http.get(`${this.baseUrl}/api/blog/search/${searchValue}`);
+  }
+
+
 }

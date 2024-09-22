@@ -6,12 +6,12 @@ import { ExerciseRendererComponent } from './exercise-renderer/exercise-renderer
 import { QuizRendererComponent } from './quiz-renderer/quiz-renderer.component';
 import { SelectionModalComponent } from './selection-modal/selection-modal.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-
-
+import { RenderBlogComponent } from './render-blog/render-blog.component';
+import { ResulttemplateComponent } from './resulttemplate/resulttemplate.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 @NgModule({
-  declarations: [LessonRendererComponent,ExerciseRendererComponent,QuizRendererComponent,SelectionModalComponent,NavBarComponent],
+  declarations: [LessonRendererComponent,ExerciseRendererComponent,QuizRendererComponent,SelectionModalComponent,NavBarComponent,RenderBlogComponent,ResulttemplateComponent],
   imports: [CommonModule,IonicModule,FormsModule],
-  exports: [LessonRendererComponent,ExerciseRendererComponent,QuizRendererComponent,SelectionModalComponent,FormsModule,NavBarComponent]  // Export it so other modules can use it
+  exports: [LessonRendererComponent,ExerciseRendererComponent,QuizRendererComponent,SelectionModalComponent,FormsModule,NavBarComponent,RenderBlogComponent,ResulttemplateComponent],  // Export it so other modules can use it
 })
 export class SharedModule {}

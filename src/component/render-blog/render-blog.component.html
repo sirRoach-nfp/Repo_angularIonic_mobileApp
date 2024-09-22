@@ -1,0 +1,16 @@
+<div class="blogRendererWrapper">
+  <div class="header">
+
+  </div>
+
+  <div *ngFor="let part of formattedContent">
+    <ng-container *ngIf="part.startsWith('<img') || part.startsWith('<h1') || part.startsWith('<h2') || part.startsWith('<p') else textPart">
+      <div [innerHTML]="part"></div>
+    </ng-container>
+    <ng-template #textPart>
+      <div class="paragraphWrapper" *ngIf="part.trim()">
+        <p style="margin: 0;">{{ part.trim() }}</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

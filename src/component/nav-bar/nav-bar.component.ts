@@ -1,7 +1,7 @@
 import { Component, OnInit,Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { Router,NavigationEnd } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { filter, Subscription } from 'rxjs';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -12,6 +12,31 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
   @Input() id: string = ""
   uniqueId: string = ""
   routerSubscription: Subscription | undefined;
+  currentRoute: string = "";
+  constructor(private menu: MenuController, private router: Router) {}
+
+  
+
+
+  //search logic
+  query: string = "";
+
+
+  search(){
+    console.log("test" + this.query)
+    
+    this.router.navigate(['/searchresultpage'], {
+      queryParams: {
+        searchQuery: this.query,
+        prevRoute: this.currentRoute // Replace with the actual search term
+      }
+    });
+  }
+
+
+
+
+
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['id']) {
@@ -162,7 +187,7 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
     this.showSubtopics = !this.showSubtopics;
   }
 
-  constructor(private menu: MenuController, private router: Router) {}
+ 
 
   closeMenu() {
       this.menu.close();
@@ -170,6 +195,8 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
   }
 
   
+
+  /*
 
   ngOnInit() {
     this.uniqueId = this.id;
@@ -185,7 +212,24 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
     // Subscribe to Router events to clear the uniqueId when the route changes
 
   }
+  */
 
+  ngOnInit() {
+    this.uniqueId = this.id;
+    console.log('Initial uniqueId:', this.uniqueId);
+  
+    // Subscribe to router events and get the current route
+    this.routerSubscription = this.router.events
+      .pipe(
+        filter((event): event is NavigationEnd => event instanceof NavigationEnd) // Explicitly filter for NavigationEnd
+      )
+      .subscribe((event: NavigationEnd) => {
+        this.currentRoute = event.urlAfterRedirects;
+        console.log('Current route:', this.currentRoute);
+        this.menu.enable(true, this.uniqueId); // Enable the menu with the updated uniqueId
+      });
+  }
+  
 
 
   html(){

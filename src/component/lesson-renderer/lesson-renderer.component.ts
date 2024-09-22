@@ -81,54 +81,6 @@ export class LessonRendererComponent  implements OnChanges {
     return null;
   }
 
-  /*
-  private formatContent(): void{
-    const combinedRegex = /<Keypoint>(.*?)<\/Keypoint>|<Image(\d+)>/g;
-    let lastIndex = 0;
-    let match;
-    this.formattedContent = [];
-
-    while ((match = combinedRegex.exec(this.text)) !== null) {
-      if (match.index > lastIndex) {
-        this.formattedContent.push(this.text.substring(lastIndex, match.index).trim());
-      }
-
-      if (match[1]) {
-        // If it's a Keypoint tag
-        this.formattedContent.push(match[1].trim());
-      } else if (match[2]) {
-        // If it's an Image tag
-        const imageIndex = parseInt(match[2], 10) - 1;
-        if (this.imageUrls[imageIndex]) {
-          this.formattedContent.push(`<img src="${this.imageUrls[imageIndex]}" />`);
-        }
-      }
-
-      lastIndex = combinedRegex.lastIndex;
-    }
-
-    if (lastIndex < this.text.length) {
-      this.formattedContent.push(this.text.substring(lastIndex).trim());
-    }
-  }
-
-
-  /*
-  isImage(part: string):boolean{
-    return /\[image\d+\]/.test(part);
-  }
-
-  getImageUrl(part: string): string | null{
-    const imageMatch = part.match(/\[image(\d+)\]/);
-
-    if(imageMatch){
-      const imageIndex = parseInt(imageMatch[1],10) - 1;
-      return !isNaN(imageIndex) && this.imageUrls[imageIndex] ? this.imageUrls[imageIndex] : null;
-    }
-    return null;
-  }
-
-  */
 
 
 

@@ -300,8 +300,8 @@
       <ion-menu-button [menu]="uniqueId"></ion-menu-button>
     </ion-buttons>
 
-    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
-      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    <ion-input clearInput placeholder="  search.."  class="input" [(ngModel)]="query"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon" (click)="search()"></ion-icon>
     </ion-input>
     
     <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->

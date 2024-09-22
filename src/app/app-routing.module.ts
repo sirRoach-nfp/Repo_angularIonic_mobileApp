@@ -219,7 +219,15 @@ const routes: Routes = [
   {
     path: 'js-whereto',
     loadChildren: () => import('./js-whereto/js-whereto.module').then( m => m.JsWheretoPageModule)
+  },  {
+    path: 'search-result-page',
+    loadChildren: () => import('./search-result-page/search-result-page.module').then( m => m.SearchResultPagePageModule)
   },
+  {
+    path: 'searchresultpage',
+    loadChildren: () => import('./searchresultpage/searchresultpage.module').then( m => m.SearchresultpagePageModule)
+  },
+
 
 
 
