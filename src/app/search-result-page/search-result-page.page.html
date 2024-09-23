@@ -1,29 +1,51 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>searchResultPage</ion-title>
-  </ion-toolbar>
+  <div class="headerWrapper">
+      <ion-icon name="arrow-back-outline" class="iconBack" (click)="goBack()"></ion-icon>
+      
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <h2>{{query}}</h2>
+  
 
-  <div class="authorDiv">
-    <div class="authorIconDiv">
-      <img src="assets\img\logo.jpg" alt="">
-    </div>
-
-    <div class="pubInfo">
-      <span class="author">
-        CodeTology
-      </span>
-
-      <span class="timePub">Posted on Feb10</span>
-    </div>
+  <div class="loaderDiv" *ngIf="isLoading">
+    <div class="spinner"></div>
   </div>
+  
+  
+  
+
+  <div class="content" *ngIf="!isLoading">
+
+      <div class="authorDiv">
+        <div class="authorIconDiv">
+          <img src="assets\img\logo.jpg" alt="">
+        </div>
+        
+
+        <div class="pubInfo">
+          <span class="author">
+            CodeTology
+          </span>
+
+          <span class="timePub">Posted on {{formattedDate}}</span>
+        </div>
 
 
-  <div class="content">
-    <app-render-blog [text]="blog.content" [imageUrls]="blogImages"></app-render-blog>
+
+      </div>
+
+
+      <div class="coverPhoto">
+        <img [src]="blog.cover" alt="">
+      </div>
+
+
+      <div class="content">
+        <app-render-blog [text]="blog.content" [imageUrls]="blogImages"></app-render-blog>
+      </div>
+
   </div>
 
 

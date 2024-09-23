@@ -2,7 +2,7 @@
 
 
 .paragraphWrapper{
-    border: 1px solid red;
+    //border: 1px solid red;
 }
 
 ::ng-deep .mainTitle{
@@ -10,11 +10,11 @@
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 40px;
-    border: 1px solid red;
+    //border: 1px solid red;
 }
 
 ::ng-deep .subTitle{
-    border: 1px solid blue;
+    //border: 1px solid blue;
     font-size: 25px;
     font-weight: 700;
     color: #171717;
@@ -24,11 +24,12 @@
 ::ng-deep .paragContent{
     color: #444444;
     font-size: 17px;
+    margin-bottom: 40px;
 
 }
 
 ::ng-deep .image{
-    border: 1px solid red;
+    //border: 1px solid red;
     width: 100%;
     min-height: 220px;
 }

@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     min-height: 56px;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     max-height: 56px;;
     background-image: linear-gradient(to right, #fb7c57, #fd9971, #ffb48f, #ffceb0, #ffe6d5);
 
@@ -44,3 +44,34 @@
     margin-right: 10px;
   }
 
+
+
+.content{//border: 1px solid red;
+    }
+
+.loaderDiv{
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   // border: 1px solid red;
+}
+
+
+.spinner {
+    width: 100px;  /* Size of the spinner */
+    height: 100px; /* Size of the spinner */
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #ff5722; /* Blue color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Spin animation */
+  }
+  
+  /* Animation keyframes */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

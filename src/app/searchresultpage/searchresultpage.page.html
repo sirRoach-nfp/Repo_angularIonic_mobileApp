@@ -6,26 +6,40 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="resultWrapperpos"  *ngIf="searchResults.length > 0">
-    <!-- Loop through the search results -->
-   
 
-    <ion-card *ngFor="let result of searchResults" >
-      <img  [src]="result.cover" />
-      <ion-card-header>
-        <ion-card-title>{{result.title}}</ion-card-title>
-     
-      </ion-card-header>
-
-      <ion-card-content>
-       {{result.desc}}
-      </ion-card-content>
-    </ion-card>
+  <div class="loaderDiv" *ngIf="isLoading" >
+    <div class="spinner"></div>
   </div>
+  
+
+  <div class="content" *ngIf="!isLoading">
+
+  
+      <div class="resultWrapperpos"  *ngIf="searchResults.length > 0">
+        <!-- Loop through the search results -->
+      
+
+        <ion-card *ngFor="let result of searchResults" >
+          <img [src]="result.cover" (click)="navigateToBlog(result._id)"/>
+          <ion-card-header>
+            <ion-card-title>{{result.title}}</ion-card-title>
+        
+          </ion-card-header>
+
+          <ion-card-content>
+          {{result.desc}}
+          </ion-card-content>
+        </ion-card>
+      </div>
 
 
 
-  <div class="resultNull" *ngIf="searchResults.length === 0">
-    <h1>no res</h1>
+      <div class="resultNull" *ngIf="searchResults.length === 0">
+        <h1>no res</h1>
+      </div>
+
+
+
+
   </div>
 </ion-content>

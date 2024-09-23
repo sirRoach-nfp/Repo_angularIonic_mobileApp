@@ -20,6 +20,10 @@ export class SearchresultpagePage implements OnInit, OnDestroy {
 
   searchResults: any[]=[];
 
+
+  isLoading: boolean = true;
+
+
   ngOnInit() {
 
    this.queryParamsSubscription = this.router.queryParams.subscribe(params => {
@@ -59,6 +63,16 @@ export class SearchresultpagePage implements OnInit, OnDestroy {
   }
 
 
+  navigateToBlog(bid: string){
+    console.log(bid)
+
+    this.route.navigate(['/search-result-page'],{
+      queryParams:{
+        blogId: bid,
+      }
+    })
+  }
+
 
   searchBlogs(searchVal:string){
 
@@ -66,6 +80,7 @@ export class SearchresultpagePage implements OnInit, OnDestroy {
       (response: any)=>{
         console.log(response)
         this.searchResults = response;
+        this.isLoading=false;
       },
       (error)=>[
         console.error('Error fetching search results',error)

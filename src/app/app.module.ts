@@ -17,6 +17,10 @@ import { SharedModule } from 'src/component/shared-modules';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+//import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+
 //import { ExerciseServiceService } from './GPTservice/exercise-service.service';
 @NgModule({
   schemas:[NO_ERRORS_SCHEMA],
@@ -29,7 +33,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 
 
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

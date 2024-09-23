@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { SearchResultPagePageRoutingModule } from './search-result-page-routing.module';
-
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SharedModule } from 'src/component/shared-modules';
 import { SearchResultPagePage } from './search-result-page.page';
 
@@ -16,7 +16,8 @@ import { SearchResultPagePage } from './search-result-page.page';
     FormsModule,
     IonicModule,
     SearchResultPagePageRoutingModule,
-    SharedModule
+    SharedModule,
+    MatProgressSpinnerModule
   ],
   declarations: [SearchResultPagePage]
 })

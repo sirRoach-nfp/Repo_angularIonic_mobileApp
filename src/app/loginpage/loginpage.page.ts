@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { setUsername } from '../store/user/user.actions';
 import { UserState } from '../store/user/user.reducer';
 import { Store } from '@ngrx/store';
-
+import { ToastController } from '@ionic/angular';
 
 
 
@@ -16,7 +16,7 @@ import { Store } from '@ngrx/store';
 })
 export class LoginpagePage implements OnInit {
 
-  constructor(private apiService: ApiService, private router:Router,private store: Store<{user: UserState}>) { }
+  constructor(private apiService: ApiService, private router:Router,private store: Store<{user: UserState}>,private toastController: ToastController ) { }
 
   credential = {
     email: '',
@@ -35,6 +35,16 @@ export class LoginpagePage implements OnInit {
     }
   }
 
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 5000,
+      position: 'top', 
+      color: 'danger' 
+    });
+    await toast.present();
+  }
+
 
   login(){
     this.apiService.login(this.credential).subscribe(
@@ -48,6 +58,7 @@ export class LoginpagePage implements OnInit {
       },
       error=>{
         console.log(`login failed`,error)
+        this.presentToast('Login failed: Incorrect credentials');
       }
     )
   }

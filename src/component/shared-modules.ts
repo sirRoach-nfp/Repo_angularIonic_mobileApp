@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RenderBlogComponent } from './render-blog/render-blog.component';
 import { ResulttemplateComponent } from './resulttemplate/resulttemplate.component';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [LessonRendererComponent,ExerciseRendererComponent,QuizRendererComponent,SelectionModalComponent,NavBarComponent,RenderBlogComponent,ResulttemplateComponent],
   imports: [CommonModule,IonicModule,FormsModule],
