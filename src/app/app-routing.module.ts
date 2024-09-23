@@ -239,6 +239,18 @@ const routes: Routes = [
     path: 'phpecho',
     loadChildren: () => import('./phpecho/phpecho.module').then( m => m.PhpechoPageModule)
   },
+  {
+    path: 'cpp',
+    loadChildren: () => import('./cpp/cpp.module').then( m => m.CppPageModule)
+  },
+  {
+    path: 'cppintro',
+    loadChildren: () => import('./cppintro/cppintro.module').then( m => m.CppintroPageModule)
+  },
+  {
+    path: 'cppgetstarted',
+    loadChildren: () => import('./cppgetstarted/cppgetstarted.module').then( m => m.CppgetstartedPageModule)
+  },
 
 
 
