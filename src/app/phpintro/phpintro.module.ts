@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PhpintroPageRoutingModule } from './phpintro-routing.module';
 
 import { PhpintroPage } from './phpintro.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PhpintroPageRoutingModule
+    PhpintroPageRoutingModule,
+    SharedModule
   ],
   declarations: [PhpintroPage]
 })

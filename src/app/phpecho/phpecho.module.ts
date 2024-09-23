@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PhpechoPageRoutingModule } from './phpecho-routing.module';
 
 import { PhpechoPage } from './phpecho.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PhpechoPageRoutingModule
+    PhpechoPageRoutingModule,
+    SharedModule
   ],
   declarations: [PhpechoPage]
 })

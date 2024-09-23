@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { JavagetstartedPageRoutingModule } from './javagetstarted-routing.module';
 
 import { JavagetstartedPage } from './javagetstarted.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    JavagetstartedPageRoutingModule
+    JavagetstartedPageRoutingModule,
+    SharedModule
   ],
   declarations: [JavagetstartedPage]
 })

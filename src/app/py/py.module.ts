@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PyPageRoutingModule } from './py-routing.module';
 
 import { PyPage } from './py.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PyPageRoutingModule
+    PyPageRoutingModule,
+    SharedModule
   ],
   declarations: [PyPage]
 })

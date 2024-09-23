@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PysyntaxPageRoutingModule } from './pysyntax-routing.module';
 
 import { PysyntaxPage } from './pysyntax.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PysyntaxPageRoutingModule
+    PysyntaxPageRoutingModule,
+    SharedModule
   ],
   declarations: [PysyntaxPage]
 })

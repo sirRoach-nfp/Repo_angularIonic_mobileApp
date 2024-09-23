@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { CssAttributesPageRoutingModule } from './css-attributes-routing.module';
-
+import { SharedModule } from 'src/component/shared-modules';
 import { CssAttributesPage } from './css-attributes.page';
 
 @NgModule({
@@ -13,7 +13,8 @@ import { CssAttributesPage } from './css-attributes.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CssAttributesPageRoutingModule
+    CssAttributesPageRoutingModule,
+    SharedModule
   ],
   declarations: [CssAttributesPage]
 })

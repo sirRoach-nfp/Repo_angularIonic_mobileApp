@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { SqlselectPageRoutingModule } from './sqlselect-routing.module';
 
 import { SqlselectPage } from './sqlselect.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SqlselectPageRoutingModule
+    SqlselectPageRoutingModule,
+    SharedModule
   ],
   declarations: [SqlselectPage]
 })

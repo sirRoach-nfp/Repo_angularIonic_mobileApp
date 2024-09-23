@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { SqlsyntaxPageRoutingModule } from './sqlsyntax-routing.module';
 
 import { SqlsyntaxPage } from './sqlsyntax.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SqlsyntaxPageRoutingModule
+    SqlsyntaxPageRoutingModule,
+    SharedModule
   ],
   declarations: [SqlsyntaxPage]
 })
