@@ -791,14 +791,16 @@ span {
     opacity: 1;
   }
 }
-
+.output-table {
+  overflow-x: scroll;
+}
 
 .element-table {
   width: 100%;
   max-width: 100%;
   border-collapse: collapse;
   font-size: 15px;
-  overflow-x: auto;
+  
 }
 
 .element-table th,
@@ -823,24 +825,3 @@ span {
   background-color: #ffe6d5;
 }
 
-@media (max-width: 768px) {
-  .element-table {
-    font-size: 13px;
-  }
-
-  .element-table th,
-  .element-table td {
-    padding: 6px;
-  }
-}
-
-@media (max-width: 480px) {
-  .element-table {
-    font-size: 12px;
-  }
-
-  .element-table th,
-  .element-table td {
-    padding: 4px;
-  }
-}

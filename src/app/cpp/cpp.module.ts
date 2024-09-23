@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CppPageRoutingModule } from './cpp-routing.module';
 
 import { CppPage } from './cpp.page';
+import { SharedModule } from 'src/component/shared-modules';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CppPageRoutingModule
+    CppPageRoutingModule,
+    SharedModule
   ],
   declarations: [CppPage]
 })
