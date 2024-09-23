@@ -20,10 +20,11 @@ mongoose.connect(
 
 //routes
 const authRoute = require("./routes/_auth");
+const blogRoute = require("./routes/blogRead");
 
 
 
-
+app.use("/api/blog",blogRoute)
 app.use("/api/auth",authRoute);
 
 
