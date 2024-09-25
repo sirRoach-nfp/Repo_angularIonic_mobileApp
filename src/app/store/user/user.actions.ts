@@ -7,4 +7,13 @@ export const setUsername = createAction(
 
 )
 
+export const setEmail = createAction(
+    '[User] Set email',
+    props<{email: string}>()
+)
+
+export const logout = createAction(
+    '[User] Logout'
+)
+
 export const clearUsername = createAction(`[User] Clear Username`);

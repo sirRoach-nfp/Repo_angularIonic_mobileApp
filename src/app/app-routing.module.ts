@@ -219,7 +219,41 @@ const routes: Routes = [
   {
     path: 'js-whereto',
     loadChildren: () => import('./js-whereto/js-whereto.module').then( m => m.JsWheretoPageModule)
-  },  {
+  },
+  {
+    path: 'php',
+    loadChildren: () => import('./php/php.module').then( m => m.PhpPageModule)
+  },
+  {
+    path: 'phpintro',
+    loadChildren: () => import('./phpintro/phpintro.module').then( m => m.PhpintroPageModule)
+  },
+  {
+    path: 'phpsyntax',
+    loadChildren: () => import('./phpsyntax/phpsyntax.module').then( m => m.PhpsyntaxPageModule)
+  },
+  {
+    path: 'phpvariables',
+    loadChildren: () => import('./phpvariables/phpvariables.module').then( m => m.PhpvariablesPageModule)
+  },
+  {
+    path: 'phpecho',
+    loadChildren: () => import('./phpecho/phpecho.module').then( m => m.PhpechoPageModule)
+  },
+  {
+    path: 'cpp',
+    loadChildren: () => import('./cpp/cpp.module').then( m => m.CppPageModule)
+  },
+  {
+    path: 'cppintro',
+    loadChildren: () => import('./cppintro/cppintro.module').then( m => m.CppintroPageModule)
+  },
+  {
+    path: 'cppgetstarted',
+    loadChildren: () => import('./cppgetstarted/cppgetstarted.module').then( m => m.CppgetstartedPageModule)
+  },
+
+  {
     path: 'search-result-page',
     loadChildren: () => import('./search-result-page/search-result-page.module').then( m => m.SearchResultPagePageModule)
   },

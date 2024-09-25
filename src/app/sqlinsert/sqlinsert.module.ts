@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { SqlinsertPageRoutingModule } from './sqlinsert-routing.module';
 
 import { SqlinsertPage } from './sqlinsert.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SqlinsertPageRoutingModule
+    SqlinsertPageRoutingModule,
+    SharedModule
   ],
   declarations: [SqlinsertPage]
 })

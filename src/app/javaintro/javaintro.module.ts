@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { JavaintroPageRoutingModule } from './javaintro-routing.module';
 
 import { JavaintroPage } from './javaintro.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    JavaintroPageRoutingModule
+    JavaintroPageRoutingModule,
+    SharedModule
   ],
   declarations: [JavaintroPage]
 })

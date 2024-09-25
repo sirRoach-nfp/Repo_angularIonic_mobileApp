@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { JavavariablesPageRoutingModule } from './javavariables-routing.module';
 
 import { JavavariablesPage } from './javavariables.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    JavavariablesPageRoutingModule
+    JavavariablesPageRoutingModule,
+    SharedModule
   ],
   declarations: [JavavariablesPage]
 })

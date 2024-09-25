@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PygetstartedPageRoutingModule } from './pygetstarted-routing.module';
 
 import { PygetstartedPage } from './pygetstarted.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PygetstartedPageRoutingModule
+    PygetstartedPageRoutingModule,
+    SharedModule
   ],
   declarations: [PygetstartedPage]
 })

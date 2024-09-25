@@ -1,0 +1,139 @@
+<app-nav-bar  id="phpsyntax"></app-nav-bar>
+
+
+
+
+
+<ion-content>
+<!-- wag buburahin-->
+<h1>PHP SYNTAX</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<p>A PHP script is executed on the server, and the plain HTML result is sent back to the browser.</p>
+<hr class="custom-hr2">
+<h1>Basic PHP Syntax</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A PHP script can be placed anywhere in the document.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A PHP script starts with <span class="bulletred"><?php</span> and ends with <span class="bulletred">?></span>:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>
+      <?php
+      <br>
+      <span style="color: gray;">// PHP code goes here</span>
+      <br>
+      ?>
+    </p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The default file extension for PHP files is "<span class="bulletred">.php</span>".</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A PHP file normally contains HTML tags, and some PHP scripting code.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Below, we have an example of a simple PHP file, with a PHP script that uses a built-in PHP function "<span class="bulletred">echo</span>" to output the text "Hello World!" on a web page:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<p>A simple <span class="bulletred">.php</span> file with both HTML code and PHP code:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p>&lt;h1&gt;<span>My First Heading</span>&lt;/h1&gt;</p>
+    <br>
+    <p><?php</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"Hello World!"</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h1>My First Heading</h1>
+    <p>Hello World!</p>
+  </div>
+</div>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>PHP statements end with a semicolon (<span class="bulletred">;</span>).</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>PHP Case Sensitive</h1>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In PHP, keywords (e.g. <span class="bulletred">if</span>, <span class="bulletred">else</span>, <span class="bulletred">while</span>, <span class="bulletred">echo</span>, etc.), classes, functions, and user-defined functions are not case-sensitive.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In the example below, all three echo statements below are equal and legal:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<p><span class="bulletred">ECHO </span>is the same as echo: is the same as <span class="bulletred">echo</span>:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p><span class="bulletblue">ECHO </span><span style="color: rgb(14, 148, 14);">"Hello World!&lt;br&gt;"</span>;</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"Hello World!&lt;br&gt;"</span>;</p>
+    <p><span class="bulletblue">EcHo </span><span style="color: rgb(14, 148, 14);">"Hello World!&lt;br&gt;"</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+  </div>
+</div>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>However; all variable names are case-sensitive!</p>
+  </div>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/phpintro']">Prev</ion-button>
+  <ion-button [routerLink]="['/phpvariables']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

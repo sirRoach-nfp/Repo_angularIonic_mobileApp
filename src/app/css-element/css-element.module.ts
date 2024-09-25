@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { CssElementPageRoutingModule } from './css-element-routing.module';
 
 import { CssElementPage } from './css-element.page';
-
+import { SharedModule } from 'src/component/shared-modules';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CssElementPageRoutingModule
+    CssElementPageRoutingModule,
+    SharedModule
   ],
   declarations: [CssElementPage]
 })

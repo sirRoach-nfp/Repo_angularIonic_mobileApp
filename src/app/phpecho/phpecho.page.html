@@ -1,0 +1,289 @@
+<app-nav-bar  id="phpecho"></app-nav-bar>
+
+
+
+
+
+<ion-content>
+
+<!-- wag buburahin-->
+<h1>PHP ECHO AND PRINT STATEMENTS</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>With PHP, there are two basic ways to get output: <span class="bulletred">echo</span> and <span class="bulletred">print</span>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In this tutorial we use <span class="bulletred">echo</span> or <span class="bulletred">print</span> in almost every example. So, this chapter contains a little more info about those two output statements.</p>
+</ion-item>
+<hr class="custom-hr2">
+<h1>PHP echo and print Statements</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">echo</span> and <span class="bulletred">print</span> are more or less the same. They are both used to output data to the screen..</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The differences are small: <span class="bulletred">echo</span> has no return value while <span class="bulletred">print</span> has a return value of 1 so it can be used in expressions. <span class="bulletred">echo</span> can take multiple parameters (although such usage is rare) while <span class="bulletred">print</span> can take one argument. <span class="bulletred">echo</span> is marginally faster than <span class="bulletred">print</span>.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>The PHP echo Statement</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">echo</span> statement can be used with or without parentheses: <span class="bulletred">echo</span> or <span class="bulletred">echo()</span>.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"Hello"</span>;</p>
+    <p style="color: gray;">//same as:</p>
+    <p><span class="bulletblue">echo </span><span>(</span><span style="color: rgb(14, 148, 14);">"Hello"</span><span>)</span>;</p>
+  </div>
+</div>
+<br>
+<h1>Display Text</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example shows how to output text with the <span class="bulletred">echo</span> command (notice that the text can contain HTML markup):</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"&lt;h2&gt;PHP is Fun!&lt;/h2&gt;"</span>;</p>
+    <p>
+      <span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"&lt;p&gt;Hello world!&lt;/p&gt;"</span>;
+      <span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"&lt;p&gt;I'm about to learn PHP!&lt;/p&gt;"</span>;
+      <span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"This ", "string ", "was ", "made ", "with multiple parameters.</span>
+  </p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h2>PHP is Fun!</h2>
+    <p>Hello world!</p>
+    <p>I'm about to learn PHP!</p>
+    <p>This string was made with multiple parameters.</p>
+  </div>
+</div>
+<h1>Display Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example shows how to output text and variables with the <span class="bulletred">echo</span> statement:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p>$txt1<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"Learn PHP"</span>;</p>
+    <p>$txt2<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"CodeTology"</span>;</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"&lt;h2&gt;</span>$txt1<span>&lt;/h2&gt;"</span>;</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">"&lt;p&gt;Study PHP at</span>$txt2<span>&lt;/p&gt;"</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h2>Learn PHP</h2>
+    <p>Study PHP at CodeTology</p>
+  </div>
+</div>
+<h1>Using Single Qoutes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Strings are surrounded by quotes, but there is a difference between single and double quotes in PHP.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>When using double quotes, variables can be inserted to the string as in the example above.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>When using single quotes, variables have to be inserted using the <span class="bulletred">.</span> operator, like this:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p>$txt1<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"Learn PHP"</span>;</p>
+    <p>$txt2<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"CodeTology"</span>;</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">'&lt;h2&gt;'</span><span> . </span> $txt1 <span> . </span><span style="color: rgb(14, 148, 14);">'&lt;/h2&gt;'</span>;</p>
+    <p><span class="bulletblue">echo </span><span style="color: rgb(14, 148, 14);">'&lt;p&gt;Study PHP at ' </span><span> . </span> $txt2 <span> . </span><span style="color: rgb(14, 148, 14);">'&lt;/p&gt;'</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h2>Learn PHP</h2>
+    <p>Study PHP at CodeTology</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>The PHP print Statement</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">print</span> statement can be used with or without parentheses: <span class="bulletred">print</span> or <span class="bulletred">print()</span>.</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">"Hello"</span>;</p>
+    <p style="color: gray;">//same as:</p>
+    <p><span class="bulletblue">print </span><span>(</span><span style="color: rgb(14, 148, 14);">"Hello"</span><span>)</span>;</p>
+  </div>
+</div>
+<br>
+<h1>Display Text</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example shows how to output text with the <span class="bulletred">print</span> command (notice that the text can contain HTML markup):</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">"&lt;h2&gt;PHP is Fun!&lt;/h2&gt;"</span>;</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">"&lt;h2&gt;Hello world!&lt;/h2&gt;"</span>;</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">"&lt;h2&gt;I'm about to learn PHP!&lt;/h2&gt;"</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h2>PHP is Fun!</h2>
+    <p>Hello world!</p>
+    <p>I'm about to learn PHP!</p>
+  </div>
+</div>
+<h1>Display Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following example shows how to output text and variables with the <span class="bulletred">print</span> statement:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p>$txt1<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"Learn PHP"</span>;</p>
+    <p>$txt2<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"CodeTology"</span>;</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">"&lt;h2&gt;</span>$txt1<span>&lt;/h2&gt;"</span>;</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">"&lt;p&gt;Study PHP at</span>$txt2<span>&lt;/p&gt;"</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h2>Learn PHP</h2>
+    <p>Study PHP at CodeTology</p>
+  </div>
+</div>
+<h1>Using Single Qoutes</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Strings are surrounded by quotes, but there is a difference between single and double quotes in PHP.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>When using double quotes, variables can be inserted to the string as in the example above.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>When using single quotes, variables have to be inserted using the <span class="bulletred">.</span> operator, like this:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>&lt;!DOCTYPE html&gt;</p>
+    <p>&lt;html&gt;</p>
+    <p>&lt;body&gt;</p>
+    <br>
+    <p><?php</p>
+    <p>$txt1<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"Learn PHP"</span>;</p>
+    <p>$txt2<span class="bulletblue"> = </span><span style="color: rgb(14, 148, 14);">"CodeTology"</span>;</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">'&lt;h2&gt;'</span><span> . </span> $txt1 <span> . </span><span style="color: rgb(14, 148, 14);">'&lt;/h2&gt;'</span>;</p>
+    <p><span class="bulletblue">print </span><span style="color: rgb(14, 148, 14);">'&lt;p&gt;Study PHP at ' </span><span> . </span> $txt2 <span> . </span><span style="color: rgb(14, 148, 14);">'&lt;/p&gt;'</span>;</p>
+    <p>?></p>
+    <br>
+    <p>&lt;/body&gt;</p>
+    <p>&lt;/html&gt;</p>
+  </div>
+</div>
+<h1>OUTPUT:</h1>
+<div class="output-container">
+  <div class="output1">
+    <h2>Learn PHP</h2>
+    <p>Study PHP at CodeTology</p>
+  </div>
+</div>
+</div>
+<br>
+<hr class="custom-hr2">
+<ion-item lines="none" style="display: flex; align-items: center;">
+  <h5 style="margin-right: 10px;">Test yourself with some exercises?</h5>
+  <ion-button class="click-here">Click here</ion-button>
+</ion-item>
+<div class="home-next">
+  <ion-button [routerLink]="['/phpsyntax']">Prev</ion-button>
+  <ion-button [routerLink]="['/phpecho']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

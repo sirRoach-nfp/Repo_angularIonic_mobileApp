@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
 
-import { setUsername } from '../store/user/user.actions';
+import { setEmail, setUsername } from '../store/user/user.actions';
 import { UserState } from '../store/user/user.reducer';
 import { Store } from '@ngrx/store';
 import { ToastController } from '@ionic/angular';
@@ -53,8 +53,13 @@ export class LoginpagePage implements OnInit {
         //console.log("Username response: " + response.username)
 
         const username = response.username;
+        const email = response.email;
         localStorage.setItem("username",username);
         this.store.dispatch(setUsername({username}))
+        this.store.dispatch(setEmail(email))
+        localStorage.setItem('username', username);
+        this.router.navigate(['/home'])
+
       },
       error=>{
         console.log(`login failed`,error)

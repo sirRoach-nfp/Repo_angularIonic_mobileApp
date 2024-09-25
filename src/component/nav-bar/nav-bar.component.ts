@@ -2,6 +2,7 @@ import { Component, OnInit,Input, OnDestroy, OnChanges, SimpleChanges } from '@a
 import { MenuController } from '@ionic/angular';
 import { Router,NavigationEnd } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',

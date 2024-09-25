@@ -27,4 +27,5 @@ export class SqlsyntaxPage {
       this.menu.close();
   }
 
+  showTable: boolean = true;
 }
