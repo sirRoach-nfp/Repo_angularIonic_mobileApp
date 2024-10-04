@@ -1,0 +1,180 @@
+<app-nav-bar  id="cppOut"></app-nav-bar>
+
+
+
+
+
+<ion-content>
+<!-- wag buburahin-->
+<h1>C++ VARIABLES (Print Text)</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<p>Variables are containers for storing data values.</p>
+<p>In C++, there are different <b>types</b> of variables (defined with different keywords), for example:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">int</span> - stores integers (whole numbers), without decimals, such as 123 or -123</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">double</span> - stores floating point numbers, with decimals, such as 19.99 or -19.99</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">char</span> - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">string</span> - stores text, such as "Hello World". String values are surrounded by double quotes</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><span class="bulletred">bool</span> - stores values with two states: true or false</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Declaring (Creating) Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To create a variable, specify the type and assign it a value:</p>
+</ion-item>
+<h1>Syntax:</h1>
+<div class="example-container">
+  <div class="example1">
+    <p><span><i>type variableName = value;</i></span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Where type is one of C++ types (such as <span class="bulletred">int</span>), and <i>variableName</i> is the name of the variable (such as <b>x</b> or <b>myName</b>). The <b>equal sign</b> is used to assign values to the variable.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To create a variable that should store a number, look at the following example:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<p>Create a variable called <b>myNum</b> of type <span class="bulletred">int</span> and assign it the value <b>15</b>:</p>
+<div class="example-container">
+  <div class="example1">
+    <p><span class="bulletblue">int</span><span> myNum</span><span class="bulletblue"> = </span>15<span class="bulletblue">;</span></p>
+    <p><span class="bulletblue">cout << </span><span>myNum</span><span class="bulletblue">;</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You can also declare a variable without assigning the value, and assign the value later:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p><span class="bulletblue">int</span><span> myNum</span><span class="bulletblue">;</span></p>
+    <p><span>myNum </span><span class="bulletblue"> = </span>15<span class="bulletblue">;</span></p>
+    <p><span class="bulletblue">cout << </span><span>myNum</span><span class="bulletblue">;</span></p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p><span class="bulletblue">int</span><span> myNum</span><span class="bulletblue"> = </span>15<span class="bulletblue">;</span>&nbsp;&nbsp;<span style="color: green;">//myNum is 15</span></p>
+    <p><span>myNum </span><span class="bulletblue"> = </span>10<span class="bulletblue">;</span>&nbsp;&nbsp;<span style="color: green;">//Now, myNum is 10</span></p>
+    <p><span class="bulletblue">cout << </span><span>myNum</span><span class="bulletblue">;</span>&nbsp;&nbsp;<span style="color: green;">//Outputs 10</span></p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>Display Variables</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">cout</span> object is used together with the <span class="bulletred"><<</span> operator to display variables.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To combine both text and a variable, separate them with the <span class="bulletred"><<</span> operator:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p><span class="bulletblue">int </span><span>myAge </span><span class="bulletblue">= </span>20<span class="bulletblue">;</span></p>
+    <p><span class="bulletblue">cout << "</span>I am<span class="bulletblue">" << </span><span>myAge</span><span class="bulletblue"> << "</span><span>years old</span><span class="bulletblue">":</span></p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>I am 20 years old</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>C++ Identifiers</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>All C++ <b>variables</b> must be identified with <b>unique names</b>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>These unique names are called <b>identifiers</b>.</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Note: </b>It is recommended to use descriptive names in order to create understandable and maintainable code</p>
+  </div>
+</div>
+<p>The general rules for naming variables are:</p>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names can contain letters, digits and underscores</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names must begin with a letter or an underscore (_)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names are case-sensitive (<span class="bulletred">myVar</span> and <span class="bulletred">myvar</span> are different variables)</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Names cannot contain whitespaces or special characters like !, #, %, etc.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Reserved words (like C++ keywords, such as int) cannot be used as names</p>
+</ion-item>
+</div>
+<br>
+<hr class="custom-hr2">
+<div class="home-next">
+  <ion-button [routerLink]="['/cppoutput']">Prev</ion-button>
+</div>
+<br><br>
+</ion-content>

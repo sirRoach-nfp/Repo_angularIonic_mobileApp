@@ -192,6 +192,12 @@
   .back{
     padding: 10px;
   }
+
+  .active-link {
+    font-weight: bold;
+    background-color: rgba(29, 28, 28, 0.2);
+    color: black;
+  }
   
   .popup-content p h3{
     color: black;

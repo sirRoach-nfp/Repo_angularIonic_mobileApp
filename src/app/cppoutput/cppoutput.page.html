@@ -1,0 +1,201 @@
+<app-nav-bar  id="cppOut"></app-nav-bar>
+
+
+
+
+
+<ion-content>
+<!-- wag buburahin-->
+<h1>C++ OUTPUT (Print Text)</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The <span class="bulletred">cout</span> object, together with the <span class="bulletred"><<</span> operator, is used to output values/print text:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Hello World</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You can add as many cout objects as you want. However, note that it does not insert a new line at the end of the output:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>I'm Leaning C++</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Hello WorldI'm Learning C++</p>
+  </div>
+</div>
+<hr class="custom-hr2">
+<h1>C++ New Lines</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>To insert a new line, you can use the <span class="bulletred">\n</span> character:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World \n</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>I'm Leaning C++</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Hello World</p>
+    <p>I'm Learning C++</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You can also use another <span class="bulletred"><<</span> operator and place the <span class="bulletred">\n</span> character after the text, like this:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue">" << "</span><span>\n</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>I'm Leaning C++</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p><b>Tip: </b>Two \n characters after each other will create a blank line:</p>
+  </div>
+</div>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue">" << "</span><span>\n\n</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>I'm Leaning C++</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<h1>OUTPUT</h1>
+<div class="output-container">
+  <div class="output1">
+    <p>Hello World</p>
+    <br>
+    <p>I'm Learning C++</p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Another way to insert a new line, is with the endl manipulator:</p>
+</ion-item>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue">" << <b>endl</b></span><span class="bulletblue"> ;</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>I'm Leaning C++</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Both <span class="bulletred">\n</span> and <span class="bulletred">endl</span> are used to break lines. However, \n is most used.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>But what is \n exactly?</p>
+</ion-item>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The newline character (<span class="bulletred">\n</span>) is called an <b>escape sequence</b>, and it forces the cursor to change its position to the beginning of the next line on the screen. This results in a new line.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Examples of other valid escape sequences are:</p>
+</ion-item>
+<div class="table-container">
+  <table class="element-table">
+    <thead>
+      <tr>
+        <th>Escape Sequence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>\t</td>
+        <td>Creates a horizontal tab</td>
+      </tr>
+      <tr>
+        <td>\\</td>
+        <td>Insert a backslash character (\)</td>
+      </tr>
+      <tr>
+        <td>\"</td>
+        <td>Insert a double qoute character</td>
+      </tr>
+    </tbody>
+  </table>
+</div><br>
+</div>
+<br>
+<hr class="custom-hr2">
+<div class="home-next">
+  <ion-button [routerLink]="['/cppsyntax']">Prev</ion-button>
+  <ion-button [routerLink]="['/cppvariables']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

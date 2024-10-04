@@ -1,0 +1,193 @@
+<app-nav-bar  id="cppsyn"></app-nav-bar>
+
+
+
+
+
+<ion-content>
+<!-- wag buburahin-->
+<h1>C++ SYNTAX</h1>
+<hr class="custom-hr1">
+<div class="anime1">
+<p>Let's break up the following code to understand it better:</p>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <p>using namespace std;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0<span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<h1>Example Explained:</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Line 1:</b><span class="bulletred"> #include &#123;iostream&#125;</span> is a <b>header file library</b> that lets us work with input and output objects, such as <span class="bulletred">cout</span> (used in line 5). Header files add functionality to C++ programs.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Line 2:</b><span class="bulletred"> using namespace std</span> means that we can use names for objects and variables from the standard library.</p>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p>Don't worry if you don't understand how<span class="bulletred"> #include &#123;iostream&#125;</span> and <span clas="bulletred">using namespace std</span> works. Just think of it as something that (almost) always appears in your program.</p>
+  </div>
+</div>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Line 3:</b> A blank line. C++ ignores white space. But we use it to make the code more readable.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Line 4:</b> Another thing that always appear in a C++ program is <span class="bulletred">int main()</span>. This is called a <span class="bulletred">function</span>. Any code inside its curly brackets <span class="bulletred">&#123;&#125;</span> will be executed.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Note:</b> Every C++ statement ends with a semicolon <span class="bulletred">;</span>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Note:</b>  The body of <span class="bulletred">int main()</span> could also been written as: <br><span class="bulletred">int main () &#123; cout << "Hello World! "; return 0; &#125;</span></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Remember:</b>  The compiler ignores white spaces. However, multiple lines makes the code more readable.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Line 6:</b>  <span class="bulletred">return 0;</span> ends the main function.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p><b>Line 7:</b>  Do not forget to add the closing curly bracket <span class="bulletred">&#125;</span> to actually end the main function.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Omitting Namespace</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>You might see some C++ programs that runs without the standard namespace library. The <span class="bulletred">using namespace std</span> line can be omitted and replaced with the <span class="bulletred">std</span> keyword, followed by the <span class="bulletred">::</span> operator for some objects:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+    <p>#include &lt;iostream&gt;</p>
+    <br>
+    <p>int main() &#123;</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>std::</b><span class="bulletblue">cout << "</span><span>Hello World</span><span class="bulletblue"> ";</span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bulletblue">return </span>0 <span class="bulletblue">;</span></p>
+    <p>&#125;</p>
+  </div>
+</div>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p>It is up to you if you want to include the standard namespace library or not.</p>
+  </div>
+</div>
+<br>
+<hr class="custom-hr2">
+<h1>C++ Statements</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>A <b>computer program</b> is a list of "instructions" to be "executed" by a computer.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>In a programming language, these programming instructions are called <b>statements</b>.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The following statement "instructs" the compiler to print the text "Hello World" to the screen:</p>
+</ion-item>
+<br>
+<div class="example-container">
+  <div class="example1">
+   <p><span class="bulletblue">cout << "</span><span>Hello World</span> <span class="bulletblue"> ";</span></p>
+  </div>
+</div>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>It is important that you end the statement with a semicolon <span class="bulletred">;</span></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>If you forget the semicolon (<span class="bulletred">;</span>), an error will occur and the program will not run.</p>
+</ion-item>
+<br>
+<hr class="custom-hr2">
+<h1>Many Statements</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Most C++ programs contain many statements.</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The statements are executed, one by one, in the same order as they are written:</p>
+</ion-item>
+<br>
+<h1>EXAMPLE</h1>
+<div class="example-container">
+  <div class="example1">
+   <p><span class="bulletblue">cout << "</span><span>Hello World</span> <span class="bulletblue"> ";</span></p>
+   <p><span class="bulletblue">cout << "</span><span>Have a Good Day!</span> <span class="bulletblue"> ";</span></p>
+   <p><span class="bulletblue">return</span> 0 <span class="bulletblue">;</span></p>
+  </div>
+</div>
+<br>
+<h1>Example Explained:</h1>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>From the example above, we have three statements:</p>
+  <p>&nbsp;&nbsp;&nbsp;1. <span class="bulletred">cout << "Hello World!";</span></p>
+  <p>&nbsp;&nbsp;&nbsp;2. <span class="bulletred">cout << "Have a good day!";</span></p>
+  <p>&nbsp;&nbsp;&nbsp;3. <span class="bulletred">return 0;</span></p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>The first statement is executed first (print "Hello World!" to the screen).</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>Then the second statement is executed (print "Have a good day!" to the screen).</p>
+</ion-item>
+<br>
+<ion-item lines="none" class="icon-text">
+  <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
+  <p>And at last, the third statement is executed (end the C++ program successfully).</p>
+</ion-item>
+<br>
+<div class="note-container">
+  <div class="note-1">
+    <p>You will learn more about statements while reading this tutorial. For now, just remember to always end them with a semicolon to avoid any errors.</p>
+    <p><b>Coming up:</b> The next chapter will teach you how to control the output and how to insert new lines to make it more readable.</p>
+  </div>
+</div>
+<br>
+</div>
+<br>
+<hr class="custom-hr2">
+<div class="home-next">
+  <ion-button [routerLink]="['/cppintro']">Prev</ion-button>
+  <ion-button [routerLink]="['/cppoutput']">Next Chapter</ion-button>
+</div>
+<br><br>
+</ion-content>

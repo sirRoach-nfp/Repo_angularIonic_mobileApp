@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'landing',
     pathMatch: 'full'
   },
   {
@@ -261,6 +261,23 @@ const routes: Routes = [
     path: 'searchresultpage',
     loadChildren: () => import('./searchresultpage/searchresultpage.module').then( m => m.SearchresultpagePageModule)
   },
+  {
+    path: 'landing',
+    loadChildren: () => import('./landing/landing.module').then( m => m.LandingPageModule)
+  },  {
+    path: 'cppsyntax',
+    loadChildren: () => import('./cppsyntax/cppsyntax.module').then( m => m.CppsyntaxPageModule)
+  },
+  {
+    path: 'cppoutput',
+    loadChildren: () => import('./cppoutput/cppoutput.module').then( m => m.CppoutputPageModule)
+  },
+  {
+    path: 'cppvariables',
+    loadChildren: () => import('./cppvariables/cppvariables.module').then( m => m.CppvariablesPageModule)
+  },
+
+
 
 
 

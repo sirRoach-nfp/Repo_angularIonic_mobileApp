@@ -1,43 +1,19 @@
-import { Component, OnInit,Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-import { Router,NavigationEnd } from '@angular/router';
-import { filter, Subscription } from 'rxjs';
-import { Store } from '@ngrx/store';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
 })
-export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
+export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input() id: string = ""
   uniqueId: string = ""
   routerSubscription: Subscription | undefined;
-  currentRoute: string = "";
-  constructor(private menu: MenuController, private router: Router) {}
-
-  
-
-
-  //search logic
-  query: string = "";
-
-
-  search(){
-    console.log("test" + this.query)
-    
-    this.router.navigate(['/searchresultpage'], {
-      queryParams: {
-        searchQuery: this.query,
-        prevRoute: this.currentRoute // Replace with the actual search term
-      }
-    });
-  }
-
-
-
-
-
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['id']) {
@@ -46,8 +22,8 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
     }
   }
 
-  ngOnDestroy(){
-  
+  ngOnDestroy() {
+
 
     this.routerSubscription = this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -90,10 +66,10 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
 
   showSubTypesJava = false;
   arrowIconJava: string = 'caret-forward-outline';
-  
+
   showSubTypesCpp = false;
   arrowIconCpp: string = 'caret-forward-outline';
-  
+
 
   //
   toggleTypeHtml() {
@@ -188,17 +164,15 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
     this.showSubtopics = !this.showSubtopics;
   }
 
- 
+  constructor(private menu: MenuController, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   closeMenu() {
-      this.menu.close();
-      console.log("test")
+    this.menu.close();
+    console.log("test")
   }
 
-  
 
-  /*
-
+  currentRoute: String = '';
   ngOnInit() {
     this.uniqueId = this.id;
     console.log('Initial uniqueId:', this.uniqueId);
@@ -212,65 +186,56 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
 
     // Subscribe to Router events to clear the uniqueId when the route changes
 
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.currentRoute = this.router.url;
+      console.log(this.currentRoute); // To check the current route
+    });
+
   }
-  */
-
-  ngOnInit() {
-    this.uniqueId = this.id;
-    console.log('Initial uniqueId:', this.uniqueId);
-  
-    // Subscribe to router events and get the current route
-    this.routerSubscription = this.router.events
-      .pipe(
-        filter((event): event is NavigationEnd => event instanceof NavigationEnd) // Explicitly filter for NavigationEnd
-      )
-      .subscribe((event: NavigationEnd) => {
-        this.currentRoute = event.urlAfterRedirects;
-        console.log('Current route:', this.currentRoute);
-        this.menu.enable(true, this.uniqueId); // Enable the menu with the updated uniqueId
-      });
-  }
-  
 
 
-  html(){
+
+  html() {
     this.router.navigate(['/html'])
-    
+
     //this.closeMenu()
   }
 
-  css(){
+  css() {
     this.router.navigate(['/css'])
   }
 
-  python(){
+  python() {
     this.router.navigate(['/py'])
   }
 
-  javascript(){
+  javascript() {
     this.router.navigate(['/js'])
   }
 
-  sql(){
+  sql() {
     this.router.navigate(['/sql'])
   }
 
-  java(){
+  java() {
     this.router.navigate(['/java'])
   }
 
-  php(){
+  php() {
     this.router.navigate(['/php'])
   }
 
-  cpp(){
-    this.router.navigate(['/c++'])
+  cpp() {
+    this.router.navigate(['/cpp'])
   }
 
 
-  home(){
+  home() {
     this.router.navigate(['/home'])
-    
+
     //this.closeMenu()
   }
 
@@ -278,28 +243,222 @@ export class NavBarComponent  implements OnInit, OnChanges, OnDestroy {
 
   //HTML lessons link
 
-  htmlIntro(){
+  htmlIntro() {
     this.router.navigate(['/htmlintro'])
-    
+
     //this.closeMenu()
   }
 
-  htmlBasic(){
+  htmlBasic() {
     this.router.navigate(['/htmlbasic'])
-   
+
     //this.closeMenu()
   }
 
-  htmlElement(){
+  htmlElement() {
     this.router.navigate(['/htmlelement'])
-    
+
     //this.closeMenu()
   }
 
-  htmlAttri(){
+  htmlAttri() {
     this.router.navigate(['/htmlattri'])
-    
+
     //this.closeMenu()
   }
+
+
+
+  //CSS lessons link
+
+  cssIntro() {
+    this.router.navigate(['/css-intro'])
+
+    //this.closeMenu()
+  }
+
+  cssBasic() {
+    this.router.navigate(['/css-basic'])
+
+    //this.closeMenu()
+  }
+
+  cssElement() {
+    this.router.navigate(['/css-element'])
+
+    //this.closeMenu()
+  }
+
+  cssAttributes() {
+    this.router.navigate(['/css-attributes'])
+
+    //this.closeMenu()
+  }
+
+
+  //JAVASCRRIPT lessons link
+
+  jsIntro() {
+    this.router.navigate(['/js-intro'])
+
+    //this.closeMenu()
+  }
+
+  jsBasic() {
+    this.router.navigate(['/js-output'])
+
+    //this.closeMenu()
+  }
+
+  jsElement() {
+    this.router.navigate(['/js-statements'])
+
+    //this.closeMenu()
+  }
+
+  jsAttributes() {
+    this.router.navigate(['/js-whereto'])
+
+    //this.closeMenu()
+  }
+
+
+
+  //PYTHON lessons link
+
+  pyIntro() {
+    this.router.navigate(['/pyintro'])
+
+    //this.closeMenu()
+  }
+
+  pyGetstarted() {
+    this.router.navigate(['/pygetstarted'])
+
+    //this.closeMenu()
+  }
+
+  pySyntax() {
+    this.router.navigate(['/pysyntax'])
+
+    //this.closeMenu()
+  }
+
+  pyVariables() {
+    this.router.navigate(['/pyvariables'])
+
+    //this.closeMenu()
+  }
+
+
+  //SQL lessons link
+
+  sqlIntro() {
+    this.router.navigate(['/sqlintro'])
+
+    //this.closeMenu()
+  }
+
+  sqlSyntax() {
+    this.router.navigate(['/sqlsyntax'])
+
+    //this.closeMenu()
+  }
+
+  sqlSelect() {
+    this.router.navigate(['/pysyntax'])
+
+    //this.closeMenu()
+  }
+
+  sqlInsert() {
+    this.router.navigate(['/sqlinsert'])
+
+    //this.closeMenu()
+  }
+
+
+
+
+  //SQL lessons link
+
+  phpIntro() {
+    this.router.navigate(['/phpintro'])
+
+    //this.closeMenu()
+  }
+
+  phpSyntax() {
+    this.router.navigate(['/phpsyntax'])
+
+    //this.closeMenu()
+  }
+
+  phpVariables() {
+    this.router.navigate(['/phpvariables'])
+
+    //this.closeMenu()
+  }
+
+  phpEcho() {
+    this.router.navigate(['/phpecho'])
+
+    //this.closeMenu()
+  }
+
+
+  //SQL lessons link
+
+  cppIntro() {
+    this.router.navigate(['/cppintro'])
+
+    //this.closeMenu()
+  }
+
+  cppSyntax() {
+    this.router.navigate(['/cppSyntax'])
+
+    //this.closeMenu()
+  }
+
+  cppOutput() {
+    this.router.navigate(['/cppOutput'])
+
+    //this.closeMenu()
+  }
+
+  cppVariables() {
+    this.router.navigate(['/cppVariables'])
+
+    //this.closeMenu()
+  }
+
+
+  //SQL lessons link
+
+  javaIntro() {
+    this.router.navigate(['/javaintro'])
+
+    //this.closeMenu()
+  }
+
+  javaGetStarted() {
+    this.router.navigate(['/javagetstarted'])
+
+    //this.closeMenu()
+  }
+
+  javaSyntax() {
+    this.router.navigate(['/javasyntax'])
+
+    //this.closeMenu()
+  }
+
+  jaVariables() {
+    this.router.navigate(['/javavariables'])
+
+    //this.closeMenu()
+  }
+
 
 }
