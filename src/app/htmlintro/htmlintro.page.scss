@@ -223,7 +223,7 @@ ion-list {
   .intro h1{
     margin-left: 10px;
     margin-top:25px;
-    font-size: 3.75vh;
+    font-size: 30px;
     font-weight: 600;
   }
   .custom-hr1 {
@@ -241,7 +241,7 @@ ion-list {
   .intro p{
     margin-left: 15px;
     font-weight: 100;
-    font-size: 2.5vh;
+    font-size: 20px;
   }
   .custom-icon {
     color: #ec8b70;
@@ -269,7 +269,7 @@ ion-list {
   }
   //end nung may bullet
   .example1{
-    height: 33vh;
+    height: auto;
     width: 88%;
     border: 1px solid black;
     margin-left: 20px;
@@ -277,7 +277,7 @@ ion-list {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   }
   .example1 p{
-    font-size: 1.8vh;
+    font-size: 15px;
     margin-left: 2px;
     margin-top: 2px;
     color: #ff5757;
@@ -291,7 +291,7 @@ ion-list {
     color: black;
   }
   .output1 {
-    height: 15vh;
+    height: auto;
     width: 88%;
     border: 1px solid black;
     margin-left: 20px;
@@ -301,11 +301,11 @@ ion-list {
   }
   .output1 h1 {
     margin-left: 2px;
-    font-size: 4.5vh;
+    font-size: 30px;
   }
   .output1 p {
     margin-left: 2px;
-    font-size: 1.8vh;
+    font-size: 15px;
     font-weight: 100;
   }
   .test {

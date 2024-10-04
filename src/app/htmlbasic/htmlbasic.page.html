@@ -28,6 +28,7 @@
     <p>The visible part of the HTML document is between <span class="bulletred">&lt;body&gt;</span> and <span class="bulletred">&lt;/body&gt;</span>.</p>
   </ion-item>    
   <h1>EXAMPLE</h1>
+  <div class="example-container">
   <div class="example1">
     <p>&lt;!DOCTYPE html&gt;</p>
     <p>&lt;html&gt;</p>
@@ -39,12 +40,15 @@
     <p>&lt;/body&gt;</p>
     <p>&lt;/html&gt;</p>
   </div>
+  </div>
   <br>
   <br>
   <h1>OUTPUT:</h1>
-  <div class="output1">
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+  <div class="output-container">
+    <div class="output1">
+      <h1>My First Heading</h1>
+      <p>My first paragraph.</p>
+    </div>
   </div>
   <hr class="custom-hr2">
   <h1 class="doctype">The &lt;!DOCTYPE&gt; Declaration</h1>
@@ -64,9 +68,10 @@
     <ion-icon class="custom-icon" name="radio-button-on-outline"></ion-icon>
     <p>The <span class="bulletred">&lt;!DOCTYPE&gt;</span> declaration for HTML5 is:</p>
   </ion-item>    
-
-  <div class="example2">
+  <div class="example-container">
+  <div class="example1">
     <p>&lt;!DOCTYPE html&gt;</p>
+  </div>
   </div>
   <hr class="custom-hr2">
   <h1>HTML Headings</h1>
@@ -80,7 +85,8 @@
     <span class="bulletred">&lt;h6&gt;</span> defines the least important heading: </p>
   </ion-item>
   <h1>EXAMPLE</h1>
-  <div class="example3">
+  <div class="example-container">
+  <div class="example1">
     <p>&lt;!DOCTYPE html&gt;</p>
     <p>&lt;html&gt;</p>
     <p>&lt;body&gt;</p>
@@ -95,16 +101,21 @@
     <p>&lt;/body&gt;</p>
     <p>&lt;/html&gt;</p>
   </div>
+  </div>
   <br>
   <br>
   <h1>OUTPUT:</h1>
-  <div class="output3">
-    <p>This is heading 1</p>
-    <p>This is heading 2</p>
-    <p>This is heading 3</p>
-    <p>This is heading 4</p>
-    <p>This is heading 5</p>
-    <p>This is heading 6</p>
+  <div class="output-container">
+    <div class="output1">
+      <div class="output_h">
+        <p>This is heading 1</p>
+        <p>This is heading 2</p>
+        <p>This is heading 3</p>
+        <p>This is heading 4</p>
+        <p>This is heading 5</p>
+        <p>This is heading 6</p>
+      </div>
+    </div>
   </div>
   <hr class="custom-hr2">
   <h1>HTML Paragraphs</h1>
@@ -113,7 +124,8 @@
     <p>HTML paragraphs are defined with the <span class="bulletred">&lt;p&gt;</span> tag:</p>
   </ion-item> 
   <h1>EXAMPLE</h1>
-  <div class="example4">
+  <div class="example-container">
+  <div class="example1">
     <p>&lt;!DOCTYPE html&gt;</p>
     <p>&lt;html&gt;</p>
     <p>&lt;body&gt;</p>
@@ -124,13 +136,15 @@
     <p>&lt;body&gt;</p>
     <p>&lt;html&gt;</p>
   </div>
+  </div>
   <br><br>
   <h1>OUTPUT:</h1>
-  <div class="output4">
-    <p>This is a paragraph.</p>
-    <p>This is another paragraph.</p>
+  <div class="output-container">
+    <div class="output1">
+      <p>This is a paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
   </div>
-
   <hr class="custom-hr2" style="margin-top: 50px;">
   <h1>HTML Links</h1>
   <ion-item lines="none" class="icon-text">
@@ -138,7 +152,8 @@
     <p>HTML links are defined with the <span class="bulletred">&lt;a&gt;</span> tag:</p>
   </ion-item> 
   <h1>EXAMPLE</h1>
-  <div class="example5">
+  <div class="example-container">
+  <div class="example1">
     <p>&lt;!DOCTYPE html&gt;</p>
     <p>&lt;html&gt;</p>
     <p>&lt;body&gt;</p>
@@ -150,12 +165,15 @@
     <p>&lt;/body&gt;</p>
     <p>&lt;/html&gt;</p>
   </div>
+  </div>
   <br><br>
   <h1>OUTPUT:</h1>
-  <div class="output5">
-    <p>HTML Links</p>
-    <p>HTML links are defined with the a tag:</p>
-    <p><u class="bulletblue">This is a link</u></p>
+  <div class="output-container">
+    <div class="output1">
+      <p>HTML Links</p>
+      <p>HTML links are defined with the a tag:</p>
+      <p><u class="bulletblue">This is a link</u></p>
+    </div>
   </div>
   <br><br>
   <ion-item lines="none" class="icon-text">
@@ -181,7 +199,8 @@
     <p>The source file (<span class="bulletred">src</span>), alternative text (<span class="bulletred">alt</span>), <span class="bulletred">width</span>, and <span class="bulletred">height</span> are provided as attributes:</p>
   </ion-item>
   <h1>EXAMPLE</h1>
-  <div class="example5">
+  <div class="example-container">
+  <div class="example1">
     <p>&lt;!DOCTYPE html&gt;</p>
     <p>&lt;html&gt;</p>
     <p>&lt;body&gt;</p>
@@ -194,11 +213,14 @@
     <p>&lt;/body&gt;</p>
     <p>&lt;/html&gt;</p>
   </div>
+  </div>
   <br><br>
-  <div class="output6">
-    <h2>HTML Images</h2>
-    <p>HTML images are defined with the img tag:</p>
-    <img src="../../assets/img/html_image.jpg">
+  <div class="output-container">
+    <div class="output1">
+      <h2>HTML Images</h2>
+      <p>HTML images are defined with the img tag:</p>
+      <img src="../../assets/img/html_image.jpg">
+    </div>
   </div>
   <br><br>
   <hr class="custom-hr2">
