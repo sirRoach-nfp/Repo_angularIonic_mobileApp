@@ -11,6 +11,11 @@ import { filter } from 'rxjs/operators';
 })
 export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
 
+  // Highlight for active page.
+  isActive(route: string): boolean {
+    return this.router.url.startsWith(route);
+  }
+
   @Input() id: string = ""
   uniqueId: string = ""
   routerSubscription: Subscription | undefined;
@@ -162,9 +167,15 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
 
   toggleSubtopics() {
     this.showSubtopics = !this.showSubtopics;
+  };
+
+  constructor(private menu: MenuController, private router: Router, private activatedRoute: ActivatedRoute) {
+
+
   }
 
-  constructor(private menu: MenuController, private router: Router, private activatedRoute: ActivatedRoute) { }
+
+
 
   closeMenu() {
     this.menu.close();
@@ -197,15 +208,16 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
   }
 
 
-
   html() {
     this.router.navigate(['/html'])
 
     //this.closeMenu()
   }
 
+
   css() {
     this.router.navigate(['/css'])
+
   }
 
   python() {
@@ -459,6 +471,7 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
 
     //this.closeMenu()
   }
+
 
 
 }

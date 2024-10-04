@@ -1,0 +1,55 @@
+<ion-content class="content">
+  <div class="img">
+    <img src="../../assets/img/logo.jpg">
+    Forgot Password
+  </div>
+
+  <br><br>
+  <ion-card class="slanted-card">
+    <!-- First Section: Before Slant -->
+    <ion-card-content>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input [(ngModel)]="user.email" clearInput (ionInput)="checkInput('email')">
+          <ion-icon slot="start" name="mail-outline" [class.big]="isEmailEntered"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Username:</ion-label>
+        <ion-input [(ngModel)]="user.username" clearInput (ionInput)="checkInput('username')">
+          <ion-icon slot="start" name="person-outline" [class.big]="isUserNameEntered"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">New Password:</ion-label>
+        <ion-input [(ngModel)]="user.password" clearInput type="Password" (ionInput)="checkInput('password')">
+          <ion-icon slot="start" name="lock-closed-outline" [class.big]="isPasswordEntered"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-buttons button class="sent" (click)="register()"><ion-icon class="submit"
+          name="arrow-forward-outline"></ion-icon></ion-buttons>
+
+    </ion-card-content>
+
+    <!-- Slant Line -->
+    <div class="slant-line"></div>
+
+    <!-- Second Section: After Slant -->
+
+    <p class="center-text">Or signup using:</p>
+    <div class="social-icons">
+
+      <ion-button fill="clear">
+        <img src="../../assets/img/FACEBOOK-LOGO.png" alt="Facebook" />
+      </ion-button>
+      <ion-button fill="clear">
+        <img src="../../assets/img/GOOGLE-LOGO.png" alt="Google" />
+      </ion-button>
+    </div>
+
+  </ion-card>
+</ion-content>

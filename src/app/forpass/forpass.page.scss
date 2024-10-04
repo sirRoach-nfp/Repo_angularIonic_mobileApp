@@ -1,0 +1,123 @@
+.content {
+	--background: linear-gradient(to top, #fee8db, #fcc4b5);
+}
+
+.img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 65px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+img {
+	width: 130px;
+	height: 130px;
+	border-radius: 100px;
+	margin-bottom: 30px;
+}
+
+.slanted-card {
+	position: relative;
+	overflow: hidden;
+	border-radius: 40px; // Adjust the rounding to match your design
+	margin-left: 60px;
+	margin-right: 60px;
+	box-shadow: none;
+}
+
+.slant-line {
+	position: absolute;
+	top: 240px; //Position this relative to the card's height 
+	left: 0;
+	width: 100%;
+	height: 20px;
+	background-color: #fcdcc9; //Background color of the slant 
+	transform: skewY(17deg); //Adjust the slant angle
+	transform-origin: top left;
+	z-index: 5;
+}
+
+// icon size changing!!!!!!
+ion-icon {
+	font-size: 15px;
+	transition: font-size 0.3s ease;
+}
+
+ion-icon.big {
+	font-size: 25px;
+}
+
+// 
+
+.submit {
+	width: 25px;
+	height: 25px;
+}
+
+.fpass {
+	display: flex;
+	justify-content: end;
+
+}
+
+.fpass a {
+	font-size: 13px;
+	color: rgb(61, 60, 60);
+}
+
+.sent {
+	display: flex;
+	justify-content: end;
+	z-index: 2;
+}
+
+.sent ion-icon {
+	background-color: #ff5757;
+	color: aliceblue;
+	padding: 10px;
+	border-radius: 30px;
+	margin-top: 20px;
+	z-index: 2;
+}
+
+.slanted-card ion-card-content {
+	position: relative;
+	z-index: 2;
+}
+
+.slanted-card ion-card-content:first-of-type {
+	margin-bottom: 60px; // Adjust based on the height of the slant
+}
+
+.center-text {
+	text-align: left;
+	margin: 0;
+	font-weight: bold;
+}
+
+.center-text {
+	text-align: left;
+	position: relative;
+	top: -50px;
+	margin-left: 20px;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	position: relative;
+	top: -30px;
+}
+
+.social-icons ion-button {
+	padding: 0;
+}
+
+.social-icons ion-button img {
+	width: 40px;
+	height: 40px;
+}

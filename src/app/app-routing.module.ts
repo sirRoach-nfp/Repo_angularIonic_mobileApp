@@ -276,6 +276,10 @@ const routes: Routes = [
     path: 'cppvariables',
     loadChildren: () => import('./cppvariables/cppvariables.module').then( m => m.CppvariablesPageModule)
   },
+  {
+    path: 'forpass',
+    loadChildren: () => import('./forpass/forpass.module').then( m => m.ForpassPageModule)
+  },
 
 
 

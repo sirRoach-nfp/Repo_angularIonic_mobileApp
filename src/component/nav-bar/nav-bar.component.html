@@ -341,15 +341,16 @@
 </ion-modal>
 
 
-<!-- WAG BUBURAHIN -->
-<!-- Background settings -->
-<div class="option">
-  <a (click)="html()" class="active1">HTML</a>
-  <a  (click)="css()" class="active2">CSS</a>
-  <a  (click)="javascript()" class="active">JS</a>
-  <a  (click)="python()" class="active">PYTHON</a>
-  <a  (click)="sql()" class="active">SQL</a>
-  <a (click)="php()"class="active">PHP</a>
-  <a (click)="java()"class="active">JAVA</a>
-  <a (click)="cpp()"class="active">C++</a>
+<div class="navbar">
+  <a (click)="html()" [ngClass]="{ 'active': isActive('/html') }">HTML</a>
+  <a (click)="css()"  [ngClass]="{ 'active': isActive('/css') }">CSS</a>
+  <a (click)="javascript()"  [ngClass]="{ 'active': isActive('/js') }">JS</a>
+  <a (click)="python()" [ngClass]="{ 'active': isActive('/py') }">PYTHON</a>
+  <a (click)="sql()"  [ngClass]="{ 'active': isActive('/sql') }">SQL</a>
+  <a (click)="php()" [ngClass]="{ 'active': isActive('/php') }">PHP</a>
+  <a (click)="java()"  [ngClass]="{ 'active': isActive('/java') }">JAVA</a>
+  <a (click)="cpp()"   [ngClass]="{ 'active': isActive('/cpp') }">C++</a>
 </div>
+
+
+
