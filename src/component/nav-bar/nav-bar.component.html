@@ -279,7 +279,7 @@
       <!--Learn menu panel -->
 
 
-      <ion-item button routerLink="/challenges" class="menu-item" >
+      <ion-item button routerLink="/challenges" (click)="challenges()" class="menu-item" >
         <ion-icon slot="start" name="trophy-outline"></ion-icon>
         <ion-label>Challenges</ion-label>
       </ion-item>
@@ -301,8 +301,8 @@
       <ion-menu-button [menu]="uniqueId"></ion-menu-button>
     </ion-buttons>
 
-    <ion-input clearInput placeholder="  search.."  class="input"><!-- Search button, Input -->
-      <ion-icon name="search-outline" slot="end" class="search-icon"></ion-icon>
+    <ion-input clearInput placeholder="  search.."  class="input" [(ngModel)]="query"><!-- Search button, Input -->
+      <ion-icon name="search-outline" slot="end" class="search-icon" (click)="search()"></ion-icon>
     </ion-input>
     
     <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
@@ -313,27 +313,29 @@
 </ion-header> 
 
 <!-- Popup Message -->
-<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()" >
   <ng-template>
     <ion-content class="popup-container">
       
       <div class="popup-content">
         <ion-buttons class="back">
-          <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+          <ion-icon name="arrow-back-outline" slot="start" (click)="closePopup()"> </ion-icon>
         </ion-buttons>
 
         <ion-item>
 
           <ion-icon slot="start" name="person-outline"></ion-icon>
           <ion-header>
-            <ion-card-title>Rhonalyn Ortiz!</ion-card-title>
+            <ion-card-title>{{username}}</ion-card-title>
             <ion-card-subtitle>
-              ortizrhonalynmail.com
+              {{email}}
             </ion-card-subtitle>
           </ion-header>
         </ion-item>
 
-        <ion-button class="ion-close" (click)="closePopup()">LOGOUT -></ion-button>
+        <ion-button class="ion-close" (click)="handleLogout()" *ngIf="isLoggedIn">LOGOUT -></ion-button>
+        <ion-button class="ion-close" *ngIf="!isLoggedIn"  (click)="redirectLogin()">LOGIN -></ion-button>
+
       </div>
     
     </ion-content>

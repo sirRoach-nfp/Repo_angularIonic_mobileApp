@@ -3,6 +3,9 @@ import { MenuController } from '@ionic/angular';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { FirebaseService } from 'src/app/firebase.service';
+import { ModalController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,6 +13,11 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
+
+
+  username: string | null = "";
+  email: string | null = " "
+  isLoggedIn: boolean | null = false
 
   // Highlight for active page.
   isActive(route: string): boolean {
@@ -19,6 +27,33 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
   @Input() id: string = ""
   uniqueId: string = ""
   routerSubscription: Subscription | undefined;
+
+
+
+    //search logic
+    query: string = "";
+
+
+    search(){
+
+      if(this.query.trim().length > 0){
+        console.log("test" + this.query)
+      
+        this.router.navigate(['/searchresultpage'], {
+          queryParams: {
+            searchQuery: this.query,
+            //searcQuery: "python",
+            prevRoute: this.currentRoute // Replace with the actual search term
+          }
+        });
+      }
+
+    }
+
+
+
+    
+
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['id']) {
@@ -156,20 +191,63 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
   }
   //
 
+
+  
   showPopup() {
     this.isPopupVisible = true;
+    console.log("clicked pop")
+  }
+  
+
+
+  
+
+  
+
+  async closePopup() {
+    this.isPopupVisible = false;
+    //await this.modalController.dismiss();
+    console.log("tst")
+
+   
+ 
   }
 
-  closePopup() {
-    this.isPopupVisible = false;
-    console.log("tst")
+  logout(){
+    
+    localStorage.clear();
+    
+    this.router.navigate(['/loginpage'])
+  }
+
+  
+  async handleLogout() {
+    await this.closePopup(); 
+    try {
+      await this.firebaseService.logout(); 
+      localStorage.clear();
+      this.router.navigate(['/login']); 
+    } catch (error) {
+      console.error('Error during logout:', error);
+    
+    }
+  }
+
+  async redirectLogin(){
+    await this.closePopup()
+    this.router.navigate(['/loginpage'])
+
+  } 
+  
+  justTest(){
+    console.log("poptest")
   }
 
   toggleSubtopics() {
     this.showSubtopics = !this.showSubtopics;
   };
 
-  constructor(private menu: MenuController, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private menu: MenuController, private router: Router, private activatedRoute: ActivatedRoute,private firebaseService:FirebaseService,private modalController:ModalController) {
 
 
   }
@@ -185,6 +263,13 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
 
   currentRoute: String = '';
   ngOnInit() {
+
+    this.username = localStorage.getItem("username")
+    this.email = localStorage.getItem("email")
+    if(localStorage.getItem("isLogged") === "true"){
+      this.isLoggedIn = true;
+    }
+
     this.uniqueId = this.id;
     console.log('Initial uniqueId:', this.uniqueId);
 
@@ -205,6 +290,22 @@ export class NavBarComponent implements OnInit, OnChanges, OnDestroy {
       console.log(this.currentRoute); // To check the current route
     });
 
+  }
+
+
+
+  challenges(){
+
+    const isLogged = localStorage.getItem("isLogged")
+
+
+    if(isLogged === "true"){
+      this.router.navigate(['/exercise-selector'])
+    }
+    else{
+      this.router.navigate(['/loginpage'])
+    }
+    
   }
 
 

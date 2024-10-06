@@ -23,14 +23,9 @@
         </ion-input>
       </ion-item>
 
-      <ion-item lines="full">
-        <ion-label position="floating">New Password:</ion-label>
-        <ion-input [(ngModel)]="user.password" clearInput type="Password" (ionInput)="checkInput('password')">
-          <ion-icon slot="start" name="lock-closed-outline" [class.big]="isPasswordEntered"></ion-icon>
-        </ion-input>
-      </ion-item>
 
-      <ion-buttons button class="sent" (click)="register()"><ion-icon class="submit"
+
+      <ion-buttons button class="sent" (click)="resetPassword()"><ion-icon class="submit"
           name="arrow-forward-outline"></ion-icon></ion-buttons>
 
     </ion-card-content>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Router } from '@angular/router';
-
+import { FirebaseService } from '../firebase.service';
+import { ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
@@ -16,11 +17,24 @@ export class SignupPage implements OnInit {
   }
 
 
-  constructor(private apiService: ApiService,private router: Router) { }
+  constructor(private apiService: ApiService,private router: Router,private firebaseService: FirebaseService,private toastController: ToastController) { }
 
   isEmailEntered = false;
   isPasswordEntered = false;
   isUserNameEntered = false;
+
+
+  
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 3000,
+      position: 'top',
+      color: 'danger'
+    });
+    await toast.present();
+  }
+
 
   checkInput(field: string) {
     if (field === 'email') {
@@ -33,6 +47,8 @@ export class SignupPage implements OnInit {
     
   }
 
+  /*
+
   register(){
     this.apiService.signUp(this.user).subscribe(
       response => {
@@ -43,6 +59,25 @@ export class SignupPage implements OnInit {
         console.error("Registration failed",error);
       }
     )
+  }
+  */
+
+  register() {
+    if (this.user.password.length < 6) {
+      this.presentToast("Password must be at least 6 characters long.");
+      return;
+    }
+    
+    this.firebaseService.register(this.user.username, this.user.email, this.user.password)
+      .then(response => {
+        console.log('Registration successful:', response);
+        this.router.navigate(['/login']); // Navigate to the login page on success
+      })
+      .catch(error => {
+        console.error("Registration failed", error); // Handle registration errors
+        console.log(error.message)
+        this.presentToast(error.message);
+      });
   }
 
   ngOnInit() {

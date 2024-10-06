@@ -52,6 +52,7 @@ export class QuizRendererComponent  implements OnInit {
   @Input() lang: string = "";
   @Input() diff: string = "";
 
+  username: string | null = "";
 
   quizData: QuizQuestion[] =[];
   currentQuestionIndex = 0;
@@ -72,6 +73,7 @@ export class QuizRendererComponent  implements OnInit {
   ngOnInit() {
     this.loadQuiz();
     console.log("lang: " + this.lang + " || " + "dif: " + this.diff)
+    this.username = localStorage.getItem("username");
   }
 
   ngOnchanges(){

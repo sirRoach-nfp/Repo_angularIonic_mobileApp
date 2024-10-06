@@ -20,7 +20,7 @@
       
 
         <ion-card *ngFor="let result of searchResults" >
-          <img [src]="result.cover" (click)="navigateToBlog(result._id)"/>
+          <img [src]="result.cover" (click)="navigateToBlog(result.id)"/>
           <ion-card-header>
             <ion-card-title>{{result.title}}</ion-card-title>
         
@@ -35,7 +35,7 @@
 
 
       <div class="resultNull" *ngIf="searchResults.length === 0">
-        <h1>no res</h1>
+        <h1>no result for "{{query}}"</h1>
       </div>
 
 

@@ -9,6 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { userReducer } from './store/user/user.reducer';
 
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 import { StoreDevtools } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -28,7 +33,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
   imports: [FormsModule,BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule, StoreModule.forRoot({user:userReducer}), StoreDevtoolsModule.instrument({
     maxAge: 30,
     logOnly: environment.production
-  }),SharedModule,BrowserAnimationsModule],
+  }),SharedModule,BrowserAnimationsModule,AngularFireModule.initializeApp(environment.firebase),AngularFireAuthModule,AngularFirestoreModule],
 
 
 

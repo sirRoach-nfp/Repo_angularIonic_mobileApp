@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiService } from '../api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { FirebaseService } from '../firebase.service';
 @Component({
   selector: 'app-searchresultpage',
   templateUrl: './searchresultpage.page.html',
@@ -13,7 +14,7 @@ export class SearchresultpagePage implements OnInit, OnDestroy {
   queryParamsSubscription: Subscription | undefined;
 
 
-  constructor(private router:ActivatedRoute,private apiService:ApiService, private route: Router) { }
+  constructor(private router:ActivatedRoute,private apiService:ApiService, private route: Router,private firebaseService:FirebaseService) { }
 
   query:string = "";
   prevRoute:string = "";
@@ -29,8 +30,8 @@ export class SearchresultpagePage implements OnInit, OnDestroy {
    this.queryParamsSubscription = this.router.queryParams.subscribe(params => {
       this.query = params['searchQuery'];
       this.prevRoute = params['prevRoute']
-      console.log(this.prevRoute)
-      console.log(this.query);
+      //console.log(this.prevRoute)
+      console.log("query" + this.query);
 
       if (this.query) {
         this.searchBlogs(this.query);  // Pass the query directly
@@ -64,29 +65,36 @@ export class SearchresultpagePage implements OnInit, OnDestroy {
 
 
   navigateToBlog(bid: string){
-    console.log(bid)
 
-    this.route.navigate(['/search-result-page'],{
-      queryParams:{
-        blogId: bid,
-      }
-    })
+    const isLogged = localStorage.getItem("isLogged");
+
+    if(isLogged === "true"){
+      console.log(bid)
+      this.route.navigate(['/search-result-page'],{
+        queryParams:{
+          blogId: bid,
+        }
+      })
+    }
+    else{
+      this.route.navigate(['/loginpage'])
+    }
+
   }
 
 
-  searchBlogs(searchVal:string){
-
-    this.apiService.searchBlogs(searchVal).subscribe(
-      (response: any)=>{
-        console.log(response)
+  async searchBlogs(searchVal: string) {
+    this.firebaseService.searchBlogs(searchVal).subscribe(
+      (response: any) => {
+        console.log(response);
         this.searchResults = response;
-        this.isLoading=false;
+        this.isLoading = false;
       },
-      (error)=>[
-        console.error('Error fetching search results',error)
-      ]
-    )
-
+      (error) => {
+        console.error('Error fetching search results', error);
+        this.isLoading = false;
+      }
+    );
   }
 
 }

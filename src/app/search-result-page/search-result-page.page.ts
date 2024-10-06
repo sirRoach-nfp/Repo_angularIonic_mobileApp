@@ -3,7 +3,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 import { blogData } from 'src/TestData/blogData';
 import { NavController } from '@ionic/angular';
-
+import { FirebaseService } from '../firebase.service';
 
 
 
@@ -14,7 +14,7 @@ import { NavController } from '@ionic/angular';
 })
 export class SearchResultPagePage implements OnInit {
 
-  constructor(private router:ActivatedRoute, private apiService : ApiService, private navCtrl: NavController) { }
+  constructor(private router:ActivatedRoute, private apiService : ApiService, private navCtrl: NavController,private firebaseService:FirebaseService) { }
 
   query:string = "";
   blogId: string ="";
@@ -46,7 +46,7 @@ export class SearchResultPagePage implements OnInit {
     return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
   }
 
-
+/*
   private fetchBlog(blogId: string): void {
     this.apiService.fetchBlogById(blogId).subscribe(
       (response) => {
@@ -64,6 +64,26 @@ export class SearchResultPagePage implements OnInit {
 
 
 
+*/
+
+private fetchBlog(blogID: string): void {
+  this.firebaseService.fetchBlogByField(blogID).subscribe(
+    (response: any[]) => {
+      if (response && response.length > 0) {
+        this.blog = response[0];  // Assuming you want the first matching blog
+        console.log('Fetched Blog:', this.blog);
+        this.isLoading = false;
+      } else {
+        console.log('No blog found with the given blogID');
+        this.isLoading = false;
+      }
+    },
+    (error) => {
+      console.error('Error fetching blog:', error);
+      this.isLoading = false;
+    }
+  );
+}
 
 
 
@@ -72,7 +92,7 @@ export class SearchResultPagePage implements OnInit {
     this.router.queryParams.subscribe(params=>{
       this.blogId = params['blogId']
       this.query = params['searchQuery']
-      console.log(this.blogId)
+      console.log("blogId " + this.blogId)
 
     })
 
