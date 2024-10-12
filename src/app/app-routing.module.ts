@@ -280,6 +280,10 @@ const routes: Routes = [
     path: 'forpass',
     loadChildren: () => import('./forpass/forpass.module').then( m => m.ForpassPageModule)
   },
+  {
+    path: 'sqldiffpage',
+    loadChildren: () => import('./ChallengeDifPage/sqldiffpage/sqldiffpage.module').then( m => m.SqldiffpagePageModule)
+  },
 
 
 

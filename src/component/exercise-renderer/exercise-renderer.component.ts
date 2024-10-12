@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewChecked,ChangeDetectorRef, OnChanges , Input} from '@angular/core';
 import { Router } from '@angular/router';
-import { HTMLbasic } from 'src/TestData/htmlBasics';
+//import { HTMLbasic } from 'src/TestData/htmlBasics';
 import { HTMLIntro } from 'src/TestData/htmlIntro';
 import { CSSintro } from 'src/TestData/cssIntro';
 import * as Prism from 'prismjs';
@@ -8,6 +8,56 @@ import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-javascript';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
+
+
+
+//CPP
+import { CPPintro } from 'src/TestData/ExerciseData/CPP/CPPintroductionED';
+import { CPPbasic } from 'src/TestData/ExerciseData/CPP/CPPbasicED';
+import { CPPintermediate } from 'src/TestData/ExerciseData/CPP/CPPintermediate';
+import { CPPabintermediate } from 'src/TestData/ExerciseData/CPP/CPPabintermdiate';
+
+//HTML
+import { HTMLintroduction } from 'src/TestData/ExerciseData/HTML/HTMLintroductionED';
+import { HTMLbasic } from 'src/TestData/ExerciseData/HTML/HTMLbasicED';
+import { HTMLintermediate } from 'src/TestData/ExerciseData/HTML/HTMLintermediate';
+import { HTMLabintermediate } from 'src/TestData/ExerciseData/HTML/HTMLabintermdiate';
+
+//JS
+import { JSbasic } from 'src/TestData/ExerciseData/JAVASCRIPT/JSbasicED';
+import { JSintroduction } from 'src/TestData/ExerciseData/JAVASCRIPT/JSintroductionED';
+import { JSintermediate } from 'src/TestData/ExerciseData/JAVASCRIPT/JSintermediate';
+import { JSabintermediate } from 'src/TestData/ExerciseData/JAVASCRIPT/JSabintermdiate';
+
+//python
+import { PYTHONintroduction } from 'src/TestData/ExerciseData/PYTHON/PythonintroductionED';
+import { PYTHONbasic } from 'src/TestData/ExerciseData/PYTHON/PythonbasicED';
+import { PYTHONintermediate } from 'src/TestData/ExerciseData/PYTHON/Pythonintermediate';
+import { PYTHONabintermediate } from 'src/TestData/ExerciseData/PYTHON/Pythonabintermdiate';
+
+//PHP
+import { PHPintroduction } from 'src/TestData/ExerciseData/PHP/PHPintroductionED';
+import { PHPbasic } from 'src/TestData/ExerciseData/PHP/PHPbasicED';
+import { PHPintermediate } from 'src/TestData/ExerciseData/PHP/PHPintermediate';
+import { PHPabintermediate } from 'src/TestData/ExerciseData/PHP/PHPabintermdiate';
+
+//JAVA
+import { JAVAintroduction } from 'src/TestData/ExerciseData/JAVA/JAVAintroductionED';
+import { JAVAbasic } from 'src/TestData/ExerciseData/JAVA/JAVAbasicED';
+import { JAVAintermediate } from 'src/TestData/ExerciseData/JAVA/JAVAntermediate';
+import { JAVAabintermediate } from 'src/TestData/ExerciseData/JAVA/JAVAabintermdiate';
+
+//SQL
+import { SQLintroduction } from 'src/TestData/ExerciseData/SQL/SQLintroductionED';
+import { SQLbasic } from 'src/TestData/ExerciseData/SQL/SQLbasicED';
+import { SQLintermediate } from 'src/TestData/ExerciseData/SQL/SQLintermediate';
+import { SQLabintermediate } from 'src/TestData/ExerciseData/SQL/SQLabintermdiate';
+
+//CSS
+import { CSSintroduction } from 'src/TestData/ExerciseData/CSS/CSSintroductionED';
+import { CSSbasic } from 'src/TestData/ExerciseData/CSS/CSSbasicED';
+import { CSSintermediate } from 'src/TestData/ExerciseData/CSS/CPPintermediate';
+import { CSSabintermediate } from 'src/TestData/ExerciseData/CSS/CSSabintermdiate';
 
 @Component({
   selector: 'app-exercise-renderer',
@@ -74,10 +124,18 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
  
       switch(this.difficulty){
         case "Intro":
-          this.exercises = [...HTMLIntro].sort(()=> 0.5 - Math.random()).slice(0,5);
+          this.exercises = [...HTMLintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
           break;
         case "Basic":
           this.exercises = [...HTMLbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...HTMLintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...HTMLabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
           break;
 
         default:
@@ -90,13 +148,174 @@ export class ExerciseRendererComponent  implements OnInit,AfterViewChecked {
     else if(this.lang === "CSS"){
       switch(this.difficulty){
         case "Intro":
-          this.exercises = [...CSSintro].sort(()=> 0.5 - Math.random()).slice(0,5);
+          this.exercises = [...CSSintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
           break;
+
+        case "Basic":
+          this.exercises = [...CSSbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...CSSintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...CSSabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
         default:
           this.exercises = [];
           break
       }
     }
+
+    else if(this.lang === "Python"){
+      switch(this.difficulty){
+        case "Intro":
+          this.exercises = [...PYTHONintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Basic":
+          this.exercises = [...PYTHONbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...PYTHONintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...PYTHONabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+          
+        default:
+          this.exercises = [];
+          break
+      }
+    }
+
+    else if(this.lang === "Javascript"){
+      switch(this.difficulty){
+        case "Intro":
+          this.exercises = [...JSintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Basic":
+          this.exercises = [...JSbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...JSintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...JSabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+          
+        default:
+          this.exercises = [];
+          break
+      }
+    }
+
+    else if(this.lang === "PHP"){
+      switch(this.difficulty){
+        case "Intro":
+          this.exercises = [...PHPintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Basic":
+          this.exercises = [...PHPbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...PHPintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...PHPabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+          
+        default:
+          this.exercises = [];
+          break
+      }
+    }
+
+
+    else if(this.lang === "CPP"){
+      switch(this.difficulty){
+        case "Intro":
+          this.exercises = [...CPPintro].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Basic":
+          this.exercises = [...CPPbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...CPPintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...CPPabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+          
+        default:
+          this.exercises = [];
+          break
+      }
+    }
+
+
+    else if(this.lang === "Java"){
+      switch(this.difficulty){
+        case "Intro":
+          this.exercises = [...JAVAintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Basic":
+          this.exercises = [...JAVAbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...JAVAintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...JAVAabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+          
+        default:
+          this.exercises = [];
+          break
+      }
+    }
+
+
+    else if(this.lang === "SQL"){
+      switch(this.difficulty){
+        case "Intro":
+          this.exercises = [...SQLintroduction].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Basic":
+          this.exercises = [...SQLbasic].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+
+        case "Intermediate":
+          this.exercises = [...SQLintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+        
+        case "AbIntermediate":
+          this.exercises = [...SQLabintermediate].sort(()=> 0.5 - Math.random()).slice(0,5);
+          break;
+          
+        default:
+          this.exercises = [];
+          break
+      }
+    }
+
   }
 
   pickRandomExercises(){

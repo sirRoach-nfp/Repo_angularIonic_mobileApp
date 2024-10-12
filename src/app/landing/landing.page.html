@@ -22,8 +22,14 @@
 
     <p class="blurAppear">Learn tech skills effortlessly</p>
     <br><br><br>
-    <ion-button [routerLink]="['/login']" class="transition">
+    <ion-button [routerLink]="['/login']" class="transition" *ngIf="!isLogged">
       Get Started
+ 
+    </ion-button>
+    <ion-button [routerLink]="['/login']" class="transition" *ngIf="isLogged">
+      Loggin In
+      <ion-spinner name="circular" style="margin-left: 15px;"></ion-spinner>
+
     </ion-button>
 
   </div>

@@ -206,19 +206,19 @@ login(email: string, password: string): Promise<any> {
 
 
   searchBlogs(searchValue: string): Observable<any[]> {
-    // Use Firestore's `where` clause to search for blogs by title
-    console.log(searchValue)
-    return this.firestore.collection(this.blogBasePath, ref => 
-      ref.where('title', '>=', searchValue)
-         .where('title', '<=', searchValue + '\uf8ff') // Firestore specific range query
-    ).snapshotChanges().pipe(
+    console.log(searchValue);
+    return this.firestore.collection(this.blogBasePath).snapshotChanges().pipe(
       map(actions => actions.map(a => {
-        const data = a.payload.doc.data() as any;  // Cast to 'any' to match your data structure
+        const data = a.payload.doc.data() as any;
         const id = a.payload.doc.id;
-        return { id, ...data }; // Return id and the blog data (cover, content, desc, title)
-      }))
+        return { id, ...data }; // Return id and the blog data
+      })),
+      map(blogs => blogs.filter(blog => 
+        blog.title.toLowerCase().includes(searchValue.toLowerCase()) // Filter to include the search value
+      ))
     );
   }
+  
 
   fetchBlogByField(blogID: string): Observable<any[]> {
     return this.firestore.collection(this.blogBasePath, ref => 
