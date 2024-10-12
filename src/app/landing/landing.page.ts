@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.page.html',
@@ -11,7 +11,7 @@ export class LandingPage implements OnInit {
   isLoading: boolean = true
   isLogged: boolean = false
   logged: string | null = ""
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -19,10 +19,13 @@ export class LandingPage implements OnInit {
     this.logged = localStorage.getItem("isLogged")
 
     if(this.logged === "true"){
-      this.isLoading = false;
+      
       this.isLogged  =true;
 
-      setTimeout(() => this.isLogged = true, 5000);
+      setTimeout(() => { this.isLogged = true; this.router.navigate(['/home']); }, 5000);
+      this.isLoading = false;
+
+
     }
 
     else{
