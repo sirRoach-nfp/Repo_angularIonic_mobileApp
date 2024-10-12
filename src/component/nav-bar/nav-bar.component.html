@@ -2,7 +2,8 @@
 <ion-menu side="start" [menuId]="uniqueId" contentId="main-content">
   <ion-header>
     <ion-toolbar style="--background: #f27f60; color: black;">
-      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline" class="arrow-close"></ion-icon></ion-buttons>
+      <ion-buttons slot="end" (click)="closeMenu()"><ion-icon name="arrow-back-outline"
+          class="arrow-close"></ion-icon></ion-buttons>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -19,267 +20,305 @@
       <!--Learn menu panel -->
       <ion-item button routerLink="/languages" (click)="toggleSubtopics()" class="menu-item">
         <ion-icon slot="start" name="book-outline"></ion-icon>
-        <ion-label>learn
+        <ion-label>Learn
         </ion-label>
       </ion-item>
-        <ion-list id="subtopics" [class.hidden]="!showSubtopics"  class="menu-tool">
+      <ion-list id="subtopics" [class.hidden]="!showSubtopics" class="menu-tool">
 
 
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypeHtml()" (click)="toggleArrowHtml()" [class.active-link]="currentRoute.startsWith('/html')">
-              <ion-icon [name]="arrowIconHtml" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>HTML</ion-label>
-              
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeHtml()" (click)="toggleArrowHtml()"
+            [class.active-link]="currentRoute.startsWith('/html')">
+            <ion-icon [name]="arrowIconHtml" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>HTML</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml" class="menu-tool">
+
+            <ion-item button routerLink="/htmlintro" (click)="htmlIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/htmlintro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
             </ion-item>
 
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesHtml"  class="menu-tool">
-              
-              <ion-item button routerLink="/htmlintro" (click)="htmlIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/htmlintro')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Introduction</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/htmlbasic"  (click)="htmlBasic()" class="menu-item" [class.active-link]="currentRoute.startsWith('/htmlbasic')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Basic</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/htmlelement"  (click)="htmlElement()" class="menu-item" [class.active-link]="currentRoute.startsWith('/htmlelement')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Element</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/htmlattri" (click)="htmlAttri()" class="menu-item" [class.active-link]="currentRoute.startsWith('/htmlattri')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Attributes</ion-label>
-              </ion-item>
-            </ion-list>
-          </div>
-
-
-
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypeCss()" (click)="toggleArrowCss()" [class.active-link]="currentRoute.startsWith('/css')">
-              <ion-icon [name]="arrowIconCss" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>CSS</ion-label>
-              
+            <ion-item button routerLink="/htmlbasic" (click)="htmlBasic()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/htmlbasic')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Basic</ion-label>
             </ion-item>
 
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesCss"  class="menu-tool">
-              
-              <ion-item button routerLink="/css-intro" (click)="cssIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/css-intro')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Introduction</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/css-basic" (click)="cssBasic()" class="menu-item" [class.active-link]="currentRoute.startsWith('/css-basic')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Syntax</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/css-element" (click)="cssElement()" class="menu-item" [class.active-link]="currentRoute.startsWith('/css-element')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Selectors</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/css-attributes" (click)="cssAttributes()" class="menu-item" [class.active-link]="currentRoute.startsWith('/css-attributes')"> 
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>How to</ion-label>
-              </ion-item>
-            </ion-list>
-          </div>
-
-
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypeJs()" (click)="toggleArrowJs()" [class.active-link]="currentRoute.startsWith('/js')">
-              <ion-icon [name]="arrowIconJs" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>JavaScript</ion-label>
-              
+            <ion-item button routerLink="/htmlelement" (click)="htmlElement()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/htmlelement')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Element</ion-label>
             </ion-item>
 
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesJs"  class="menu-tool">
-              
-              <ion-item button routerLink="/js-intro" (click)="jsIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/js-intro')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Introduction</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/js-output" (click)="jsBasic()" class="menu-item" [class.active-link]="currentRoute.startsWith('/js-output')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Where to</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/js-statements" (click)="jsElement()" class="menu-item" [class.active-link]="currentRoute.startsWith('/js-statements')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Output</ion-label>
-              </ion-item>
-    
-              <ion-item button routerLink="/js-whereto" (click)="jsAttributes()" class="menu-item" [class.active-link]="currentRoute.startsWith('/js-whereto')">
-                  <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                  <ion-label>Statements</ion-label>
-              </ion-item>
-            </ion-list>
-          </div>
+            <ion-item button routerLink="/htmlattri" (click)="htmlAttri()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/htmlattri')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Attributes</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
 
 
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypePy()" (click)="toggleArrowPy()" [class.active-link]="currentRoute.startsWith('/py')">
-              <ion-icon [name]="arrowIconPy" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Python</ion-label>
-              
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeCss()" (click)="toggleArrowCss()"
+            [class.active-link]="currentRoute.startsWith('/css')">
+            <ion-icon [name]="arrowIconCss" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>CSS</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesCss" class="menu-tool">
+
+            <ion-item button routerLink="/css-intro" (click)="cssIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/css-intro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
             </ion-item>
 
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesPy"  class="menu-tool">
-              
-              <ion-item button routerLink="/pyintro" (click)="pyIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/pyintro')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Introduction</ion-label>
-              </ion-item>
-  
-              <ion-item button routerLink="/pygetstarted" (click)="pyGetstarted()" class="menu-item" [class.active-link]="currentRoute.startsWith('/pygetstarted')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Get Started</ion-label>
-              </ion-item>
-  
-            <ion-item button routerLink="/pysyntax" (click)="pySyntax()" class="menu-item" [class.active-link]="currentRoute.startsWith('/pysyntax')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Syntax</ion-label>
+            <ion-item button routerLink="/css-basic" (click)="cssBasic()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/css-basic')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
             </ion-item>
-  
-            <ion-item button routerLink="/pyvariables" (click)="pyVariables()" class="menu-item" [class.active-link]="currentRoute.startsWith('/pyvariables')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Variables</ion-label>
+
+            <ion-item button routerLink="/css-element" (click)="cssElement()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/css-element')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Selectors</ion-label>
             </ion-item>
-            </ion-list>
-          </div>
+
+            <ion-item button routerLink="/css-attributes" (click)="cssAttributes()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/css-attributes')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>How to</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
 
 
-          
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypeSQL()" (click)="toggleArrowSQL()" [class.active-link]="currentRoute.startsWith('/sql')">
-              <ion-icon [name]="arrowIconSQL" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>SQL</ion-label>
-            </ion-item>
-          
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesSQL" class="menu-tool">
-              <ion-item button routerLink="/sqlintro" (click)="sqlIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/sqlintro')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Introduction</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/sqlsyntax" (click)="sqlSyntax()" class="menu-item" [class.active-link]="currentRoute.startsWith('/sqlsyntax')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Syntax</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/sqlselect" (click)="sqlSelect()" class="menu-item" [class.active-link]="currentRoute.startsWith('/sqlselect')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Select</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/sqlinsert" (click)="sqlInsert()" class="menu-item" [class.active-link]="currentRoute.startsWith('/sqlinsert')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Insert Into</ion-label>
-            </ion-item>
-            </ion-list>
-          </div>
-          
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeJs()" (click)="toggleArrowJs()"
+            [class.active-link]="currentRoute.startsWith('/js')">
+            <ion-icon [name]="arrowIconJs" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>JavaScript</ion-label>
 
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypePHP()" (click)="toggleArrowPHP()"  [class.active-link]="currentRoute.startsWith('/php')">
-              <ion-icon [name]="arrowIconPHP" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>PHP</ion-label>
-            </ion-item>
-          
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesPHP" class="menu-tool">
-              <ion-item button routerLink="/phpintro" (click)="phpIntro()" class="menu-item"  [class.active-link]="currentRoute.startsWith('/phpintro')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Introduction</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/phpsyntax" (click)="phpSyntax()" class="menu-item" [class.active-link]="currentRoute.startsWith('/phpsyntax')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Syntax</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/phpvariables" (click)="phpVariables()" class="menu-item" [class.active-link]="currentRoute.startsWith('/phpvariables')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Variables</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/phpecho" (click)="phpEcho()" class="menu-item" [class.active-link]="currentRoute.startsWith('/phpecho')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Echo/Print</ion-label>
-            </ion-item>
-            </ion-list>
-          </div>
-          
+          </ion-item>
 
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypeJava()" (click)="toggleArrowJava()" [class.active-link]="currentRoute.startsWith('/java')">
-              <ion-icon [name]="arrowIconJava" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>Java</ion-label>
-            </ion-item>
-          
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesJava" class="menu-tool">
-              <ion-item button routerLink="/javaintro" (click)="javaIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/javaintro')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Introduction</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/javagetstarted" (click)="javaGetStarted()" class="menu-item" [class.active-link]="currentRoute.startsWith('/javagetstarted')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Get Started</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/javasyntax" (click)="javaSyntax()" class="menu-item" [class.active-link]="currentRoute.startsWith('/javasyntax')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Syntax</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/javavariables" (click)="jaVariables()" class="menu-item" [class.active-link]="currentRoute.startsWith('/javavariables')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Variables</ion-label>
-            </ion-item>
-            </ion-list>
-          </div>
-          
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesJs" class="menu-tool">
 
-          <div>
-            <ion-item button class="menu-item" (click)="toggleTypeCpp()" (click)="toggleArrowCpp()" [class.active-link]="currentRoute.startsWith('/cpp')">
-              <ion-icon [name]="arrowIconCpp" slot="start" name="caret-forward-outline"></ion-icon>
-              <ion-label>C++</ion-label>
+            <ion-item button routerLink="/js-intro" (click)="jsIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/js-intro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
             </ion-item>
-          
-            <ion-list id="subTypes" [class.hidden]="!showSubTypesCpp" class="menu-tool">
-              <ion-item button routerLink="/cppintro" (click)="cppIntro()" class="menu-item" [class.active-link]="currentRoute.startsWith('/cppintro')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Introduction</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/cppsyntax" (click)="cppSyntax()" class="menu-item" [class.active-link]="currentRoute.startsWith('/cppsyntax')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Syntax</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/cppoutput" (click)="cppOutput()" class="menu-item" [class.active-link]="currentRoute.startsWith('/cppoutput')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Output</ion-label>
-            </ion-item>
-  
-            <ion-item button routerLink="/cppcppvariables" (click)="cppVariables()" class="menu-item" [class.active-link]="currentRoute.startsWith('/cppvariables')">
-                <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
-                <ion-label>Variables</ion-label>
-            </ion-item>
-            </ion-list>
-          </div>
-          
 
-        </ion-list>
+            <ion-item button routerLink="/js-output" (click)="jsBasic()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/js-output')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Where to</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-statements" (click)="jsElement()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/js-statements')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Output</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/js-whereto" (click)="jsAttributes()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/js-whereto')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Statements</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypePy()" (click)="toggleArrowPy()"
+            [class.active-link]="currentRoute.startsWith('/py')">
+            <ion-icon [name]="arrowIconPy" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>Python</ion-label>
+
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesPy" class="menu-tool">
+
+            <ion-item button routerLink="/pyintro" (click)="pyIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/pyintro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/pygetstarted" (click)="pyGetstarted()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/pygetstarted')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Get Started</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/pysyntax" (click)="pySyntax()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/pysyntax')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/pyvariables" (click)="pyVariables()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/pyvariables')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Variables</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeSQL()" (click)="toggleArrowSQL()"
+            [class.active-link]="currentRoute.startsWith('/sql')">
+            <ion-icon [name]="arrowIconSQL" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>SQL</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesSQL" class="menu-tool">
+            <ion-item button routerLink="/sqlintro" (click)="sqlIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/sqlintro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sqlsyntax" (click)="sqlSyntax()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/sqlsyntax')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sqlselect" (click)="sqlSelect()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/sqlselect')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Select</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/sqlinsert" (click)="sqlInsert()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/sqlinsert')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Insert Into</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypePHP()" (click)="toggleArrowPHP()"
+            [class.active-link]="currentRoute.startsWith('/php')">
+            <ion-icon [name]="arrowIconPHP" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>PHP</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesPHP" class="menu-tool">
+            <ion-item button routerLink="/phpintro" (click)="phpIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/phpintro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/phpsyntax" (click)="phpSyntax()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/phpsyntax')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/phpvariables" (click)="phpVariables()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/phpvariables')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Variables</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/phpecho" (click)="phpEcho()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/phpecho')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Echo/Print</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeJava()" (click)="toggleArrowJava()"
+            [class.active-link]="currentRoute.startsWith('/java')">
+            <ion-icon [name]="arrowIconJava" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>Java</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesJava" class="menu-tool">
+            <ion-item button routerLink="/javaintro" (click)="javaIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/javaintro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/javagetstarted" (click)="javaGetStarted()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/javagetstarted')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Get Started</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/javasyntax" (click)="javaSyntax()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/javasyntax')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/javavariables" (click)="jaVariables()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/javavariables')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Variables</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+        <div>
+          <ion-item button class="menu-item" (click)="toggleTypeCpp()" (click)="toggleArrowCpp()"
+            [class.active-link]="currentRoute.startsWith('/cpp')">
+            <ion-icon [name]="arrowIconCpp" slot="start" name="caret-forward-outline"></ion-icon>
+            <ion-label>C++</ion-label>
+          </ion-item>
+
+          <ion-list id="subTypes" [class.hidden]="!showSubTypesCpp" class="menu-tool">
+            <ion-item button routerLink="/cppintro" (click)="cppIntro()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/cppintro')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Introduction</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cppsyntax" (click)="cppSyntax()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/cppsyntax')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Syntax</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cppoutput" (click)="cppOutput()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/cppoutput')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Output</ion-label>
+            </ion-item>
+
+            <ion-item button routerLink="/cppcppvariables" (click)="cppVariables()" class="menu-item"
+              [class.active-link]="currentRoute.startsWith('/cppvariables')">
+              <ion-icon slot="start" name="chevron-forward-outline"></ion-icon>
+              <ion-label>Variables</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+
+      </ion-list>
       <!--Learn menu panel -->
 
 
-      <ion-item button routerLink="/challenges" (click)="challenges()" class="menu-item" >
+      <ion-item button routerLink="/challenges" (click)="challenges()" class="menu-item">
         <ion-icon slot="start" name="trophy-outline"></ion-icon>
         <ion-label>Challenges</ion-label>
       </ion-item>
@@ -301,22 +340,22 @@
       <ion-menu-button [menu]="uniqueId"></ion-menu-button>
     </ion-buttons>
 
-    <ion-input clearInput placeholder="  search.."  class="input" [(ngModel)]="query"><!-- Search button, Input -->
+    <ion-input clearInput placeholder="  search.." class="input" [(ngModel)]="query"><!-- Search button, Input -->
       <ion-icon name="search-outline" slot="end" class="search-icon" (click)="search()"></ion-icon>
     </ion-input>
-    
+
     <ion-buttons (click)="showPopup()"><!-- Profile Button Popup Message -->
       <ion-icon slot="end" name="person-circle-outline" class="profile-button"></ion-icon>
     </ion-buttons>
 
-  </ion-item> 
-</ion-header> 
+  </ion-item>
+</ion-header>
 
 <!-- Popup Message -->
-<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()" >
+<ion-modal [isOpen]="isPopupVisible" (ionModalDidDismiss)="closePopup()">
   <ng-template>
     <ion-content class="popup-container">
-      
+
       <div class="popup-content">
         <ion-buttons class="back">
           <ion-icon name="arrow-back-outline" slot="start" (click)="closePopup()"> </ion-icon>
@@ -334,10 +373,10 @@
         </ion-item>
 
         <ion-button class="ion-close" (click)="handleLogout()" *ngIf="isLoggedIn">LOGOUT -></ion-button>
-        <ion-button class="ion-close" *ngIf="!isLoggedIn"  (click)="redirectLogin()">LOGIN -></ion-button>
+        <ion-button class="ion-close" *ngIf="!isLoggedIn" (click)="redirectLogin()">LOGIN -></ion-button>
 
       </div>
-    
+
     </ion-content>
   </ng-template>
 </ion-modal>
@@ -345,14 +384,11 @@
 
 <div class="navbar">
   <a (click)="html()" [ngClass]="{ 'active': isActive('/html') }">HTML</a>
-  <a (click)="css()"  [ngClass]="{ 'active': isActive('/css') }">CSS</a>
-  <a (click)="javascript()"  [ngClass]="{ 'active': isActive('/js') }">JS</a>
+  <a (click)="css()" [ngClass]="{ 'active': isActive('/css') }">CSS</a>
+  <a (click)="javascript()" [ngClass]="{ 'active': isActive('/js') }">JS</a>
   <a (click)="python()" [ngClass]="{ 'active': isActive('/py') }">PYTHON</a>
-  <a (click)="sql()"  [ngClass]="{ 'active': isActive('/sql') }">SQL</a>
+  <a (click)="sql()" [ngClass]="{ 'active': isActive('/sql') }">SQL</a>
   <a (click)="php()" [ngClass]="{ 'active': isActive('/php') }">PHP</a>
-  <a (click)="java()"  [ngClass]="{ 'active': isActive('/java') }">JAVA</a>
-  <a (click)="cpp()"   [ngClass]="{ 'active': isActive('/cpp') }">C++</a>
+  <a (click)="java()" [ngClass]="{ 'active': isActive('/java') }">JAVA</a>
+  <a (click)="cpp()" [ngClass]="{ 'active': isActive('/cpp') }">C++</a>
 </div>
-
-
-
