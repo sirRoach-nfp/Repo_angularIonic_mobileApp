@@ -24,6 +24,7 @@
         </ion-item>
 
         <div class="fpass">
+          <ion-card-subtitle><a routerLink="/login">Return to Login</a></ion-card-subtitle>
           <ion-card-subtitle><a routerLink="/forpass">Forgot Password?</a></ion-card-subtitle>
         </div>
         <ion-buttons  button  (click)="login()"  class="sent"><ion-icon class="submit" name="arrow-forward-outline"></ion-icon></ion-buttons>
@@ -33,17 +34,8 @@
     <!-- Slant Line -->
     <div class="slant-line"></div>
 
-    <!-- Second Section: After Slant -->
-   
-      <p class="center-text">Or login using:</p>
-      <div class="social-icons">
-          
-        <ion-button fill="clear">
-          <img src="../../assets/img/FACEBOOK-LOGO.png" alt="Facebook" />
-        </ion-button>
-        <ion-button fill="clear">
-          <img src="../../assets/img/GOOGLE-LOGO.png" alt="Google" />
-        </ion-button>
+      <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <ion-card-subtitle>Don't have an account?<a routerLink="/signup">Sign up</a></ion-card-subtitle>
       </div>
    
   </ion-card>
